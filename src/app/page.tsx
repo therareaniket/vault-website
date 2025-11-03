@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
         <div className="container">
-            <h1>Hello Developers!</h1>
+            {/* <h1>Hello Developers!</h1> */}
         </div>
     </>
   );

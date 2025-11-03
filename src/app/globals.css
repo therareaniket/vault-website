@@ -76,6 +76,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+
+
 }
 
 .dark {
@@ -122,4 +125,108 @@
 }
 
 
-.container { max-width: 1636px; padding: 0 18px; margin: 0 auto; background-color: red; }
+.container { max-width: 1636px; padding: 0 18px; margin: 0 auto; }
+
+
+@font-face {
+    font-family: 'poppins-rg';
+    src: url('../../public/fonts/Poppins-Regular.woff2') format('woff2'),
+    url('../../public/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'poppins-md';
+    src: url('../../public/fonts/Poppins-Medium.woff2') format('woff2'),
+    url('../../public/fonts/Poppins-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'poppins-sb';
+    src: url('../../public/fonts/Poppins-SemiBold.woff2') format('woff2'),
+    url('../../public/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'poppins-bd';
+    src: url('../../public/fonts/Poppins-Bold.woff2') format('woff2'),
+    url('../../public/fonts/Poppins-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../../public/fonts/icon/icomoon.ttf?10kkgx') format('truetype'),
+          url('../../public/fonts/icon/icomoon.woff?10kkgx') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-check_circle:before {
+    content: "\e905";
+  }
+  .icon-footer-contact-email:before {
+    content: "\e900";
+  }
+  .icon-footer-call:before {
+    content: "\e901";
+  }
+  .icon-location:before {
+    content: "\e902";
+  }
+  .icon-email:before {
+    content: "\e903";
+  }
+  .icon-add_call:before {
+    content: "\e904";
+  }
+
+
+.text-rg { font-family: 'poppins-rg' !important; }
+.text-md { font-family: 'poppins-md' !important; }
+.text-sb { font-family: 'poppins-sb' !important; }
+.text-bd { font-family: 'poppins-bd' !important; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: 'poppins-md'; font-weight: normal; font-style: normal; }
+
+h1, .h1 { font-size: 72px; line-height: 86px; }
+h2, .h2 { font-size: 56px; line-height: 68px; }
+h3, .h3 { font-size: 40px; line-height: 56px; }
+h4, .h4 { font-size: 32px; line-height: 44px; }
+h5, .h5 { font-size: 24px; line-height: 34px; }
+h6, .h6 { font-size: 20px; line-height: 30px; }
+
+p { font-family: 'poppins-rg'; font-size: 18px; line-height: 28px;  }
+
+body { font-family: 'poppins-rg'; }
+
+.text-18 { font-size: 18px; line-height: 28px; }
+.text-16 { font-size: 16px; line-height: 24px; }
+.text-14 { font-size: 14px; line-height: 20px; }
+.text-12 { font-size: 12px; line-height: 18px; }

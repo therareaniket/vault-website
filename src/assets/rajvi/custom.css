@@ -1,0 +1,224 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: -45deg;
+}
+
+
+
+:root{
+    --primary: #4B0081;
+    --secondary: #6FB018;
+    --hero-bg: #481AD1;
+    --secondary-orange: #FEE4D2;
+    --secondary-green: #D2E7B7;
+    --blue-light: #CDD8FF;
+    --red-light: #F8D1D1;
+    --yellow-light: #FFEFCD;
+    --black: #000000;
+    --white: #FFFFFF;
+    --off-white: #FFFCE8;
+
+    --secondary-purple-bluish: #561FF9;
+    --purple-light: #DDD2FE;
+    --green-light: #D1EAD3;
+    --orange-light: #FEE4D2;
+
+
+
+    --anim-time: 400ms;
+    --anim-ease: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+.btn-padding{ padding: 12px 30px; display: inline-block; }
+.site-radius-5 { border-radius: 5px; }
+.site-radius-10 { border-radius: 10px; }
+.site-radius-20 { border-radius: 20px; }
+
+
+
+/* header */
+
+header{ width: 100%;  padding: 20px 0; background-color: var(--hero-bg);  }
+.Header-main{ position: relative; display: flex; justify-content: space-between; align-items: center; }
+
+
+.menu-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 56px; 
+  height: 52px;
+  /* padding: 12px 28px; */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--anim-time) var(--anim-ease);
+  box-shadow:
+    inset 0 0 8px rgba(255, 255, 255, 0.03),
+    0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* ========== BORDER LIGHT EFFECT ========== */
+.menu-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px; /* border width */
+  background: conic-gradient(
+    from var(--angle),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.05) 60%,
+    rgba(255, 255, 255, 0.5) 90%,
+    rgba(255, 255, 255, 0.2)
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: --angle var(--anim-time) var(--anim-ease);
+}
+
+/* ========== REFLECTION STREAK ========== */
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.3) 45%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.2;
+  transition: all var(--anim-time) var(--anim-ease);
+  transform: translateX(-20%);
+}
+
+/* Hover Animations */
+.menu-icon:hover {
+  transform: scale(0.975);
+}
+
+.menu-icon:hover::before {
+  --angle: -120deg; /* animate the conic gradient */
+}
+
+.menu-icon:hover::after {
+  opacity: 0.4;
+  transform: translateX(30%);
+}
+
+/* Active (Click) State */
+.menu-icon:active {
+  transform: scale(0.96);
+}
+
+.menu-icon:active::before {
+  --angle: -75deg;
+}
+
+
+
+.dhatuVault-logo{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+
+/* ========== YOUR BASE BUTTON ========== */
+.btn-bg {
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--anim-time) var(--anim-ease);
+  box-shadow:
+    inset 0 0 8px rgba(255, 255, 255, 0.03),
+    0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* ========== BORDER LIGHT EFFECT ========== */
+.btn-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px; /* border width */
+  background: conic-gradient(
+    from var(--angle),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.05) 60%,
+    rgba(255, 255, 255, 0.5) 90%,
+    rgba(255, 255, 255, 0.2)
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: --angle var(--anim-time) var(--anim-ease);
+}
+
+/* ========== REFLECTION STREAK ========== */
+.btn-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.3) 45%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.2;
+  transition: all var(--anim-time) var(--anim-ease);
+  transform: translateX(-20%);
+}
+
+/* Hover Animations */
+.btn-bg:hover {
+  transform: scale(0.975);
+}
+
+.btn-bg:hover::before {
+  --angle: -120deg; /* animate the conic gradient */
+}
+
+.btn-bg:hover::after {
+  opacity: 0.4;
+  transform: translateX(30%);
+}
+
+/* Active (Click) State */
+.btn-bg:active {
+  transform: scale(0.96);
+}
+
+.btn-bg:active::before {
+  --angle: -75deg;
+}
+
+
+
+
