@@ -5,6 +5,7 @@ import "@/assets/rajvi/responsive.css"
 import "@/assets/aniket/custom.css"
 import "@/assets/aniket/responsive.css"
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
@@ -12,15 +13,16 @@ export const metadata: Metadata = {
   description: "Vault simplifies clinical trial management—secure, automated, globally compliant, effortlessly scalable, and built.",
 };
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode;}>) 
-    {
-    return (
-        <html lang="en">
-            <body>
-                <Header/>
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+  return (
+    <html lang="en">
+      <body>
+        <Header />
 
-                {children}
-        </body>
-        </html>
-    );
+        {children}
+
+        <Footer />
+      </body>
+    </html>
+  );
 }

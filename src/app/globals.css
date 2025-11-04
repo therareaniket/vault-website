@@ -125,7 +125,7 @@
 }
 
 
-.container { max-width: 1636px; padding: 0 18px; margin: 0 auto; }
+.container { max-width: 1636px; padding: 0 18px; margin: 0 auto; background-color: none; }
 
 
 @font-face {
