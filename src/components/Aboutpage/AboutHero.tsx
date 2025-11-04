@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 const AboutHero = () => {
   return (
   <>
-        <div>
+        <div className="container">
             <p>Hello I am About Component</p>
         </div>
     </>
