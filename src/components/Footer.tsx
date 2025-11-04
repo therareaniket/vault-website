@@ -9,14 +9,13 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-links-section">
                         <div className='social-media-section'>
-                            <Image src='/images/Footer/dhatuVault.svg' alt='menu-img' width={199} height={34} priority={false}></Image>
+                            <Image className='footer-dhatu-icon' src='/images/Footer/dhatuVault.svg' alt='menu-img' width={199} height={34} priority={false}></Image>
 
                             <div className='footer-text'>
-                                <p className='text-16 text-rg'>Built for Security.</p>
-                                <p className='text-16 text-rg'>Trusted for Compliance.</p>
+                                <p className='text-16 text-rg'>Built for Security.  <br />   Trusted for Compliance.</p>
                             </div>
 
-                            <Image src='/images/Footer/linkedInIcon.svg' alt='menu-img' width={28} height={28} priority={false}></Image>
+                            <Image className='linkedIn-Icon' src='/images/Footer/linkedInIcon.svg' alt='menu-img' width={28} height={28} priority={false}></Image>
                         </div>
 
                         <div className='footer-links'>
@@ -49,7 +48,7 @@ const Footer = () => {
                             <div className='newsletter'>
                                 <p className='text-18 text-md links-heading'>Newsletter</p>
 
-                                <input className='newsletter-input text-16 text-rg' type="email" name="" id="" placeholder='Enter your mail' />
+                                <input className='newsletter-input text-16 text-rgc btn-padding' type="email" name="" id="" placeholder='Enter your mail' />
                             </div>
                         </div>
                     </div>
@@ -78,11 +77,13 @@ const Footer = () => {
                 <div className='foot-cta'>
                     <div className="container">
                         <div className="footer-cta-bg site-radius-10">
-                            <h2 className='h3 text-sb'>Let Vault manage regulatory compliance while you focus on breakthrough research</h2>
+                            <div className="footer-cta-text">
+                                <h2 className='h3 text-sb'>Let Vault manage regulatory compliance </h2>
 
-                            <p className='h6 text-rg'>From eTMF uploads to regulatory inspections, Vault streamlines clinical operations with automated accuracy, full traceability, and unmatched speed.</p>
-                            
-                            <Link href="" className='btn-bg btn-padding'>Book a Demo</Link>
+                                <p className='h6 text-rg'>From eTMF uploads to regulatory inspections, Vault streamlines clinical operations with automated accuracy, full traceability, and unmatched speed.</p>
+
+                                <Link href="" className='footer-cta-button btn-bg btn-padding text-18 text-md'>Book a Demo</Link>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -202,7 +202,6 @@ header{ width: 100%;  padding: 20px 0; background-color: var(--hero-bg);  }
 .newsletter-input {
   width: 315px;
   height: 48px;
-  padding: 12px 20px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.12); /* stronger transparency */
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -224,7 +223,6 @@ header{ width: 100%;  padding: 20px 0; background-color: var(--hero-bg);  }
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: inherit;
   background: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.4) 0%,
@@ -267,10 +265,11 @@ header{ width: 100%;  padding: 20px 0; background-color: var(--hero-bg);  }
   background-image: url('/images/Footer/footer-cta-image.webp'); 
   background-position: center;
   background-repeat: no-repeat;
-  padding: 80px 280px; 
+  padding: 80px 0; 
   color: var(--white);
   text-align: center; 
 }
 
 .footer-cta-bg p{ margin-top: 20px; margin-bottom: 40px; }
+.footer-cta-text{ width: 1050px; margin: 0 auto; }
 
