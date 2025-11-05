@@ -14,16 +14,23 @@
 
 @media screen and (max-width: 1799px) {
     .container { max-width: calc(1400px + 36px); }
+
+    /* megamenu */
+    .mega-menu-content{ gap: 345px; }
 }
 
 @media screen and (max-width: 1599px) {
     /* font-size */
+    h2, .h2{ font-size: 52px; line-height: 65px; }
     h3, .h3{ font-size: 38px; line-height: 54px; }
 
     /* header */
     .menu-icon{ width: 50px; height: 50px; }
     .dhatuVault-logo{ width: 180px;}
     .btn-padding{ padding: 10px 25px;  }
+
+    /* mega-menu */
+    .menu-links .h2{ line-height: 74px; }
 
     /* footer */
     .footer-links{ gap: 75px; }
@@ -33,12 +40,16 @@
     .container { max-width: calc(1364px + 36px); }
 
     /* font-size */
+    h2, .h2{ font-size: 48px; line-height: 60px; }
     .text-18{ font-size: 16px; line-height: 26px; }
 
     /* header */
     .dhatuVault-logo{ width: 175px; }
     .menu-icon{ width: 48px; height: 48px; }
     .menu-icon img{ position: absolute; width: 25px; height: 25px;  top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+    /* mega-menu */
+    .menu-links .h2{ line-height: 70px; }
 
     /* footer */
     .footer-cta-text{ width: 960px; }
@@ -49,6 +60,7 @@
     .container { max-width: calc(1150px  + 36px); }
 
     /* font-size */
+    h2, .h2{ font-size: 46px; line-height: 58px; }
     h3, .h3{ font-size: 36px; line-height: 46px; }
     h6, .h6{ font-size: 18px; line-height: 28px; }
 
@@ -56,6 +68,11 @@
     /* header */  
     .menu-icon{ width: 48px; height: 44px; }
     .btn-padding{ padding: 8px 22px; }
+
+    /* mega-menu */
+    .menu-links .h2{ line-height: 66px; }
+    .mega-menu-content{ gap: 200px; }
+    .menu-links li{ margin-bottom: 10px; }
 
     /* footer */
     .footer-cta-text{ width: 900px; }
@@ -67,7 +84,12 @@
     .container { max-width: calc(980px  + 36px); }
 
     /* font-size */
+    h2, .h2{ font-size: 34px; line-height: 46px; }
 
+    /* mega-menu */
+    /* .mega-menu-content{ gap: 150px; } */
+    .menu-links .h2{ line-height: 50px; }
+    .menu-links li{ margin-bottom: 20px; }
 
     /* footer */
     .footer-cta-text{ width: 810px; }
@@ -81,6 +103,7 @@
     .container { max-width: calc(991px + 36px); }
 
     /* font-size */
+    h2, .h2{ font-size: 32px; line-height: 42px; }
     .text-16{ font-size: 14px; line-height: 24px; }
 
     /* header */  
@@ -96,13 +119,21 @@
     .container { max-width: calc(800px + 36px); }
 
     /* font-size */
+    h2, .h2{ font-size: 32px; line-height: 42px; }
     h3, .h3{ font-size: 32px; line-height: 42px; }
+    h5, .h5{ font-size: 22px; line-height: 32px; }
     h6, .h6{ font-size: 16px; line-height: 24px; }
 
     /* header */  
     .text-18{ font-size: 14px; line-height: 24px; }
     .menu-icon img{ width: 20px; height: 20px; }
     .menu-icon{ width: 46px; height: 42px; }
+
+    /* mega-menu */
+    /* .mega-menu-content{ justify-content: space-between; flex-direction: column; gap: 100px; } */
+    .mega-menu-content{ justify-content: space-between;  gap: 0; }
+    .menu-links .h2{ line-height: 46px; }
+    .menu-contact{ padding-top: 0px; }
 
     /* footer */
     .footer-cta-text{ width: 650px; }
@@ -123,7 +154,7 @@
     .container { max-width: calc(750px + 36px); }
 
     /* font-size */
-
+        h2, .h2{ font-size: 30px; line-height: 40px; }
     /* footer */
     .footer-links{ gap: 60px; }
     .footer-cta-bg p { margin-bottom: 20px; }
@@ -143,6 +174,10 @@
     .contact-btn{ display: none; }
     .dhatuVault-logo{ left: 90px; }
 
+    /* mega-menu */
+    .mega-menu-content{ flex-direction: column; gap: 50px; }
+    .contact-menu-text{ display: block; }
+
     /* footer */
     .main-footer{ padding-bottom: 30px; }
     .footer-cta-bg{ padding: 30px 0; }
@@ -161,6 +196,7 @@
     .container { max-width: calc(500px + 36px); }
 
     /* font-size */
+    h2, .h2{ font-size: 32px; line-height: 40px; }
     h3, .h3{ font-size: 26px; line-height: 36px; }
     h6, .h6{ font-size: 14px; line-height: 24px; }
 
@@ -185,6 +221,9 @@
     /* header */  
     .menu-icon{ width: 44px; height: 40px; }
 
+    /* mega-menu */
+    .menu-links .h2{ line-height: 40px; }
+
     /* footer */
     .footer-links{ gap: 40px; }
     .footer-br-line{ margin-top: 35px; }
@@ -201,12 +240,19 @@
     .menu-icon{ width: 40px; height: 35px; }
     .dhatuVault-logo{ left: 70px; }
 
+    /* mega menu */
+.menu-links li img{display: none;} 
+
+
     /* footer */
 }
 
 @media screen and (max-width: 459px) {
     /* font-size */
 
+
+    /* mega-menu */
+    .linkedin-header-link{ margin-top: 25px; }
 
     /* footer */
     .footer-dhatu-icon { width: 160px; }
@@ -215,7 +261,18 @@
 
 @media screen and (max-width: 400px) {
     /* font-size */
+    h2, .h2{ font-size: 28px; line-height: 40px; }
 
+    /* mega-menu */
+    .mega-menu{ padding-top: 80px; }
+    .menu-links li{ margin-bottom: 10px; }
+    .mega-menu-content{ padding-top: 10px; gap: 30px; }
+    .linkedin-header-link{ margin-top: 0; }
+    .contact-detail-header:nth-child(2){ margin: 4px 0; }
+    .contact-detail-header{ align-items: center; gap: 10px; }
+
+
+    .contact-title-text span { font-size: 20px !important; padding-top: 0; }
 
     /* footer */
     .footer-cta-bg{padding: 30px 20px; }
@@ -230,7 +287,9 @@
 
 @media screen and (max-width: 374px) {
     /* font-size */
+        h2, .h2{ font-size: 26px; line-height: 38px; }
 
+        hr{ margin: 15px 0; }
 
     /* footer */
 }

@@ -165,48 +165,85 @@
 }
 
 @font-face {
-    font-family: 'icomoon';
-    src:  url('../../public/fonts/icon/icomoon.ttf?10kkgx') format('truetype'),
-          url('../../public/fonts/icon/icomoon.woff?10kkgx') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-check_circle:before {
-    content: "\e905";
-  }
-  .icon-footer-contact-email:before {
-    content: "\e900";
-  }
-  .icon-footer-call:before {
-    content: "\e901";
-  }
-  .icon-location:before {
-    content: "\e902";
-  }
-  .icon-email:before {
-    content: "\e903";
-  }
-  .icon-add_call:before {
-    content: "\e904";
-  }
+  font-family: 'icomoon';
+  src: url('../../public/fonts/icon/icomoon.ttf?jonddb') format('truetype'),
+    url('../../public/fonts/icon/icomoon.woff?jonddb') format('woff');
 
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-validationIcon:before {
+  content: "\e905";
+}
+.icon-uploadIcon:before {
+  content: "\e906";
+}
+.icon-locationIcon:before {
+  content: "\e900";
+}
+.icon-mailIcon:before {
+  content: "\e901";
+}
+.icon-calllcon:before {
+  content: "\e902";
+}
+.icon-notificationIcon:before {
+  content: "\e90b";
+}
+.icon-archiveIcon:before {
+  content: "\e90c";
+}
+.icon-validationIcon1:before {
+  content: "\e90d";
+}
+.icon-uploadIcon1:before {
+  content: "\e90e";
+}
+.icon-locationIcon1:before {
+  content: "\e90f";
+}
+.icon-mailIcon1:before {
+  content: "\e910";
+}
+.icon-calllcon1:before {
+  content: "\e911";
+  color: #fffce8;
+}
+.icon-check_circle1:before {
+  content: "\e908";
+}
+.icon-footer-contact-email:before {
+  content: "\e903";
+}
+.icon-footer-call:before {
+  content: "\e904";
+}
+.icon-location:before {
+  content: "\e907";
+}
+.icon-email:before {
+  content: "\e909";
+}
+.icon-add_call:before {
+  content: "\e90a";
+}
 
 .text-rg { font-family: 'poppins-rg' !important; }
 .text-md { font-family: 'poppins-md' !important; }

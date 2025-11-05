@@ -40,24 +40,41 @@
 
 
 
-/* header */
+/* ===========================
+   HEADER
+=========================== */
+header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: var(--hero-bg);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
 
-header{ width: 100%;  padding: 20px 0; background-color: var(--hero-bg);  }
-.Header-main{ position: relative; display: flex; justify-content: space-between; align-items: center; }
-
-
-.menu-icon {
+.Header-main {
   position: relative;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+   /* MENU ICON */
+
+.menu-icon {
+  /* position: relative; */
+  display: flex;
   justify-content: center;
-  width: 56px; 
+  align-items: center;
+  width: 56px;
   height: 52px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   cursor: pointer;
   overflow: hidden;
   transition: all var(--anim-time) var(--anim-ease);
@@ -66,13 +83,13 @@ header{ width: 100%;  padding: 20px 0; background-color: var(--hero-bg);  }
     0 0 15px rgba(255, 255, 255, 0.05);
 }
 
-/*  BORDER LIGHT EFFECT  */
+/* Border Light Effect */
 .menu-icon::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px; /* border width */
+  padding: 1px;
   background: conic-gradient(
     from var(--angle),
     rgba(255, 255, 255, 0.2),
@@ -88,7 +105,7 @@ header{ width: 100%;  padding: 20px 0; background-color: var(--hero-bg);  }
   transition: --angle var(--anim-time) var(--anim-ease);
 }
 
-/*  REFLECTION STREAK  */
+/* Reflection Streak */
 .menu-icon::after {
   content: "";
   position: absolute;
@@ -106,14 +123,118 @@ header{ width: 100%;  padding: 20px 0; background-color: var(--hero-bg);  }
   transform: translateX(-20%);
 }
 
-/* Hover Animations */
+/* Hover + Active States */
 .menu-icon:hover { transform: scale(0.975); }
-.menu-icon:hover::before { --angle: -120deg; /* animate the conic gradient */ }
+.menu-icon:hover::before { --angle: -120deg; }
 .menu-icon:hover::after { opacity: 0.4; transform: translateX(30%); }
 
-/* Active (Click) State */
 .menu-icon:active { transform: scale(0.96); }
 .menu-icon:active::before { --angle: -75deg; }
+
+/* Icon Image Transition */
+.menu-icon img {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+
+/* MEGA MENU */
+
+
+.mega-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh; 
+  background-color: var(--hero-bg);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px); /* small slide-in */
+  transition: all 0.35s ease;
+  z-index: 999;
+  padding-top: calc(80px + 40px); 
+}
+
+/* SHOW MEGA MENU */
+.mega-menu.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* MEGA MENU CONTENT */
+.mega-menu-content {
+  display: flex;
+  gap: 352px;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+.menu-links .h2{ line-height: 78px; }
+
+/* MENU LINKS */
+.menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-links li {
+  display: flex; 
+  gap: 50px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-links li img {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+
+}
+
+.menu-links li:hover {
+  color: var(--secondary);
+}
+
+.menu-links li:hover img {
+  opacity: 1;
+  transform: translateX(0);
+  /* tint arrow to same green hue */
+}
+
+
+/* CONTACT SECTION */
+
+
+.contact-title-text{ width: 300px; }
+/* .contact-title-text p:nth-child(2){ padding: 8px 0; } */
+.contact-detail-header-text{ margin: 8px 0; }
+.menu-contact{ padding-top: 10px;  }
+.contact-detail-header:nth-child(2) {margin: 8px 0;}
+/* .linkedin-header-link{ margin-top: 30px;} */
+
+.menu-contact .contact-title {
+  padding-bottom: 14px;
+}
+
+.contact-detail-header{ display: flex; align-items: flex-start;  gap: 20px; }
+.contact-detail-header span{ font-size: 25px; width: 20px; }
+.contact-detail-header .icon-add_call{ font-size: 19px; } 
+.contact-detail-header .icon-location{ font-size: 26px; transform: translateY(-10px); } 
+.contact-detail-header span { padding-top: 4px; }
+
+.megaMenuSvg{ position: absolute; top: 70%; right: 250px; }
+
+.contact-menu-text{ display: none; }
+
+
+
+
 .dhatuVault-logo{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
 
