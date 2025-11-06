@@ -95,13 +95,14 @@ const Header = () => {
                 <span className="icon-locationIcon"></span><Link href="#">2445 Oak Ridge Omaha, QA 45065</Link> 
               </div>
 
-                    <hr className="my-[20px]  opacity-[40%]" />
-                          <div >
-                              <p className="contact-title h5 text-sb">Follow</p>
-                              <Link href="#" onClick={closeMenu}>
-                                  <Image className="linkedin-header-link" src="/images/Header/linkedInIcon.svg" alt="linkedin" width={24} height={2} />
-                              </Link>
-                          </div>
+              <hr className="my-[20px]  opacity-[40%]" />
+                
+              <div >
+                <p className="contact-title h5 text-sb">Follow</p>
+                  <Link href="#" onClick={closeMenu}>
+                    <Image className="linkedin-header-link" src="/images/Header/linkedInIcon.svg" alt="linkedin" width={24} height={2} />
+                  </Link>
+              </div>
             </div>
 
             {/* <Image className="megaMenuSvg" src="/images/Header/megMenuSvg.svg" alt="mega-menu-svg" width={190} height={189}></Image> */}
