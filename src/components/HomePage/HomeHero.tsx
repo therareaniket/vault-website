@@ -1,5 +1,4 @@
-"use client";
-import React from "react";
+"use client";   
 import Image from "next/image";
 
 const HomeHero = () => {
@@ -15,7 +14,7 @@ const HomeHero = () => {
                         <div className="hero-content-text">
                             <h1 className="hero-title text-sb">Intelligent Vault for Compliant Clinical Trials</h1>
 
-                            <p className="hero-subtitle text-rg">
+                            <p className="hero-subtitle text-rg h6">
                                 Secure, automated vault system built for global compliance, seamless scalability, and effortless document management.
                             </p>
 
