@@ -56,11 +56,17 @@
 header {
   width: 100%;
   padding: 20px 0;
-  background-color: var(--hero-bg);
+  /* background-color: var(--hero-bg); */
+  /* background-color: #481AD1; */
   position: sticky;
   top: 0;
   left: 0;
   z-index: 1001;
+  background: linear-gradient(
+    to bottom,
+    #481AD1 10%,
+    #441AC2 90%
+  );
 }
 
 .Header-main {
@@ -156,7 +162,7 @@ header {
   left: 0;
   width: 100%;
   min-height: 100vh; 
-  background-color: var(--hero-bg);
+  background-color: #441AC2;
   color: var(--white);
   display: flex;
   justify-content: center;

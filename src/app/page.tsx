@@ -1,7 +1,6 @@
-import HomeHero from "@/components/HomePage/HomeHero";
-import HomeStatistic from "@/components/HomePage/HomeStatistic";
-import HomeSolution from "@/components/HomePage/HomeSolution";
-
+import HomeHero from "@/components/Homepage/HomeHero";
+import HomeSolution from "@/components/Homepage/HomeSolution";
+import HomeStatistic from "@/components/Homepage/HomeStatistic";
 
 
 export default function Home() {
