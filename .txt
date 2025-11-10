@@ -1,0 +1,250 @@
+.home-pricing {
+  background-color: #000;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-pricing .container {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.pricing-title {
+  margin-bottom: 20px;
+}
+
+.pricing-desc {
+  color: #aaa;
+  margin: 20px auto 60px;
+}
+
+
+.pricing-tabs .btn-bg {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 12px;
+  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 0.05); 
+   border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px); 
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.03),
+    0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.plan-btn {
+  min-width: 110px;
+  padding: 10px 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ccc;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  /* transition: all 0.3s ease; */
+}
+
+.plan-btn.active {
+  background-color: #7b2ff7;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(123, 47, 247, 0.6);
+}
+
+.plan-btn:not(.active):hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+.pricing-content {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* Left Side (Price + Button) */
+.pricing-left {
+  text-align: left;
+  height: 352px;
+}
+
+.pricing-right{ width: 570px; height: 372px; }
+
+/* .pricing-left-text{ display: flex; flex-direction: column; justify-content: space-between; gap: 160px; } */
+
+/* Price Section */
+.price-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.price {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.per-user {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.total-price {
+  color: #ccc;
+  font-size: 15px;
+  margin: 15px 0 30px;
+}
+
+
+.glass-box {
+  width: 570px;
+  height: 352px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.03),
+    0 0 15px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  text-align: left;
+}
+
+.glass-box h4 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.glass-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.glass-box li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #ccc;
+}
+
+.btn-bg::before,
+.btn-bg::after {
+  pointer-events: none;
+}
+
+.pricing-right .icon-check_circle1{ font-size: 24px; }
+
+
+
+
+
+
+
+
+
+shadcn tab css & structure-code
+
+/* =============================== */
+/*  GLASS TAB BUTTON FOR SHADCN UI */
+/* =============================== */
+
+import React from 'react'
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
+const HomePricingNew = () => {
+    return (
+        <>
+            <section className="section">
+                <div className="pricing-section-main">
+                    <div className="container">
+                        <div className="pricing-section-wrapper">
+                            <div className="pricing-text-head">
+                                <h2 className="pricing-title text-sb">Designed to Scale with Your Clinical Operations</h2>
+
+                                <p className="pricing-desc h6 text-rg">Choose the plan that fits your organization’s scale and complexity from core eTMF functionality to advanced automation and analytics. Vault’s pricing is designed to grow with you.</p>
+                            </div>
+
+                            <Tabs defaultValue="standard" className="text-white">
+                                <TabsList className="tabs-list">
+                                    <TabsTrigger value="standard" className="tab-trigger btn-bg">
+                                        Standard
+                                    </TabsTrigger>
+                                    <TabsTrigger value="enterprise" className="tab-trigger btn-bg">
+                                        Enterprise
+                                    </TabsTrigger>
+                                </TabsList>
+
+                                <TabsContent value="standard">im standard</TabsContent>
+                                <TabsContent value="enterprise">im enterprise</TabsContent>
+                            </Tabs>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </>
+    )
+}
+
+export default HomePricingNew
+
+
+
+.tabs-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 361px;
+  height: 54px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.03),
+    0 0 15px rgba(255, 255, 255, 0.05);
+
+}
+
+.tab-trigger {
+  position: relative;
+  z-index: 1;
+  /* padding: 10px 28px; */
+  /* border-radius: 10px; */
+  border: none;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+/* ✅ Apply your glass base */
+.tab-trigger.btn-bg {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.tab-trigger[data-state="active"] {
+  background-color: var(--primary);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(111, 176, 24, 0.4); /* subtle glow */
+}
+
+/* 🖱️ Hover keeps your glass effects intact */
+.tab-trigger:hover {
+  transform: scale(0.975);
+}
