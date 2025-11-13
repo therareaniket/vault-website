@@ -65,11 +65,11 @@ const HomePricing = () => {
             <div className="pricing-left">
               <div className="pricing-left-text">
                 <div className="price-line">
-                  <h3 className="price h1 text-sb">${plan.price}</h3>
+                  <h3 className="price h1 text-sb">${plan?.price}</h3>
                   <p className="per-user h6 text-md">per user/month</p>
                 </div>
                 <p className="total-price h5 text-md">
-                  Total price: ${plan.price} <span className="text-grey h5 text-md">${plan.oldprice}</span>
+                  Total price: ${plan?.price} <span className="text-grey h5 text-md">${plan?.oldprice}</span>
                 </p>
                 <button className="start-btn btn-padding btn-bg btn-primary text-18 text-md">
                   Subscribe
@@ -80,7 +80,7 @@ const HomePricing = () => {
             <div className="pricing-right glass-box site-radius-20">
               <h4 className="h5 text-md pricin-right-head">Includes</h4>
               <ul>
-                {plan.features.map((feature, i) => (
+                {plan?.features.map((feature, i) => (
                   <li className="text-18" key={i}>
                     <span className="icon-check_circle1"></span> {feature}
                   </li>
