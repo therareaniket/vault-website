@@ -881,6 +881,8 @@
     .mobile-circle-btn.active{ transform: scale(1.09); }
     .mobile-line{ top: 45%; }
 
+    .testimonial-content { height: 260px; }
+
 }
 
 @media screen and (max-width: 374px) {

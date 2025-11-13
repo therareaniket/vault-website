@@ -3,8 +3,8 @@
 import React, { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import HmBlogArrow from "@/components/HomePage/HmBlogArrow"
 import { Progress } from "@/components/ui/progress"
+import HmBlogArrow from "./HmBlogArrow"
 
 const HomeBlogSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
