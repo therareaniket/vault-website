@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HomeSolution = () => {
     return (
-        <section>
+        <section className="section">
             <div className="container">
                 <div className="home-solution-main">
                     <div className="home-solution-head">

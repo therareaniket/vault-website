@@ -34,8 +34,7 @@ const HomePricing = () => {
   const plan = plans.find((p) => p.name === activePlan);
 
   return (
-    <section className="section">
-      <div className="home-pricing">
+      <section className="home-pricing section">
         <div className="container">
           <div className="pricing-text-head">
             <h2 className="pricing-title text-sb">
@@ -90,8 +89,8 @@ const HomePricing = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
   );
 };
 
