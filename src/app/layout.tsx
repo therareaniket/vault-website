@@ -9,20 +9,23 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "DhatuVault | Document Driven, Smarter, Scalable Trials",
-  description: "Vault simplifies clinical trial management—secure, automated, globally compliant, effortlessly scalable, and built.",
+    title: "DhatuVault | Document Driven, Smarter, Scalable Trials",
+    description: "Vault simplifies clinical trial management—secure, automated, globally compliant, effortlessly scalable, and built.",
+    viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en">
-      <body>
-        <Header />
 
-        {children}
+    <html lang="en" >
+        <body>
+            <Header />
 
-        <Footer />
-      </body>
+            {children}
+
+            <Footer />
+        </body>
     </html>
-  );
+
+);
 }

@@ -1,13 +1,12 @@
-import HomeHero from "@/components/HomePage/HomeHero";
-import HomeStatistic from "@/components/HomePage/HomeStatistic";
-import HomeVideo from "@/components/HomePage/HomeVideo";
-import HomeSolution from "@/components/HomePage/HomeSolution";
-import HomePricing from "@/components/HomePage/HomePricing";
 import HomeBlogSection from "@/components/HomePage/HomeBlogSection";
 import HomeFAQ from "@/components/HomePage/HomeFAQ";
-import HomeTestimonial from "@/components/HomePage/HomeTestimonial";
+import HomeHero from "@/components/HomePage/HomeHero";
+import HomePricing from "@/components/HomePage/HomePricing";
 import HomeRoleBaseSolSection from "@/components/HomePage/HomeRoleBaseSolSection";
-
+import HomeSolution from "@/components/HomePage/HomeSolution";
+import HomeStatistic from "@/components/HomePage/HomeStatistic";
+import HomeTestimonial from "@/components/HomePage/HomeTestimonial";
+import HomeVideo from "@/components/HomePage/HomeVideo";
 
 
 
@@ -20,7 +19,7 @@ export default function Home() {
 
       <HomeVideo />
 
-      <HomeRoleBaseSolSection />
+      {/* <HomeRoleBaseSolSection /> */}
 
       <HomeSolution />
 

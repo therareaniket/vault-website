@@ -24,7 +24,7 @@ const Footer = () => {
                                 <p className='text-18 text-md links-heading'>Quick Links</p>
 
                                 <ul className=''>
-                                    <li><Link className='text-16 text-rg' href="">About</Link></li>
+                                    <li><Link className='text-16 text-rg' href="/About">About</Link></li>
                                     <li><Link className='text-16 text-rg' href="">Product</Link></li>
                                     <li><Link className='text-16 text-rg' href="">Solutions</Link></li>
                                     <li><Link className='text-16 text-rg' href="">Resources</Link></li>

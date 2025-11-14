@@ -31,4 +31,61 @@
     background-color: var(--purple-light); 
 }
 
-.why-leads-list img { margin-bottom: 40px; }
+.why-leads-list img { margin-bottom: 40px; width: auto; height: 200px; }
+
+.abt-roles-headings { text-align: center; }
+.abt-roles-headings p { width: 700px; margin: 0 auto; }
+.abt-roles-wrapper { display: flex; gap: 30px; margin-top: 60px; }
+.role { width: 100%; transition: all 0.5s ease-in-out; padding: 20px; display: flex; flex-direction: column; justify-content: end; }
+.active-role { width: 1170px; height: calc(100% - 20px); }
+.click-roles .role { width: 400px; height: 210px; margin-bottom: 20px; }
+
+.cro-bg-img { background-image: url('https://rarepixelsdesign.com/wp-content/uploads/2025/11/cro-role.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.labs-bg-img { background-image: url('https://rarepixelsdesign.com/wp-content/uploads/2025/11/labs-role.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.sites-bg-img { background-image: url('https://rarepixelsdesign.com/wp-content/uploads/2025/11/sites-role.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.sponsor-bg-img { background-image: url('https://rarepixelsdesign.com/wp-content/uploads/2025/11/sponsor-role.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
+
+.abt-roles-wrapper .btn-bg { background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); }
+.abt-roles-wrapper .btn-bg:hover { transform: scale(1); }
+.role-content { padding: 20px; }
+.role-content .h4 { margin-bottom: 20px; }
+.click-roles .role, .click-roles .role-content { padding: 10px; }
+.click-roles .role-content { transform: translateY(16px); }
+.i-am-hidden-role { display: none; }
+
+.sytmtc-comp-headings { text-align: center; }
+.systematic-highlgts { padding-top: 100px; display: flex; align-items: center; justify-content: space-between; }
+.systematic-pointers { display: flex; gap: 30px; }
+.pointer-items:nth-child(2) { transform: translateY(-60px); }
+.pointer-item { width: 310px; height: 260px; padding: 20px; }
+.pointer-item:first-child { margin-bottom: 30px; }
+.pointer-item .h5 { width: 60%; }
+
+.security-list-wrapper { display: flex; align-items: center; justify-content: space-between; padding-right: 60px; }
+.security-headings { width: 600px; }
+.security-list { width: 600px; padding: 18px; display: flex; align-items: start; gap: 30px; }
+.security-list:not(:last-child) { margin-bottom: 14px; }
+.security-list:nth-child(even) { transform: translateX(60px); }
+.security-list:nth-child(1) { border-left: 6px solid #053EFF; }
+.security-list:nth-child(2) { border-left: 6px solid #FEAF06; }
+.security-list:nth-child(3) { border-left: 6px solid #F8791E; }
+.security-list:nth-child(4) { border-left: 6px solid #561FF9; }
+
+.compli-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%); }
+.compli-info { width: 470px; }
+
+.proven-clinical-headings .h3 { margin-bottom: 20px; }
+.info-paras { display: flex; align-items: flex-start; justify-content: space-between; }
+.info-paras p:first-child { width: 40%; }
+.info-paras p:last-child { width: 45%; }
+.innovation-result { display: flex; align-items: center; justify-content: space-between; margin-top: 60px; }
+.innov-list { width: 680px; }
+.innov-list:not(:last-child) { margin-bottom: 30px; }
+.innov-prog-bar { width: 100%; height: 6px; background-color: #B8B8B8; margin-top: 20px; }
+.added-prog { display: block; height: 6px; position: relative; background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%); }
+.forty-percnt { width: 40%; }
+.sixty-percnt { width: 60%; }
+.eighty-percnt { width: 80%; }
+.ninety-nine-percnt { width: 99%; }
+.hundred-percnt { width: 100%; }
+.added-prog img { position: absolute; top: 0; right: 0; transform: translate(50%,-120%); }
