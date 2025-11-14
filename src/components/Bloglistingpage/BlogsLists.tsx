@@ -164,13 +164,13 @@ export default function BlogLists() {
                                 <Link href="#" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/blog-4-final.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/blogspage/blog-3-final.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
-                                                    <p>Amit Sinha</p>
+                                                    <p>Dev Malhotra</p>
 
-                                                    <p>Data Visualization</p>
+                                                    <p>AI & Automation</p>
                                                 </div>
 
                                                 <p>27 October 2025</p>
@@ -180,9 +180,9 @@ export default function BlogLists() {
                                         </div>
 
                                         <div className="blog-glimps-cont">
-                                            <p className="h5">Smart TMF Management: A Day in the Life with DhatuVault</p>
+                                            <p className="h5">From Protocol to Archive: End-to-End Trial Oversight in Action</p>
 
-                                            <p>Follow a clinical operations lead through a typical day using DhatuVault’s TMF tools.</p>
+                                            <p>Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.</p>
                                         </div>
                                     </div>
                                 </Link>
@@ -224,13 +224,13 @@ export default function BlogLists() {
                                 <Link href="#" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/blog-3-final.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/blogspage/blog-4-final.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
-                                                    <p>Dev Malhotra</p>
+                                                    <p>Amit Sinha</p>
 
-                                                    <p>AI & Automation</p>
+                                                    <p>Data Visualization</p>
                                                 </div>
 
                                                 <p>27 October 2025</p>
@@ -240,9 +240,9 @@ export default function BlogLists() {
                                         </div>
 
                                         <div className="blog-glimps-cont">
-                                            <p className="h5">From Protocol to Archive: End-to-End Trial Oversight in Action</p>
+                                            <p className="h5">Smart TMF Management: A Day in the Life with DhatuVault</p>
 
-                                            <p>Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.</p>
+                                            <p>Follow a clinical operations lead through a typical day using DhatuVault’s TMF tools.</p>
                                         </div>
                                     </div>
                                 </Link>

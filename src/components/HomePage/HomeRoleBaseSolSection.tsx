@@ -218,7 +218,7 @@ const handleManualClick = (key: FeatureKey) => {
 
                 <button
                   onClick={() => handleManualClick("hub")}
-                  className={`int-hub-btn site-radius-106 text-16 text-rg link-padding relative z-[100]
+                  className={`int-hub-btn site-radius-106 text-16 text-rg link-padding relative z-[10]
                     ${active === "hub" ? "active-role-btn" : ""}`}
                 >
                   Integration Hub
@@ -228,7 +228,7 @@ const handleManualClick = (key: FeatureKey) => {
 
               <button
                 onClick={() => handleManualClick("blinding")}
-                className={`blinding-manage-btn site-radius-106 text-16 text-rg link-padding 
+                className={`blinding-manage-btn site-radius-106 text-16 text-rg link-padding relative
                   ${active === "blinding" ? "active-role-btn" : ""}`}
               >
                 Blinding Management
