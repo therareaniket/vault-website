@@ -30,12 +30,13 @@ const HomeTestimonial = () => {
             clientName: "Bhavesh Rao",
             clientDetail: "Compliance Officer, FinSecure Ltd.",
             text: "Data security and reliability have never been this effortless. Highly recommended!",
-            date: "21 Dec, 2025",
+            date: "06 Jan, 2025",
         },
     ];
 
     const [rotation, setRotation] = useState(0);
-    const [activeIndex, setActiveIndex] = useState(0);
+    // <-- Set initial activeIndex to 3 so the RIGHT point is active by default (top=0,left=1,bottom=2,right=3)
+    const [activeIndex, setActiveIndex] = useState(3);
     const [isMobile, setIsMobile] = useState(false);
 
     // Detect screen size
@@ -156,7 +157,7 @@ const HomeTestimonial = () => {
                         <div className="testimonial-btns">
                             <button className="prev" onClick={rotateCircleN}>
                                 <svg
-                                className="prev-arrow"
+                                    className="prev-arrow"
                                     width="15"
                                     height="20"
                                     viewBox="0 0 11 17"
@@ -174,7 +175,7 @@ const HomeTestimonial = () => {
 
                             <button className="next" onClick={rotateCircleC}>
                                 <svg
-                                className="next-arrow"
+                                    className="next-arrow"
                                     width="15"
                                     height="20"
                                     viewBox="0 0 11 17"

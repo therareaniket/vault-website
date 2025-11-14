@@ -58,7 +58,9 @@ const HomeBlogSection = () => {
               <div className="hm-blog-card-text hm-blog-card-text-1">
                 <div className="hm-blog-text-wrap">
                   <h3 className="h5 text-md">Dashboards That Drive Decisions</h3>
-                  <HmBlogArrow />
+                  <Link href="/BlogDetailPage">
+                    <HmBlogArrow />
+                  </Link>
                 </div>
                 <p className="text-18 text-rg">
                   How real-time insights improve trial oversight and streamline compliance.
@@ -88,7 +90,9 @@ const HomeBlogSection = () => {
                   <h3 className="h5 text-md">
                     5 Ways DhatuVault CTMS Reduces Study Time
                   </h3>
-                  <HmBlogArrow />
+                  <Link href="/BlogDetailPage">
+                    <HmBlogArrow />
+                  </Link>
                 </div>
                 <p className="text-18 text-rg">
                   Learn proven strategies for streamlining site activation, document management.
@@ -118,7 +122,9 @@ const HomeBlogSection = () => {
                   <h3 className="h5 text-md">
                     The Complete Guide to DhatuVault Integration
                   </h3>
-                  <HmBlogArrow />
+                  <Link href="/BlogDetailPage">
+                    <HmBlogArrow />
+                  </Link>
                 </div>
                 <p className="text-18 text-rg">
                   Explore how Vault unified integration hub connects EDC, eTMF, CRM.

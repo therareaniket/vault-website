@@ -45,6 +45,7 @@
 .site-radius-5 { border-radius: 5px; }
 .site-radius-10 { border-radius: 10px; }
 .site-radius-20 { border-radius: 20px; }
+.site-radius-106 { border-radius: 106px; }
 .btn-secondary{ background-color: var(--secondary); color: var(--white); }
 .section{ padding: 150px 0; }
 .text-grey{ color: var(--grey); }
@@ -251,7 +252,9 @@ header {
 .contact-menu-text{ display: none; }
 
 .dhatuVault-logo{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-
+.mega-menu {
+  overflow-y: auto;  /* enables vertical scroll */
+}
 
 
 /*  YOUR BASE BUTTON  */
@@ -927,4 +930,242 @@ background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%);
 
 .text-date-detail{ display: inline-block; padding-top: 30px ; }
 
-.hm-role-section-main{   }
+.hm-role-section-main{ position: relative; background-image: url('/images/HomePage/role-base-solution-section.webp'); width: 100%; height: 1095px; }
+
+.role-base-soln-text{ display: flex; justify-content: space-between; align-items: flex-start; }
+.role-base-soln-head{ width: 859px; }
+.role-base-soln-para{ width: 681px; }
+
+.role-base-sol-chart{ margin-top: 60px; }
+.role-sol-para{ width: 622px;  }
+.role-sol-para p{ padding: 15px 0 47px 0; }
+
+.role-base-sol-chart{ display: flex; align-items: flex-start; justify-content: space-between; }
+.role-chart-buttons{ display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 50px; z-index: 222; }
+.role-btn{ color: var(--black);  }
+.planning-btn{ position: relative; width: 112px; background-color: #C7B0D8; color: var(--black); }
+.planning-svg{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 57px; height: 56px; padding-top: 3px; padding-bottom: 5px; }
+
+.edl-templates-btn{position: relative; background-color: var(--purple-light); margin-top: 5px; z-index: 3;  }
+.edl-1-svg { position: absolute; left: -100%; top: -60%;  width: 200px; height: 169px; z-index: 1; padding-right: 5px; padding-bottom: 5px;   }
+.edl-2-svg { position: absolute; right: -100%; top: -60%;  width: 169px; height: 169px; padding-left: 5px; padding-bottom: 5px; }
+.mid-group{ display: flex; gap: 94px; margin-top: 10px; }
+
+
+.issue-tracking-btn{ background-color: #FFE2A5; z-index: 11111; }
+.etmf-viewer-btn { position: relative; background-color: #ACD9B1  ; } 
+
+.tracking-1-svg{ position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); width: 56px; height: 56px; }
+.tracking-2-svg { position: absolute; left: -60%; top: 50%; transform: translateY(-50%); width: 78px; height: 78px; }
+.tracking-3-svg { position: absolute; right: -60%; top: 50%; transform: translateY(-50%); width: 78px; height: 78px; }
+.tracking-4-svg { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 55px; height: 70px; padding: 5px 0; }
+
+.int-hub-btn{ background-color: #FCCFAE; }
+
+.blinding-manage-btn{ position: relative; background-color: #DFA3FB; margin-top: 16px; z-index: 100; } 
+
+.blinding-1-svg { position: absolute; left: -58%; bottom: -30%; width: 134px; height: 134px; z-index: 0;  }
+.blinding-2-svg { position: absolute; right: -58%; bottom: -30%; width: 134px; height: 134px; }
+
+.btn-bg.btn-secondary {
+  background: var(--hero-bg); /* your purple color */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow:
+    inset 0 0 8px rgba(255, 255, 255, 0.05),
+    0 0 15px rgba(123, 47, 247, 0.4); /* purple glow */
+  transition: all var(--anim-time) var(--anim-ease);
+  position: relative;
+  overflow: hidden;
+}
+
+/* BORDER LIGHT EFFECT */
+.btn-bg.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--angle),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.15) 10%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.05) 60%,
+    rgba(255, 255, 255, 0.5) 90%,
+    rgba(255, 255, 255, 0.2)
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: --angle var(--anim-time) var(--anim-ease);
+}
+
+.btn-bg.btn-secondary {
+  background: var(--secondary); /* your green color */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow:
+    inset 0 0 8px rgba(255, 255, 255, 0.05),
+    0 0 15px rgba(111, 176, 24, 0.4); /* green glow */
+  transition: all var(--anim-time) var(--anim-ease);
+  position: relative;
+  overflow: hidden;
+}
+
+/* BORDER LIGHT EFFECT */
+.btn-bg.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--angle),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.15) 10%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.05) 60%,
+    rgba(255, 255, 255, 0.5) 90%,
+    rgba(255, 255, 255, 0.2)
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: --angle var(--anim-time) var(--anim-ease);
+}
+
+/* REFLECTION STREAK */
+.btn-bg.btn-secondary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.25;
+  transform: translateX(-20%);
+  transition: all var(--anim-time) var(--anim-ease);
+}
+
+/* Hover State */
+.btn-bg.btn-secondary:hover {
+  transform: scale(0.975);
+
+}
+
+.btn-bg.btn-secondary:hover::before {
+  --angle: -120deg;
+}
+
+.btn-bg.btn-secondary:hover::after {
+  opacity: 0.5;
+  transform: translateX(30%);
+}
+
+/* Active (Click) State */
+.btn-bg.btn-secondary:active {
+  transform: scale(0.96);
+  box-shadow:
+    0 0 25px rgba(111, 176, 24, 0.7), /* stronger green glow */
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+.role-chart-buttons button {
+  cursor: pointer;
+}
+
+/* FADE + SLIDE DOWN */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(-12px);
+  animation: fadeSlide 0.6s ease forwards;
+}
+
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(-12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ACTIVE BUTTON COLORS (MATCH YOUR HOVER COLORS) */
+.planning-btn.active-role-btn {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.edl-templates-btn.active-role-btn {
+  background-color: #053EFF;
+  color: #fff;
+}
+
+.issue-tracking-btn.active-role-btn {
+  background-color: #FEAF06;
+  color: #fff;
+}
+
+.etmf-viewer-btn.active-role-btn {
+  background-color: #189525;
+  color: #fff;
+}
+
+.int-hub-btn.active-role-btn {
+  background-color: #F8791E;
+  color: #fff;
+}
+
+.blinding-manage-btn.active-role-btn {
+  background-color: #A700F4;
+  color: #fff;
+}
+
+.role-section-model{ position: absolute; right: 550px; top: 435px;  z-index: 1; }
+
+.blog-section-detail-wrap{  width: 1200px; margin: 0 auto; padding-top: 69px; }
+.blog-section-dtae-text{  display: flex; align-items: center; justify-content: space-between; }
+.blog-section-detail-wrap h1{ padding: 12px 0; }
+
+.blog-detail-hero-img{  left: 0; margin-top: 80px; padding-bottom: 150px; transform: translateX(-10%); }
+.blog-detail-image-wrap img{ position: relative; left: 0; }
+
+.blog-detail-cards{ width: 1152px; margin: 0 auto; }
+.blog-detail-cards h2{ padding-bottom: 30px; }
+.blog-detail-section-cards{ display: flex; align-items: center; justify-content: space-between;  margin: 0 auto;  }
+
+.blog-detail-section-card-1, .blog-detail-section-card-2{ transform: none; }
+
+.blog-detail-questions-section{ display: flex; justify-content: center; align-items: flex-start; gap: 30px; width: 1260px; margin: 0 auto;  }
+.blog-detail-questions{ width: 1200px; }
+
+.blog-detail-para-padding{ padding-top: 10px; padding-bottom: 30px; }
+.blog-btn{ background-color: var(--light-grey); border-radius: 100px; }
+.blg-detail-icons{ display: flex; flex-direction: column; gap: 20px; } 
+
+.blog-breadcrumb-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 84px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.blog-breadcrumb-wrap nav {
+  width: 100%;
+}
+
+[data-slot="breadcrumb-list"] {
+  flex-wrap: nowrap !important;   /* force single line */
+}
+
+[data-slot="breadcrumb-page"] {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 800px;  /* adjust based on design */
+}
+.nav-item.active {
+  color: #000 !important;
+}
