@@ -14,7 +14,7 @@ export default function About () {
 
             <WhyVaultLead />
 
-            {/* <ProvenClinicals /> */}
+            <ProvenClinicals />
 
             <SystematicCompliance />
 

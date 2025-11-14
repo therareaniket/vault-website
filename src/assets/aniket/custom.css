@@ -71,7 +71,7 @@
 .security-list:nth-child(3) { border-left: 6px solid #F8791E; }
 .security-list:nth-child(4) { border-left: 6px solid #561FF9; }
 
-.compli-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%); }
+.compli-icon, .list-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%); }
 .compli-info { width: 470px; }
 
 .proven-clinical-headings .h3 { margin-bottom: 20px; }
@@ -89,3 +89,58 @@
 .ninety-nine-percnt { width: 99%; }
 .hundred-percnt { width: 100%; }
 .added-prog img { position: absolute; top: 0; right: 0; transform: translate(50%,-120%); }
+
+
+/* SOLUTIONS PAGE */
+
+.strmlnd-ops-headings { text-align: center; }
+.opertion-lists { padding-top: 60px; display: flex; justify-content: space-between; }
+.opertion-list { width: 350px; height: 350px; padding: 20px 0 0 20px; }
+.opert-list-title { position: relative;  }
+.opert-list-title .h5 { width: 280px; padding-top: 40px; position: relative; z-index: 2; }
+.opert-list-title .list-num { font-size: 200px; line-height: 160px; position: absolute; top: 0; right: 0; color: #F2F2F2; z-index: 1; }
+
+.trail-ovrsgt-headings { width: 560px; }
+.trail-ovrsgt-headings .h6 { width: 80%; }
+.ovrsgt-lists { padding-top: 60px; display: flex; justify-content: space-between; }
+.ovrsgt-list { width: 490px; height: 500px; display: flex; flex-direction: column; justify-content: space-between; }
+.ovrsgt-list-titles { width: 90%; padding-top: 30px; }
+.ovrsgt-list:nth-child(2) { transform: translateY(-100px); }
+.ovrsgt-list:nth-child(3) { transform: translateY(calc(-100px * 2)); }
+
+.features-lab-headings { width: 780px; text-align: center; margin: 0 auto; }
+.features-lab-list-wrapper { display: flex; align-items: start; justify-content: space-between; padding-top: 60px; }
+.featu-lab-butns { height: 350px; border-right: 2px solid rgba(126, 126, 126, 0.25); }
+.feat-lab-btn { width: 370px; display: block; padding: 10px 0; text-align: left; padding-left: 3px; cursor: pointer; }
+.feat-lab-btn.active-feat-btn { color: var(--secondary-purple-bluish); border-right: 4px solid var(--secondary-purple-bluish); transform: translateX(3px); padding-left: 0px; cursor: auto; }
+.featu-lab-data { width: 1190px; height: 350px; background-color: var(--blue-light); } 
+.featu-lab-item { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 20px; text-align: center; }
+.feat-lab-mob-acrdn { display: none; }
+
+section.trial-performance { padding-top: 0; }
+.trail-prfmnc-headings { width: 820px; text-align: center; margin: 0 auto; }
+.performace-glance { padding-top: 60px; }
+.glance-list { width: 375px; height: 160px; padding: 20px; }
+.glanc-list-icons { display: flex; align-items: center; justify-content: space-between; }
+.glanc-list-icons .h4 { margin-bottom: 0; }
+.glace-content .h6 { margin-bottom: 0px; margin-top: 20px; }
+.glace-content p + p { color: var(--grey); }
+.glance-lists { display: flex; align-items: center; justify-content: space-between; }
+
+.blog-tablist { border: 1px solid rgb(199, 199, 199); padding: 6px; margin-bottom: 50px; width: max-content; }
+.blog-category-select { padding: 8px 20px; }
+.blog-category-select[data-state="active"] { border-radius: 8px; background-color: var( --secondary-purple-bluish) !important; color: white !important; }
+
+.the-blog { width: 490px; height: 410px; }
+.blog-image { position: relative; }
+.blog-author { width: 100%; padding: 20px; padding-bottom: 10px; position: absolute; bottom: 0; }
+.blog-author.btn-bg  { border-radius: 0; border: none; background: rgba(129, 129, 129, 0.5); backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(6px); }
+.blog-author.btn-bg:hover { transform: scale(1); }
+.name-designation { display: flex; justify-content: space-between; margin-bottom: 8px; }
+
+.blog-image .hm-blog-arrow { position: absolute; top: 10px; right: 10px; }
+.blog-glimps-cont { padding-top: 40px; }
+
+.blog-list { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 60px; }
+
+.foot-quick-links a:hover, .contact-infolinks a:hover { color: var(--secondary); }

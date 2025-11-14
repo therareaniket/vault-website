@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function SystematicCompliance () {
     return(
         <>
-            <section className="section bg-black text-white mt-[100px]">
+            <section className="section bg-black text-white">
                 <div className="container">
                     <div className="sytmtc-comp-headings">
                         <h2 className="h3">Compliance Made Systematic</h2>

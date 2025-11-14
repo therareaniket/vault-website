@@ -7,11 +7,14 @@ import "@/assets/aniket/responsive.css"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+export const viewport = {
+    width: "device-width",
+    initialScale: 1,
+};
 
 export const metadata: Metadata = {
     title: "DhatuVault | Document Driven, Smarter, Scalable Trials",
     description: "Vault simplifies clinical trial management—secure, automated, globally compliant, effortlessly scalable, and built.",
-    viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {

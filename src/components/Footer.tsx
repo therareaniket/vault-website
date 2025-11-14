@@ -23,11 +23,11 @@ const Footer = () => {
                             <div className='quick-links'>
                                 <p className='text-18 text-md links-heading'>Quick Links</p>
 
-                                <ul className=''>
+                                <ul className='foot-quick-links'>
                                     <li><Link className='text-16 text-rg' href="/About">About</Link></li>
                                     <li><Link className='text-16 text-rg' href="">Product</Link></li>
-                                    <li><Link className='text-16 text-rg' href="">Solutions</Link></li>
-                                    <li><Link className='text-16 text-rg' href="">Resources</Link></li>
+                                    <li><Link className='text-16 text-rg' href="/Solutions">Solutions</Link></li>
+                                    <li><Link className='text-16 text-rg' href="/Blogs">Resources</Link></li>
                                     <li><Link className='text-16 text-rg' href="">Security & Compliance </Link></li>
                                 </ul>
                             </div>
@@ -41,7 +41,7 @@ const Footer = () => {
                                     </li>
 
                                     <li>
-                                        <p className='text-16 text-rg'><span className='icon-footer-contact-email'></span><Link href="mailto:info@dhatucomply.com">info@dfoldsvault.com</Link> </p>
+                                        <p className='text-16 text-rg'><span className='icon-footer-contact-email'></span><Link href="mailto:enquire@dhatuvault.com">enquire@dhatuvault.com</Link> </p>
                                     </li>
                                 </ul>
                             </div>

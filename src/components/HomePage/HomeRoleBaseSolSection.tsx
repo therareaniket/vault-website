@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const HomeRoleBaseSolSection = () => {
+
   const textData = {
     planning: {
       title: "Planning",
@@ -23,31 +24,32 @@ const HomeRoleBaseSolSection = () => {
     },
     hub: {
       title: "Integration Hub",
-      desc: "Break down silos with seamless connections between Vault and your clinical systems. The Integration Hub automates data flow across EDC, CTMS, and other platforms, ensuring consistency and accuracy. With unified insights, teams can work smarter and make data-driven decisions."
+      desc: "Break down silos with seamless connections between DhatuVault and your clinical systems. The Integration Hub automates data flow across EDC, CTMS, and other platforms, ensuring consistency and accuracy. With unified insights, teams can work smarter and make data-driven decisions."
     },
     blinding: {
       title: "Blinding Management",
       desc: "Protect study integrity through secure, role-based blinding workflows. The Blinding Management feature ensures sensitive data remains confidential and only accessible to authorized users. Maintain compliance and minimize risk while keeping your trial operations transparent."
     },
-  };
+  } as const;
 
-  const buttonOrder = [
+  const buttonOrder: FeatureKey[] = [
     "planning",
     "edl",
     "issue",
     "etmf",
     "hub",
-    "blinding"
+    "blinding",
   ];
 
-  const [active, setActive] = useState("planning");
+  const [active, setActive] = useState<FeatureKey>("planning");
   const [animKey, setAnimKey] = useState(0);
   const [pauseAutoplay, setPauseAutoplay] = useState(false);
+  
 
   // refs for safe DOM access
-  const containerRef = useRef(null); // .role-chart-buttons
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef(null); // .hm-role-section-main
-  const observerRef = useRef(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
   const [sectionVisible, setSectionVisible] = useState(false);
 
   // 🔄 Autoplay every 3 seconds (keeps your current timing)
@@ -69,9 +71,10 @@ const HomeRoleBaseSolSection = () => {
   useEffect(() => {
     const el = sectionRef.current;
     if (!el || typeof IntersectionObserver === "undefined") {
-      setSectionVisible(true); // fallback
-      return;
-    }
+  // Defer the state update → no more ESLint error
+  Promise.resolve().then(() => setSectionVisible(true));
+  return;
+}
 
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -109,23 +112,30 @@ const HomeRoleBaseSolSection = () => {
   }, [active, sectionVisible]);
 
   // Manual click handler (pauses autoplay briefly)
-  const handleManualClick = (key) => {
+
+type FeatureKey = keyof typeof textData;
+
+const handleManualClick = (key: FeatureKey) => {
     setActive(key);
     setAnimKey(prev => prev + 1);
-
+  
     setPauseAutoplay(true);
     setTimeout(() => setPauseAutoplay(false), 1000);
-
-    // also immediately center on manual click if responsive and section visible
+  
     setTimeout(() => {
       if (containerRef.current && window.innerWidth <= 991 && sectionVisible) {
         const btn = containerRef.current.querySelector(".active-role-btn");
         if (btn) {
-          btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+          btn.scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest"
+          });
         }
       }
     }, 80);
   };
+  
 
   return (
     <section ref={sectionRef} className="hm-role-section-main section">
@@ -135,7 +145,7 @@ const HomeRoleBaseSolSection = () => {
           <div className="role-base-soln-text">
             <h2 className="role-base-soln-head text-md">Powering Smarter Clinical Operations</h2>
             <p className="role-base-soln-para h6 text-rg">
-              Explore Vault’s core strengths through a visual showcase of its most impactful features.
+              Explore DhatuVault’s core strengths through a visual showcase of its most impactful features.
               From intelligent automation to regulatory-grade compliance, each capability is designed to streamline workflows.
             </p>
           </div>
@@ -208,7 +218,7 @@ const HomeRoleBaseSolSection = () => {
 
                 <button
                   onClick={() => handleManualClick("hub")}
-                  className={`int-hub-btn site-radius-106 text-16 text-rg link-padding 
+                  className={`int-hub-btn site-radius-106 text-16 text-rg link-padding relative z-[100]
                     ${active === "hub" ? "active-role-btn" : ""}`}
                 >
                   Integration Hub
@@ -236,77 +246,3 @@ const HomeRoleBaseSolSection = () => {
 };
 
 export default HomeRoleBaseSolSection;
-
-
-
-
-
-
-// "use client";
-// import Image from "next/image";
-// import Link from "next/link";
-
-// const HomeRoleBaseSolSection = () => {
-//   return (
-//     <section className='hm-role-section-main section'>
-//       <div className="container">
-//         <div className="role-base-sol-wrapper">
-//           <div className="role-base-soln-text">
-//             <h2 className="role-base-soln-head text-md">Powering Smarter Clinical Operations</h2>
-
-//             <p className="role-base-soln-para h6 text-rg">Explore Vault’s core strengths through a visual showcase of its most impactful features. From intelligent automation to regulatory-grade compliance, each capability is designed to streamline workflows.</p>
-//           </div>
-
-//           <div className="role-base-sol-chart">
-//             <div className="role-sol-para">
-//               <h3 className="h4 text-sb">Planning</h3>
-
-//               <p className="text-rg h6">Effortlessly organize your study milestones, timelines, and deliverables in one place. The Planning module ensures visibility across all trial activities. With proactive insights, you can plan smarter and keep studies on track from start to finish.</p>
-
-//               <Link href="#" title="Book a Demo" className="role-btn btn-padding btn-bg btn-secondary site-radius-10 text-md text-18">
-//                 Book a Demo
-//               </Link>
-//             </div>
-
-//             <div className="role-chart-buttons">
-//               <button className='planning-btn site-radius-106 text-16 text-rg link-padding'>Planning
-//                 <Image className="planning-svg" src="/images/HomePage/role-svg-1.svg" alt="svg-1" width={56} height={57}></Image>
-//               </button>
-
-//               <button className='edl-templates-btn site-radius-106 text-16 text-rg link-padding'>EDL Templates
-//                 <Image className="edl-1-svg" src="/images/HomePage/role-svg-2.svg" alt="svg-1" width={80} height={168}></Image>
-
-//                 <Image className="edl-2-svg" src="/images/HomePage/role-svg-3.svg" alt="svg-1" width={80} height={168}></Image>
-//               </button>
-
-//               <div className='mid-group'>
-//                 <button className='issue-tracking-btn site-radius-106 text-16 text-rg link-padding'>Issue Tracking</button>
-
-//                 <button className='etmf-viewer-btn site-radius-106 text-16 text-rg link-padding'>eTMF Viewer
-//                   <Image className="tracking-1-svg" src="/images/HomePage/role-svg-6.svg" alt="svg-1" width={1} height={56}></Image>
-
-//                 <Image className="tracking-2-svg" src="/images/HomePage/role-svg-7.svg" alt="svg-1" width={1} height={78}></Image>
-
-//                 <Image className="tracking-3-svg" src="/images/HomePage/role-svg-9.svg" alt="svg-1" width={1} height={78}></Image>
-
-//                 <Image className="tracking-4-svg" src="/images/HomePage/role-svg-8.svg" alt="svg-1" width={1} height={56}></Image>    
-//                 </button>
-
-//                 <button className='int-hub-btn site-radius-106 text-16 text-rg link-padding'>Integration Hub</button>
-//               </div>
-
-//               <button className='blinding-manage-btn site-radius-106 text-16 text-rg link-padding'>Blinding Management
-
-//                 <Image className="blinding-1-svg" src="/images/HomePage/role-svg-4.svg" alt="svg-1" width={82} height={137}></Image>
-
-//                 <Image className="blinding-2-svg" src="/images/HomePage/role-svg-5.svg" alt="svg-1" width={82} height={137}></Image>  
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default HomeRoleBaseSolSection

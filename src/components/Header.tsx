@@ -63,7 +63,7 @@ const Header = () => {
 						</li>
 
 						<li className="h2 text-sb">
-							<Link href="#" onClick={closeMenu}>Solutions</Link><Image src="/images/Header/arrowIcon.svg" alt="linkedin" width={32} height={32} ></Image>
+							<Link href="/Solutions" onClick={closeMenu}>Solutions</Link><Image src="/images/Header/arrowIcon.svg" alt="linkedin" width={32} height={32} ></Image>
 						</li>
 
 						<li className="h2 text-sb">
@@ -71,7 +71,7 @@ const Header = () => {
 						</li>
 
 						<li className="h2 text-sb">
-							<Link href="/Blog" onClick={closeMenu}>Blog</Link><Image src="/images/Header/arrowIcon.svg" alt="linkedin" width={32} height={32} ></Image>
+							<Link href="/Blogs" onClick={closeMenu}>Blog</Link><Image src="/images/Header/arrowIcon.svg" alt="linkedin" width={32} height={32} ></Image>
 						</li>
 
 						<li className="h2 text-sb ">
