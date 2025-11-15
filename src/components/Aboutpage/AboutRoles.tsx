@@ -41,7 +41,7 @@ export default function AboutRoles() {
 
     return (
         <>
-            <section className="section" style={{ paddingTop: 0 }}>
+            <section className="section">
                 <div className="container">
                     <div className="abt-roles-headings">
                         <h2 className="h3">Built for Every Role</h2>

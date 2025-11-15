@@ -18,7 +18,7 @@ export default function WhyVaultLead() {
                             <Image src='/images/aboutpage/why-leads-compliance.webp' alt="" width={261} height={182}></Image>
 
                             <div className="leads-list-text">
-                                <h3 className="h5 text-md">Compliance-First Architecture </h3>
+                                <h3 className="h5 text-md">Compliance-First Architecture</h3>
 
                                 <p className="text-18-ani">Built for global regulatory standards, Vault ensures your trial data is secure, auditable, and inspection-ready.</p>
                             </div>
@@ -28,7 +28,7 @@ export default function WhyVaultLead() {
                             <Image src='/images/aboutpage/why-leads-ai-automation.webp' alt="" width={307} height={201}></Image>
 
                             <div className="leads-list-text">
-                                <h3 className="h5 text-md">AI-Powered Automation</h3>
+                                <h3 className="h5 text-md">Powered by AI Agents</h3>
 
                                 <p className="text-18-ani">DhatuVault&apos;s AI-powered automation classifies, validates, and manages trial documents reducing manual effort.</p>
                             </div>

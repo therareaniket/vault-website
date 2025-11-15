@@ -90,6 +90,41 @@
 .hundred-percnt { width: 100%; }
 .added-prog img { position: absolute; top: 0; right: 0; transform: translate(50%,-120%); }
 
+.workflow-headings { width: 570px; }
+.wf-tablist { width: 680px; height: 100px; display: flex; align-items: start; justify-content: space-between;}
+.wf-tablist:not(:last-child) { margin-bottom: 20px; }
+.wf-tab-info { width: 590px; }
+
+.workflow-wrapper { display: flex; justify-content: space-between; align-items: flex-end; }
+
+.wf-tab-icon { 
+    width: 52px; 
+    height: 52px; 
+    position: relative; 
+    background-color: var(--white); 
+    font-size: 24px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    box-shadow: 0 5px 20px 4px rgba(0, 0, 0, 0.06);
+}
+.wf-tablist:not(:last-child) .wf-tab-icon::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 40px;
+    background-color: var(--light-grey);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    border-radius: 3px;
+}
+
+
+.wf-tablist.active-tablist .wf-tab-icon, .wf-tablist.active-tablist .wf-tab-icon::before { background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%); color: var(--white); }
+.wf-tablist.active-tablist .wf-tab-info .h5 { color: var(--secondary-purple-bluish); }
+
 
 /* SOLUTIONS PAGE */
 
