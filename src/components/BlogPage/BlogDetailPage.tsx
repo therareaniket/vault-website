@@ -27,7 +27,7 @@ const BlogDetailPage = () => {
                             <BreadcrumbSeparator />
 
                             <BreadcrumbItem>
-                                <BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
+                                <BreadcrumbLink href="/Blogs">Blogs</BreadcrumbLink>
                             </BreadcrumbItem>
 
                             <BreadcrumbSeparator />

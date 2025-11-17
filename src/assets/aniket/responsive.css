@@ -82,6 +82,9 @@
     .innov-list { padding-right: 40px; }
     .the-blog { width: 400px; }
 
+    .wf-tab-info { width: 530px; }
+    .wf-tablist { width: 620px; }
+
 
 }
 
@@ -134,6 +137,12 @@
     .forty-percnt { width: 48%; }
     .the-blog { width: 340px; }
 
+    /* .wf-tablist {  } */
+    .workflow-wrapper { gap: 30px; }
+    .wf-tablist { width: 560px; }
+    .wf-tab-info { width: 470px; }
+    .wf-tab-info .h5 { font-size: 22px; line-height: 26px; }
+    .wf-tablist:not(:last-child) { margin-bottom: 16px; }
 
 }
 
@@ -182,6 +191,11 @@
     .forty-percnt { width: 60%; }
 
     .the-blog { width: 460px; } 
+
+    .wf-tab-info { width: 390px; }
+    .wf-tablist { width: 470px; }
+    .wf-tablist:not(:last-child) { margin-bottom: 22px; }
+    .workflow-wrapper { align-items: center; }
 
 
 }
@@ -269,6 +283,16 @@
 
     .the-blog { width: 380px; height: 390px; } 
 
+    .workflow-wrapper { display: none; }
+    .workflow-accordion { display: flex; }
+    .workflow-accordion [data-state="open"] .wf-tab-icon { background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%); color: var(--white); }
+    .workflow-accordion [data-state="open"] .accord-btn-text .h5 { color: var(--secondary-purple-bluish); }
+    .wf-tab-icon { width: 40px;  height: 40px; font-size: 18px; }
+    .accord-btn-text .h5 { margin-bottom: 0; transition: color 0.5s ease; }
+    .wf-accord-item { width: 100%; padding: 10px; border-radius: 10px; transition: all 0.5s ease; margin-top: 20px; border: 1px solid rgb(201, 201, 201); }
+    .wf-accrd-tab-info { display: flex; align-items: start; justify-content: space-between; margin-top: 20px; }
+    .wf-accrd-tab-info p { width: 300px; padding-left: 50px; }
+    .wf-accrd-tab-info img { width: 400px; height: 200px; object-fit: contain; }
 }
 
 @media screen and (max-width: 839px) {
@@ -327,6 +351,9 @@
     .blog-category-select { padding: 10px; margin-right: 5px; }
     .the-blog { width: 280px; height: 340px; }
     .blog-glimps-cont .h5 { font-size: 18px; line-height: 26px; }
+
+    .wf-accrd-tab-info p { width: 260px; padding-left: 30px; }
+    .wf-accrd-tab-info img { width: 300px; height: 180px; }
 }
 
 @media screen and (max-width: 639px) {
@@ -367,8 +394,12 @@
 
     .the-blog { width: 100%; height: max-content; }
 
-    /* .blog-tablist { width: 100%; display: flex; flex-direction: column; }
-    .blog-tablist button { text-align: left; } */
+    .workflow-headings { width: 100%; }
+    .wf-accrd-tab-info { flex-direction: column; align-items: center; gap: 20px; }
+    .wf-accrd-tab-info p { width: 100%; }
+    .accord-btn-text .h5 { font-size: 19px; line-height: 28px; }
+    .wf-accrd-tab-info p { padding-left: 50px; }
+
  
 }
 
@@ -405,6 +436,9 @@
     .innov-list { width: 400px; }
     .forty-percnt { width: 60%; }
 
+    .wf-accrd-tab-info { margin-top: 10px; }
+    .accord-btn-text .h5 { text-align: left; max-width: 350px;}
+
 }
 
 @media screen and (max-width: 480px) {
@@ -416,7 +450,10 @@
 
     .feat-lab-btn { width: 180px; }
     .feat-lab-btn .h5 i { display: none; }
-
+    .wf-tab-icon { display: none; }
+    .workflow-accordion, .wf-accrd-tab-info p { padding: 0; }
+    .wf-accord-item { padding: 15px; }
+    
 }
 
 @media screen and (max-width: 459px) {
