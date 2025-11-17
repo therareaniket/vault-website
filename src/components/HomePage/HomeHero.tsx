@@ -1,5 +1,7 @@
 "use client";   
+
 import Image from "next/image";
+import Link from "next/link";
 
 const HomeHero = () => {
     return (
@@ -19,9 +21,9 @@ const HomeHero = () => {
                             </p>
 
                             <div className="home-hero-buttons">
-                                <button className="btn-bg btn-padding text-md text-18">Book a Demo</button>
+                                <Link href="#" className="btn-bg btn-padding text-md text-18">Book a Demo</Link>
 
-                                <button className="btn-padding explore-prod-btn text-md text-18 site-radius-10 btn-secondary">Explore Product</button>
+                                <Link href="#" className="btn-padding explore-prod-btn text-md text-18 site-radius-10 btn-secondary">Explore Product</Link>
                             </div>
                         </div>
 
