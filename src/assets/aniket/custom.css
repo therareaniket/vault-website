@@ -181,3 +181,9 @@ section.trial-performance { padding-top: 0; }
 .blog-list { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 60px; }
 
 .foot-quick-links a:hover, .contact-infolinks a:hover { color: var(--secondary); }
+
+.assrnc-headings { width: 1320px; text-align: center; margin: 0 auto; }
+.assrnc-compli-tabs-wrapper { flex-direction: row; }
+.assrnc-compli-tablist { min-width: max-content; height: 100%; opacity: 1; flex-direction: column; background-color: none; }
+.assrnc-compli-tab { width: 100%; justify-content: start; margin-bottom: 20px; }
+.assrnc-compli-tab .h5 { margin-bottom: 0; }

@@ -40,7 +40,7 @@ const ContactSection = () => {
             <div className="info-list-row">
 
             <div className="contact-info-card contact-phone-card">
-             <div className="contact-call-icon"><span className="icon-add_call"></span></div>
+             <div className="contact-call-icon"><span className="icon-contact-page-call"></span></div>
               <p className="label text-18 text-rg text-grey">Phone Number</p>
               <p className="value text-18 text-rg">+1 (555) 123-4567</p>
             </div>
