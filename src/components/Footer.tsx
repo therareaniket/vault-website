@@ -25,10 +25,10 @@ const Footer = () => {
 
                                 <ul className='foot-quick-links'>
                                     <li><Link className='text-16 text-rg' href="/About">About</Link></li>
-                                    <li><Link className='text-16 text-rg' href="">Product</Link></li>
+                                    {/* <li><Link className='text-16 text-rg' href="">Product</Link></li> */}
                                     <li><Link className='text-16 text-rg' href="/Solutions">Solutions</Link></li>
+                                    <li><Link className='text-16 text-rg' href="/Security&Compliance">Security & Compliance </Link></li>
                                     <li><Link className='text-16 text-rg' href="/Blogs">Resources</Link></li>
-                                    <li><Link className='text-16 text-rg' href="">Security & Compliance </Link></li>
                                 </ul>
                             </div>
 

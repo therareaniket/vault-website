@@ -59,18 +59,19 @@
 header {
   width: 100%;
   padding: 20px 0;
+  transition: transform 0.35s ease;
   /* background-color: var(--hero-bg); */
   /* background-color: #481AD1; */
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1001;
-  background: linear-gradient(
-    to bottom,
-    #481AD1 10%,
-    #441AC2 90%
-  );
+  z-index: 10;
+  background: linear-gradient( to bottom, #481AD1 10%, #441AC2 90% );
 }
+.header-hide {
+	transform: translateY(-100%);
+}
+.contact-menu-list img{ display: none; }
 
 .Header-main {
   position: relative;
@@ -79,8 +80,7 @@ header {
   align-items: center;
 }
 
-
-   /* MENU ICON */
+/* MENU ICON */
 
 .menu-icon {
   /* position: relative; */
@@ -174,7 +174,7 @@ header {
   pointer-events: none;
   transform: translateY(-10px); /* small slide-in */
   transition: all 0.35s ease;
-  z-index: 999;
+  z-index: 9;
   padding-top: calc(80px + 40px); 
 }
 
@@ -421,7 +421,7 @@ header {
   align-items: center;
   position: relative;
   gap: 100px;
-  z-index: 99; 
+  z-index: 5; 
   height: calc(100vh - 90px);
 }
 
@@ -904,7 +904,7 @@ background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%);
   justify-content: flex-end;
   gap: 16px;
   margin-top: 60px;
-  z-index: 5;
+  z-index: 4;
 }
 
 .prev,
@@ -941,7 +941,7 @@ background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%);
 .role-sol-para p{ padding: 15px 0 47px 0; }
 
 .role-base-sol-chart{ display: flex; align-items: flex-start; justify-content: space-between; }
-.role-chart-buttons{ display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 50px; z-index: 222; }
+.role-chart-buttons { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 50px; z-index: 6; }
 .role-btn{ color: var(--black);  }
 .planning-btn{ position: relative; width: 112px; background-color: #C7B0D8; color: var(--black); }
 .planning-svg{ position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 57px; height: 56px; padding-top: 3px; padding-bottom: 5px; }
@@ -1271,19 +1271,3 @@ background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%);
 .contact-card-3 .contact-cust-tag-new, .contact-card-4 .contact-cust-tag-new{ display: none; }
 .contact-card-3 { padding-top: 53px; }
 .contact-card-4 { padding-top: 53px; }
-
-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 9999999;
-	transition: transform 0.35s ease;
-}
-
-.header-hide {
-	transform: translateY(-100%);
-}
-
-.contact-menu-list img{ display: none; }
-

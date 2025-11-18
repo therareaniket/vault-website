@@ -104,7 +104,7 @@ const Header = () => {
 						</li>
 
 						<li className="h2 text-sb">
-							<Link href="#" onClick={closeMenu}>Security & Compliance</Link>
+							<Link href="/Security&Compliance" onClick={closeMenu}>Security & Compliance</Link>
 							<Image src="/images/Header/arrowIcon.svg" alt="linkedin" width={32} height={32} />
 						</li>
 
@@ -114,7 +114,7 @@ const Header = () => {
 						</li>
 
 						<li className="h2 text-sb contact-menu-list">
-							<Link href="#" onClick={closeMenu} className="contact-menu-text">Contact</Link>
+							<Link href="/Contact" onClick={closeMenu} className="contact-menu-text">Contact</Link>
 							<Image src="/images/Header/arrowIcon.svg" alt="linkedin" width={32} height={32} />
 						</li>
 					</ul>
