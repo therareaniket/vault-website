@@ -1,6 +1,8 @@
 "use client";
 import React from 'react'
 import Image from "next/image";
+import CountUp from '../Animations/CountUp';
+
 
 
 const HomeStatistic = () => {
@@ -29,35 +31,36 @@ const HomeStatistic = () => {
                             <div className='stats-path-line'>
                                 <div className='stats-card-1 site-radius-20'>
                                     <div className="stats-card-1-text">
-                                        <h3 className='h2 text-sb'>85%</h3>
+                                        <h3 className='h2 text-sb'><CountUp end={85} />%</h3>
+
                                         <p className='h6 text-rg text-grey'>Faster Document Turnaround</p>
                                     </div>
                                 </div>
 
                                 <div className='stats-card-2 site-radius-20'>
                                     <div className="stats-card-2-text stats-card-1-text">
-                                        <h3 className='h2 text-sb'>40%</h3>
+                                        <h3 className='h2 text-sb'><CountUp end={40} />%</h3>
                                         <p className='h6 text-rg text-grey'>Lower Compliance Risk</p>
                                     </div>
                                 </div>
 
                                 <div className='stats-card-3 site-radius-20'>
                                     <div className="stats-card-3-text stats-card-1-text">
-                                        <h3 className='h2 text-sb'>60%</h3>
+                                        <h3 className='h2 text-sb'><CountUp end={60} />%</h3>
                                         <p className='h6 text-rg text-light-grey'>Higher TMP Completeness rate metrics</p>
                                     </div>
                                 </div>
 
                                 <div className='stats-card-4 site-radius-20'>
                                     <div className="stats-card-4-text stats-card-1-text">
-                                        <h3 className='h2 text-sb'>99.9%</h3>
+                                        <h3 className='h2 text-sb'><CountUp end={99.9} />%</h3>
                                         <p className='h6 text-rg text-grey'>System Uptime Trial Operations</p>
                                     </div>
                                 </div>
 
                                 <div className='stats-card-5 site-radius-20'>
                                     <div className="stats-card-5-text stats-card-1-text">
-                                        <h3 className='h2 text-sb'>5x</h3>
+                                        <h3 className='h2 text-sb'><CountUp end={5} />x</h3>
                                         <p className='h6 text-rg text-grey'>Productivity Boost</p>
                                     </div>
                                 </div>

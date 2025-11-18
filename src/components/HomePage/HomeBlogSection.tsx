@@ -54,8 +54,14 @@ const HomeBlogSection = () => {
             className="hm-blog-cards hide-scrollbar flex gap-[60px] scroll-smooth"
           >
             {/* ===== Card 1 ===== */}
-            <div className="hm-blog-card hm-blog-card-1">
+            <div className="hm-blog-card hm-blog-card-1 primary-box-shadow">
+              <div className="line-top"></div>
+              <div className="line-right"></div>
+              <div className="line-bottom"></div>
+              <div className="line-left"></div>
+
               <div className="hm-blog-card-text hm-blog-card-text-1">
+
                 <div className="hm-blog-text-wrap">
                   <h3 className="h5 text-md">Dashboards That Drive Decisions</h3>
                   <Link href="/BlogDetailPage">
@@ -81,10 +87,15 @@ const HomeBlogSection = () => {
                 width={493}
                 height={237}
               />
+
             </div>
 
             {/* ===== Card 2 ===== */}
             <div className="hm-blog-card hm-blog-card-2">
+              <div className="line-top"></div>
+              <div className="line-right"></div>
+              <div className="line-bottom"></div>
+              <div className="line-left"></div>
               <div className="hm-blog-card-text hm-blog-card-text-2">
                 <div className="hm-blog-text-wrap">
                   <h3 className="h5 text-md">
@@ -117,6 +128,10 @@ const HomeBlogSection = () => {
 
             {/* ===== Card 3 ===== */}
             <div className="hm-blog-card hm-blog-card-3">
+              <div className="line-top"></div>
+              <div className="line-right"></div>
+              <div className="line-bottom"></div>
+              <div className="line-left"></div>
               <div className="hm-blog-card-text hm-blog-card-text-3">
                 <div className="hm-blog-text-wrap">
                   <h3 className="h5 text-md">
