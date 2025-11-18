@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?jonddb');
-  src:  url('fonts/icomoon.eot?jonddb#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?jonddb') format('truetype'),
-    url('fonts/icomoon.woff?jonddb') format('woff'),
-    url('fonts/icomoon.svg?jonddb#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ihhx4o');
+  src:  url('fonts/icomoon.eot?ihhx4o#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ihhx4o') format('truetype'),
+    url('fonts/icomoon.woff?ihhx4o') format('woff'),
+    url('fonts/icomoon.svg?ihhx4o#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,63 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-compliance:before {
+  content: "\e917";
+}
+.icon-contact-page-cancelling-sub:before {
+  content: "\e913";
+}
+.icon-contact-page-ready-to:before {
+  content: "\e914";
+}
+.icon-contact-page-need-help:before {
+  content: "\e915";
+}
+.icon-live_help:before {
+  content: "\e916";
+}
+.icon-archive-wprm:before {
+  content: "\e903";
+}
+.icon-finalize:before {
+  content: "\e907";
+}
+.icon-approved:before {
+  content: "\e908";
+}
+.icon-review:before {
+  content: "\e909";
+}
+.icon-draft:before {
+  content: "\e90a";
+}
+.icon-contact-page-location:before {
+  content: "\e90b";
+}
+.icon-contact-page-mail:before {
+  content: "\e90c";
+}
+.icon-contact-page-call:before {
+  content: "\e90d";
+}
+.icon-exit_to_app:before {
+  content: "\e90e";
+}
+.icon-assistant_on_hub:before {
+  content: "\e90f";
+}
+.icon-order_approve:before {
+  content: "\e910";
+}
+.icon-grading:before {
+  content: "\e911";
+}
+.icon-notificationIcon:before {
+  content: "\e912";
+}
+.icon-archiveIcon:before {
+  content: "\e904";
+}
 .icon-validationIcon:before {
   content: "\e905";
 }
@@ -39,44 +96,4 @@
 }
 .icon-calllcon:before {
   content: "\e902";
-}
-.icon-notificationIcon:before {
-  content: "\e90b";
-}
-.icon-archiveIcon:before {
-  content: "\e90c";
-}
-.icon-validationIcon1:before {
-  content: "\e90d";
-}
-.icon-uploadIcon1:before {
-  content: "\e90e";
-}
-.icon-locationIcon1:before {
-  content: "\e90f";
-}
-.icon-mailIcon1:before {
-  content: "\e910";
-}
-.icon-calllcon1:before {
-  content: "\e911";
-  color: #fffce8;
-}
-.icon-check_circle1:before {
-  content: "\e908";
-}
-.icon-footer-contact-email:before {
-  content: "\e903";
-}
-.icon-footer-call:before {
-  content: "\e904";
-}
-.icon-location:before {
-  content: "\e907";
-}
-.icon-email:before {
-  content: "\e909";
-}
-.icon-add_call:before {
-  content: "\e90a";
 }
