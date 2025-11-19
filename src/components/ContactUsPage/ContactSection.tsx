@@ -46,14 +46,14 @@ const ContactSection = () => {
             </div>
 
             <div className="contact-info-card contact-mail-card">
-             <div className="contact-call-icon"><span className="icon-mailIcon"></span></div>
+             <div className="contact-call-icon"><span className="icon-contact-page-mail"></span></div>
               <p className="label text-18 text-rg text-grey">Email</p>
               <p className="value text-18 text-rg">inquiry@dhatavault.com</p>
             </div>
 
             </div>
             <div className="contact-info-card contact-location-card">
-             <div className="contact-call-icon"><span className="icon-location"></span></div>
+             <div className="contact-call-icon"><span className="icon-contact-page-location"></span></div>
               <p className="label text-18 text-rg text-grey">Location</p>
               <p className="value text-18 text-rg">
                 2445 Oak Ridge Omaha, QA 45065

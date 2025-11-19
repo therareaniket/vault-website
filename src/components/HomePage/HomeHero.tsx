@@ -1,51 +1,156 @@
-"use client";   
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const heroImages = [
+  { src: "/images/HomePage/demo-2.webp", width: 297, height: 279 },
+  { src: "/images/HomePage/hero-img-2.webp", width: 344, height: 150 },
+  { src: "/images/HomePage/hero-img-3.webp", width: 236, height: 216 },
+  { src: "/images/HomePage/demo.webp", width: 250, height: 200 },
+  { src: "/images/HomePage/demo-1.webp", width: 264, height: 118 },
+];
 
 const HomeHero = () => {
-    return (
-        <section className="home-hero">
-            <div className="hero-bg-video">
-                <video src="/images/HomePage/hero-bg-mp.mp4" loop autoPlay muted suppressHydrationWarning className="hero-video"></video>
-            </div>
+  const [animate, setAnimate] = useState({
+    title: false,
+    subtitle: false,
+    buttons: false,
+    images: Array(heroImages.length).fill(false),
+  });
 
-            <div className="hero-overlay"></div>
-                <div className="container">
-                    <div className="home-hero-content">
-                        <div className="hero-content-text">
-                            <h1 className="hero-title text-sb">Intelligent Vault for Compliant Clinical Trials</h1>
+  useEffect(() => {
+    const timers: NodeJS.Timeout[] = [];
 
-                            <p className="hero-subtitle text-rg h6">
-                                Secure, automated vault system built for global compliance, seamless scalability, and effortless document management.
-                            </p>
+    // Animate title, subtitle, buttons
+    const sequence = [
+      { key: "title", delay: 0 },
+      { key: "subtitle", delay: 1000 },
+      { key: "buttons", delay: 1500 },
+    ];
 
-                            <div className="home-hero-buttons">
-                                <Link href="#" className="btn-bg btn-padding text-md text-18">Book a Demo</Link>
+    sequence.forEach(({ key, delay }) => {
+      timers.push(
+        setTimeout(() => {
+          setAnimate((prev) => ({ ...prev, [key]: true }));
+        }, delay)
+      );
+    });
 
-                                <Link href="#" className="btn-padding explore-prod-btn text-md text-18 site-radius-10 btn-secondary">Explore Product</Link>
-                            </div>
-                        </div>
+    // Animate images sequentially
+    animate.images.forEach((_, idx) => {
+      timers.push(
+        setTimeout(() => {
+          setAnimate((prev) => {
+            const imagesCopy = [...prev.images];
+            imagesCopy[idx] = true;
+            return { ...prev, images: imagesCopy };
+          });
+        }, 2200 + idx * 200)
+      );
+    });
 
-                        <div className="hero-content-images">
-                            <div className="image-content-1">
-                                <Image className="home-hero-img-1" src="/images/HomePage/demo-2.webp" alt="" width={297} height={279}></Image>
+    return () => timers.forEach((t) => clearTimeout(t));
+  }, []);
 
-                                <Image className="home-hero-img-2" src="/images/HomePage/hero-img-2.webp" alt="" width={344} height={150}></Image>
-                            </div>
+  return (
+    <section className="home-hero">
+      {/* Background video */}
+      <div className="hero-bg-video">
+        <video
+          src="/images/HomePage/hero-bg-mp.mp4"
+          loop
+          autoPlay
+          muted
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="container">
+      {/* Hero content */}
+      <div className="home-hero-content">
+        <div className="hero-content-text">
+          <h1
+            className={`hero-title transition-transform duration-700 ${animate.title ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+              }`}
+          >
+            Intelligent Vault for Compliant Clinical Trials
+          </h1>
 
-                            <div className="image-content-2">
-                                <Image className="home-hero-img-3" src="/images/HomePage/hero-img-3.webp" alt="" width={236} height={216}></Image>
+          <p
+            className={`hero-subtitle transition-transform duration-700 ${animate.subtitle ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+              }`}
+          >
+            Secure, automated vault system built for global compliance, seamless
+            scalability, and effortless document management.
+          </p>
 
-                                <Image className="home-hero-img-4" src="/images/HomePage/demo.webp" alt="" width={250} height={200}></Image>
+          <div
+            className={`home-hero-buttons duration-700 transform ${animate.buttons
+                ? "scale-100 opacity-100"
+                : "scale-0 opacity-0"
+              }`}
+          >
+            <Link href="#" className="btn-bg btn-padding text-md text-18">
+              Book a Demo
+            </Link>
+            <Link
+              href="#"
+              className="btn-padding explore-prod-btn text-md text-18 site-radius-10 btn-secondary"
+            >
+              Explore Product
+            </Link>
+          </div>
+        </div>
 
-                                <Image className="home-hero-img-5" src="/images/HomePage/demo-1.webp" alt="" width={264} height={118}></Image>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-    );
+        <div className="hero-content-images">
+          <div className="image-content-1">
+            {heroImages.slice(0, 2).map((img, idx) => (
+              <AnimatedImage
+                key={idx}
+                src={img.src}
+                width={img.width}
+                height={img.height}
+                visible={animate.images[idx]}
+              />
+            ))}
+          </div>
+          <div className="image-content-2">
+            {heroImages.slice(2).map((img, idx) => (
+              <AnimatedImage
+                key={idx + 2}
+                src={img.src}
+                width={img.width}
+                height={img.height}
+                visible={animate.images[idx + 2]}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  );
 };
+
+// Reusable component for animated images
+const AnimatedImage = ({
+  src,
+  width,
+  height,
+  visible,
+}: {
+  src: string;
+  width: number;
+  height: number;
+  visible: boolean;
+}) => (
+  <div
+    className={`transition-transform duration-700 ${visible ? "scale-100 opacity-100" : "scale-0 opacity-0"
+      }`}
+  >
+    <Image src={src} width={width} height={height} alt="" />
+  </div>
+);
 
 export default HomeHero;

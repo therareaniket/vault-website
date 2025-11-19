@@ -13,7 +13,7 @@ const ContactHero = () => {
                         </div>
 
                         <div className="hero-hilight">
-                            <Image src="/images/contactUs/contact-hero-img.webp" alt='About Hilight' width={638} height={422} className='page-img-hglt'></Image>
+                            <Image src="/images/contactUs/contact-hero-img.webp" alt='About Hilight' width={638} height={422} className='cntct-hero-img page-img-hglt'></Image>
                         </div>
                     </div>
                 </div>
