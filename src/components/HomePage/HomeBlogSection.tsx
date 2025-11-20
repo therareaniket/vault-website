@@ -25,7 +25,7 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  // Track scroll progress & active card
+  // Scroll handling & mobile animation trigger
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
@@ -35,10 +35,11 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
       const containerWidth = el.clientWidth
       const totalWidth = el.scrollWidth
 
-      // Update progress bar
+      // Progress bar logic
       const visibleEnd = scrollLeft + containerWidth
       const progressPercent = (visibleEnd / totalWidth) * 100
-      setProgress(Math.max(70, Math.min(progressPercent, 100)))
+      const adjustedProgress = Math.max(70, Math.min(progressPercent, 100))
+      setProgress(adjustedProgress)
 
       if (isSmallScreen) {
         const children = Array.from(el.children) as HTMLElement[]
@@ -49,15 +50,17 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
           const childCenter = child.offsetLeft + child.clientWidth / 2
           const viewCenter = scrollLeft + containerWidth / 2
           const dist = Math.abs(childCenter - viewCenter)
+
+          // Remove animation class from all
+          child.classList.remove("active-animation")
+
           if (dist < minDist) {
             minDist = dist
             closest = idx
           }
-          // Remove active-animation from all
-          child.classList.remove("active-animation")
         })
 
-        // Add animation to the centered card
+        // Add animation class to the centered card
         children[closest].classList.add("active-animation")
         setActiveIndex(closest)
       }
@@ -72,9 +75,11 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
   const scrollToCard = (index: number) => {
     const el = scrollRef.current
     if (!el) return
+
     const card = el.children[index] as HTMLElement
     if (card) {
-      card.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" })
+      const left = card.offsetLeft - (el.clientWidth / 2 - card.clientWidth / 2)
+      el.scrollTo({ left, behavior: "smooth" })
     }
   }
 
@@ -82,6 +87,7 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
     <section className="home-blog-section section">
       <div className="container">
         <div className="home-blog-wrapper">
+
           {/* Header */}
           <div className="hm-blog-head">
             <h2 className="text-sb">{blogsTitle}</h2>
@@ -91,8 +97,8 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
           {/* Scrollable Blog Cards */}
           <div
             ref={scrollRef}
-            className="hm-blog-cards hide-scrollbar flex gap-[60px] overflow-x-auto scroll-smooth snap-x snap-mandatory"
-            style={{ scrollSnapType: "x mandatory" }}
+            className="hm-blog-cards hide-scrollbar flex gap-[60px] scroll-smooth 
+                       snap-x snap-mandatory"
           >
             {/* Card 1 */}
             <div className="hm-blog-card hm-blog-card-1 relative snap-center">
@@ -101,11 +107,14 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
                 <div className="blog-text-res-wrap">
                   <div className="hm-blog-text-wrap">
                     <h3 className="h5 text-md">Dashboards That Drive Decisions</h3>
-                    <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
+                    <Link href="/BlogDetailPage">
+                      <HmBlogArrow />
+                    </Link>
                   </div>
                   <p className="text-18 text-rg">
                     How real-time insights improve trial oversight and streamline compliance.
                   </p>
+
                   <div className="hm-blogs-links">
                     <Link href="#" className="link-padding text-rg text-14">Data Visualization</Link>
                     <p className="text-14 text-rg text-grey">23 October 2025</p>
@@ -122,57 +131,61 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
             </div>
 
             {/* Card 2 */}
-            <div className="hm-blog-card hm-blog-card-2 relative snap-center">
-              <span className="for-animation"></span>
-              <div className="blog-text-res-wrap">
-                <div className="hm-blog-card-text hm-blog-card-text-2">
-                  <div className="hm-blog-text-wrap">
-                    <h3 className="h5 text-md">5 Ways DhatuVault CTMS Reduces Study Time</h3>
-                    <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
+            <div className="hm-blog-card-wrapper hm-blog-card-wrapper-2 snap-center">
+              <div className="hm-blog-card hm-blog-card-2 relative">
+                <span className="for-animation"></span>
+                <div className="blog-text-res-wrap">
+                  <div className="hm-blog-card-text hm-blog-card-text-2">
+                    <div className="hm-blog-text-wrap">
+                      <h3 className="h5 text-md">5 Ways DhatuVault CTMS Reduces Study Time</h3>
+                      <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
+                    </div>
+                    <p className="text-18 text-rg">
+                      Learn proven strategies for streamlining site activation, document management.
+                    </p>
                   </div>
-                  <p className="text-18 text-rg">
-                    Learn proven strategies for streamlining site activation, document management.
-                  </p>
+                  <div className="hm-blogs-links">
+                    <Link href="#" className="link-padding text-rg text-14">Compliance & Security</Link>
+                    <p className="text-14 text-rg text-grey">27 October 2025</p>
+                  </div>
                 </div>
-                <div className="hm-blogs-links">
-                  <Link href="#" className="link-padding text-rg text-14">Compliance & Security</Link>
-                  <p className="text-14 text-rg text-grey">27 October 2025</p>
-                </div>
+                <Image
+                  className="home-blog-img-2 site-radius-20"
+                  src="/images/HomePage/hm-blog-img-2.webp"
+                  alt="CTMS Study Startup"
+                  width={493}
+                  height={237}
+                />
               </div>
-              <Image
-                className="home-blog-img-2 site-radius-20"
-                src="/images/HomePage/hm-blog-img-2.webp"
-                alt="CTMS Study Startup"
-                width={493}
-                height={237}
-              />
             </div>
 
             {/* Card 3 */}
-            <div className="hm-blog-card hm-blog-card-3 relative snap-center">
-              <span className="for-animation"></span>
-              <div className="blog-text-res-wrap">
-                <div className="hm-blog-card-text hm-blog-card-text-3">
-                  <div className="hm-blog-text-wrap">
-                    <h3 className="h5 text-md">The Complete Guide to DhatuVault Integration</h3>
-                    <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
+            <div className="hm-blog-card-wrapper hm-blog-card-wrapper-3 snap-center">
+              <div className="hm-blog-card hm-blog-card-3 relative">
+                <span className="for-animation"></span>
+                <div className="blog-text-res-wrap">
+                  <div className="hm-blog-card-text hm-blog-card-text-3">
+                    <div className="hm-blog-text-wrap">
+                      <h3 className="h5 text-md">The Complete Guide to DhatuVault Integration</h3>
+                      <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
+                    </div>
+                    <p className="text-18 text-rg">
+                      Explore how Vault unified integration hub connects EDC, eTMF, CRM.
+                    </p>
                   </div>
-                  <p className="text-18 text-rg">
-                    Explore how Vault unified integration hub connects EDC, eTMF, CRM.
-                  </p>
+                  <div className="hm-blogs-links">
+                    <Link href="#" className="link-padding text-rg text-14">AI & Automation</Link>
+                    <p className="text-14 text-rg text-grey">14 September 2025</p>
+                  </div>
                 </div>
-                <div className="hm-blogs-links">
-                  <Link href="#" className="link-padding text-rg text-14">AI & Automation</Link>
-                  <p className="text-14 text-rg text-grey">14 September 2025</p>
-                </div>
+                <Image
+                  className="home-blog-img-3 site-radius-20"
+                  src="/images/HomePage/hm-blog-img-3.webp"
+                  alt="Integration"
+                  width={493}
+                  height={237}
+                />
               </div>
-              <Image
-                className="home-blog-img-3 site-radius-20"
-                src="/images/HomePage/hm-blog-img-3.webp"
-                alt="Integration"
-                width={493}
-                height={237}
-              />
             </div>
           </div>
 
@@ -192,12 +205,14 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
                     key={idx}
                     onClick={() => scrollToCard(idx)}
                     className={`block cursor-pointer w-3 h-3 rounded-full bg-[rgba(0,0,0,0.3)]
-                      ${activeIndex === idx ? "w-6 h-1 bg-[var(--secondary)] rounded-[2px]" : ""} transition-all duration-300`}
+                      ${activeIndex === idx ? "w-6 h-1 bg-[var(--secondary)] rounded-[2px]" : ""}
+                      transition-all duration-300`}
                   />
                 ))}
               </div>
             )}
           </div>
+
         </div>
       </div>
     </section>
