@@ -3,7 +3,12 @@ import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import CountUp from '../Animations/CountUp';
 
-const HomeStatistic = () => {
+type StatsProps = {
+    statisticsTitle: string;
+    statisticsSubtitle: string;
+}
+
+const HomeStatistic = ({statisticsTitle, statisticsSubtitle}:StatsProps) => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -24,15 +29,9 @@ const HomeStatistic = () => {
       <div className="container">
         <div className="statistic-main">
           <div className='home-stats-head'>
-            <h2 className='text-sb'>
-              Accelerate Trial with Vault’s Intelligent Platform
-            </h2>
+            <h2 className='text-sb'>{statisticsTitle}</h2>
 
-            <p className='h6 text-rg home-stats-para'>
-              Vault is designed for modern clinical operations, unifying document control,
-              AI-powered automation, and compliance first workflows. Whether you’re a sponsor, CRO, site partner,
-              Vault ensures fast, and compliant trial delivery.
-            </p>
+            <p className='h6 text-rg home-stats-para'>{statisticsSubtitle}</p>
 
             <div className='stats-section-cards'>
               <div className='stats-lines'>

@@ -2,14 +2,19 @@
 
 import React, { useState } from "react";
 
+type ContactProps = {
+    phoneNumber: string;
+    email: string;
+    location: string;
+}
 
-const ContactSection = () => {
+const ContactSection = ({phoneNumber, email, location}:ContactProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     organization: "",
     message: "",
-  });
+});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -42,13 +47,13 @@ const ContactSection = () => {
             <div className="contact-info-card contact-phone-card">
              <div className="contact-call-icon"><span className="icon-contact-page-call"></span></div>
               <p className="label text-18 text-rg text-grey">Phone Number</p>
-              <p className="value text-18 text-rg">+1 (555) 123-4567</p>
+              <p className="value text-18 text-rg">{phoneNumber}</p>
             </div>
 
             <div className="contact-info-card contact-mail-card">
              <div className="contact-call-icon"><span className="icon-contact-page-mail"></span></div>
               <p className="label text-18 text-rg text-grey">Email</p>
-              <p className="value text-18 text-rg">inquiry@dhatavault.com</p>
+              <p className="value text-18 text-rg">{email}</p>
             </div>
 
             </div>
@@ -56,7 +61,7 @@ const ContactSection = () => {
              <div className="contact-call-icon"><span className="icon-contact-page-location"></span></div>
               <p className="label text-18 text-rg text-grey">Location</p>
               <p className="value text-18 text-rg">
-                2445 Oak Ridge Omaha, QA 45065
+                {location}
               </p>
             </div>
           </div>

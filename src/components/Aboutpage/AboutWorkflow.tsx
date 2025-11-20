@@ -4,46 +4,67 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@r
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Workflow(){
+type WorkflowProps = {
+    vaultWorkflowTitle: string;
+    vaultWorkflowSubtitle: string;
+    vaultProcessFlow: {
+        flow1Title: string;
+        flow1Subtitle: string;
+
+        flow2Title: string;
+        flow2Subtitle: string;
+
+        flow3Title: string;
+        flow3Subtitle: string;
+
+        flow4Title: string;
+        flow4Subtitle: string;
+
+        flow5Title: string;
+        flow5Subtitle: string;
+    }
+}
+
+export default function Workflow({vaultWorkflowTitle, vaultWorkflowSubtitle, vaultProcessFlow}:WorkflowProps){
 
     const [activeTab, setActiveTab] = useState(0);
 
     const tabs = [
         {
-            title: "Upload documents via secure portal",
-            desc: "Easily submit files through our encrypted platform, ensuring data privacy from the start.",
+            title: vaultProcessFlow.flow1Title,
+            desc: vaultProcessFlow.flow1Subtitle,
             icon: "icon-uploadIcon",
             image: "/images/aboutpage/upload-docs.webp",
             imgWidth: 646,
             imgHeight: 394,
         },
         {
-            title: "AI Agents for auto-checking content",
-            desc: "Intelligent algorithms sort, tag, and verify your documents for accuracy and compliance.",
+            title: vaultProcessFlow.flow2Title,
+            desc: vaultProcessFlow.flow2Subtitle,
             icon: "icon-grading",
             image: "/images/aboutpage/ai-agents.webp",
             imgWidth: 473,
             imgHeight: 387,
         },
         {
-            title: "Review and approve with audit ready logs",
-            desc: "Collaborate with your team and maintain detailed logs for full audit transparency.",
+            title: vaultProcessFlow.flow3Title,
+            desc: vaultProcessFlow.flow3Subtitle,
             icon: "icon-order_approve",
             image: "/images/aboutpage/approve-audit-ready.webp",
             imgWidth: 605,
             imgHeight: 382,
         },
         {
-            title: "Monitor site readiness via dashboards",
-            desc: "Get real-time insights into compliance status and system health through intuitive dashboards.",
+            title: vaultProcessFlow.flow4Title,
+            desc: vaultProcessFlow.flow4Subtitle,
             icon: "icon-assistant_on_hub",
             image: "/images/aboutpage/site-readiness.webp",
             imgWidth: 592,
             imgHeight: 320,
         },
         {
-            title: "Export or archive with full compliance",
-            desc: "Collaborate with your team and maintain detailed logs for full audit transparency.",
+            title: vaultProcessFlow.flow5Title,
+            desc: vaultProcessFlow.flow5Subtitle,
             icon: "icon-exit_to_app",
             image: "/images/aboutpage/export-archive.webp",
             imgWidth: 559,
@@ -56,9 +77,9 @@ export default function Workflow(){
             <section className="about-roles">
                 <div className="container">
                     <div className="workflow-headings">
-                        <h2 className="h3">Vault-Driven Workflow</h2>
+                        <h2 className="h3">{vaultWorkflowTitle}</h2>
 
-                        <p className="h6 text-rg">Experience a secure, step-by-step approach to manage compliance with confidence and clarity.</p>
+                        <p className="h6 text-rg">{vaultWorkflowSubtitle}</p>
                     </div>
 
                     <div className="workflow-wrapper">

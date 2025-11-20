@@ -1,6 +1,11 @@
 "use client"
 import React, { useState, useEffect } from "react";
 
+type AboutRolesProps = {
+    rolesTitle: string;
+    rolesSubtitle: string;
+}
+
 const ROLES = [
     { id: 1, bgClass: "cro-bg-img", title: "CROs", subTitle: "Collaborate seamlessly with sponsors and sites while maintaining high-quality documentation." },
     { id: 2, bgClass: "labs-bg-img", title: "Labs", subTitle: "Transmit lab results and sensitive data through secure, encrypted pipelines at every stage, and drive operations." },
@@ -22,7 +27,7 @@ function useIsMobile(maxWidth = 400) {
     return isMobile;
 }
 
-export default function AboutRoles() {
+export default function AboutRoles({rolesTitle, rolesSubtitle}: AboutRolesProps) {
 
     const [activeRole, setActiveRole] = useState(ACTIVE_ROLE);
     const [clickRoles, setClickRoles] = useState(ROLES);
@@ -44,9 +49,9 @@ export default function AboutRoles() {
             <section className="section">
                 <div className="container">
                     <div className="abt-roles-headings">
-                        <h2 className="h3">Built for Every Role</h2>
+                        <h2 className="h3">{rolesTitle}</h2>
 
-                        <p className="h6 text-rg">From sponsors to sites, CROs to labs—Vault empowers every stakeholder in the clinical trial ecosystem</p>
+                        <p className="h6 text-rg">{rolesSubtitle}</p>
                     </div>
 
                     <div className="abt-user-roles">

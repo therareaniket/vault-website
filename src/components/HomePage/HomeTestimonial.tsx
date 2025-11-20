@@ -1,35 +1,43 @@
 "use client";
-import { div } from "motion/react-client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const HomeTestimonial = () => {
+type TestimonialProps = {
+    testimonialsTitle: string;
+    testimonialsSubtitle: string;
+    testimonialReview1: string;
+    testimonialReview2: string;
+    testimonialReview3: string;
+    testimonialReview4: string;
+}
+
+const HomeTestimonial = ({ testimonialsTitle, testimonialsSubtitle, testimonialReview1, testimonialReview2, testimonialReview3, testimonialReview4 }:TestimonialProps) => {
     const testimonials = [
         {
             client: "J",
             clientName: "James Carter",
             clientDetail: "IT Director, MedTech Solutions",
-            text: "Vault simplified our document management, replacing long email threads with one seamless workspace. Collaboration is now faster, smarter, and fully compliant.",
+            text: testimonialReview1,
             date: "01 Sep, 2025",
         },
         {
             client: "P",
             clientName: "Priya Mehta",
             clientDetail: "Compliance Officer, FinSecure Ltd.",
-            text: "Compliance Vault streamlined our entire audit process. What used to take weeks now takes days. The intuitive dashboard and automated alerts keep us ahead of regulatory deadlines.",
+            text: testimonialReview2,
             date: "29 Aug, 2025",
         },
         {
             client: "A",
             clientName: "Anita Desai",
             clientDetail: "Operations Manager, LegalEdge Partners",
-            text: "As our studies expanded across regions, Vault scaled effortlessly with our needs. Its secure, connected workflows empower us to manage complex global operations with confidence.",
+            text: testimonialReview3,
             date: "06 Sep, 2025",
         },
         {
             client: "B",
             clientName: "Bhavesh Rao",
             clientDetail: "Compliance Officer, FinSecure Ltd.",
-            text: "Data security and reliability have never been this effortless. Highly recommended!",
+            text: testimonialReview4,
             date: "06 Jan, 2025",
         },
     ];
@@ -71,14 +79,8 @@ const HomeTestimonial = () => {
             <div className="container">
                 {/* Heading Section */}
                 <div className="hm-head-text-wrapper">
-                    <h2 className="text-sb hm-head-text">
-                        Success Stories Powered by ComplianceVault
-                    </h2>
-                    <p className="text-rg h6 hm-para-text">
-                        Hear from teams who rely on Vault to streamline document management,
-                        ensure compliance, and deliver study excellence — empowering seamless
-                        collaboration and complete audit readiness across every study phase.
-                    </p>
+                    <h2 className="text-sb hm-head-text">{testimonialsTitle}</h2>
+                    <p className="text-rg h6 hm-para-text">{testimonialsSubtitle}</p>
                 </div>
 
                 {/* Testimonial Section */}

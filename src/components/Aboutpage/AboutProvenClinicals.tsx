@@ -3,7 +3,13 @@
 import { useEffect } from "react";
 import Image from "next/image";
 
-export default function ProvenClinicals() {
+type ProvenClinicalProps = {
+    trialInnovationTitle: string;
+    trialInnovationParagraph1: string;
+    trialInnovationParagraph2: string;
+}
+
+export default function ProvenClinicals({trialInnovationTitle, trialInnovationParagraph1, trialInnovationParagraph2}:ProvenClinicalProps) {
 
     useEffect(() => {
         const bars = document.querySelectorAll<HTMLElement>(".added-prog");
@@ -61,16 +67,12 @@ export default function ProvenClinicals() {
             <section className="section">
                 <div className="container">
                     <div className="proven-clinical-headings">
-                        <h2 className="h3">Powering Clinical Trial Innovation</h2>
+                        <h2 className="h3">{trialInnovationTitle}</h2>
 
                         <div className="info-paras">
-                            <p className="h6 text-rg">
-                                DhatuVault built by clinical operations experts who recognized the need for intelligent, faster trial documentation management. Today, DhatuVault empowers life sciences teams with solutions that eliminate complexity and accelerate medical breakthroughs.
-                            </p>
+                            <p className="h6 text-rg">{trialInnovationParagraph1}</p>
 
-                            <p className="h6 text-rg">
-                                Trusted by leading life sciences organizations globally to securely manage critical trial documentation with confidence. Our intelligent CTMS combines industry expertise with advanced technology to deliver solutions that ensure regulatory compliance, user-friendliness, and enterprise-scale capabilities.
-                            </p>
+                            <p className="h6 text-rg">{trialInnovationParagraph2}</p>
                         </div>
                     </div>
 

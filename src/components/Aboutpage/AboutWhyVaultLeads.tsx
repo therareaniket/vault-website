@@ -2,15 +2,20 @@
 
 import Image from "next/image";
 
-export default function WhyVaultLead() {
+type WhyVaultLeads = {
+    leadsClinicalTrialsTitle: string;
+    leadsClinicalTrialsSubtitle: string;
+}
+
+export default function WhyVaultLead({leadsClinicalTrialsTitle, leadsClinicalTrialsSubtitle}:WhyVaultLeads) {
     return (
         <>
             <section>
                 <div className="container">
                     <div className="why-leads-headings">
-                        <h2 className="h3">Why DhatuVault Leads Clinical Trials</h2>
+                        <h2 className="h3">{leadsClinicalTrialsTitle}</h2>
 
-                        <p className="h6 text-rg">Regulatory-first architecture, AI-driven automation, and intelligent solutions Vault delivers secure, scalable, and inspection-ready trial management.</p>
+                        <p className="h6 text-rg">{leadsClinicalTrialsSubtitle}</p>
                     </div>
 
                     <div className="why-leads-lists">

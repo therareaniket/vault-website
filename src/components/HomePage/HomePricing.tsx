@@ -1,32 +1,54 @@
 "use client";
 import React, { useState } from "react";
 
-const HomePricing = () => {
+type PricingProps = {
+    pricingTitle: string;
+    pricingSubtitle: string;
+    planDetails: {
+        standardUpdatedPrice: string;
+        standardOldPrice: string;
+        standardInclude1: string;
+        standardInclude2: string;
+        standardInclude3: string;
+        standardInclude4: string;
+        standardInclude5: string;
+
+        enterpriseUpdatedPrice: string;
+        enterpriseOldPrice: string;
+        enterpriseInclude1: string;
+        enterpriseInclude2: string;
+        enterpriseInclude3: string;
+        enterpriseInclude4: string;
+        enterpriseInclude5: string;
+    }
+}
+
+const HomePricing = ({pricingTitle, pricingSubtitle, planDetails}:PricingProps) => {
   const [activePlan, setActivePlan] = useState("Standard");
 
   const plans = [
     {
       name: "Standard",
-      price: 49,
-      oldprice: 89,
+      price: planDetails.standardUpdatedPrice,
+      oldprice: planDetails.standardOldPrice,
       features: [
-        "Advanced EDL Templates",
-        "Automated Issue Tracking",
-        "eTMF Viewer & Document Preview",
-        "Integration Hub (Basic APIs)",
-        "Priority Email & Chat Support",
+        planDetails.standardInclude1,
+        planDetails.standardInclude2,
+        planDetails.standardInclude3,
+        planDetails.standardInclude4,
+        planDetails.standardInclude5,
       ],
     },
     {
       name: "Enterprise",
-      price: 299,
-      oldprice: 399,
+      price: planDetails.enterpriseUpdatedPrice,
+      oldprice: planDetails.enterpriseOldPrice,
       features: [
-        "Advanced Automation & Analytics",
-        "Blinding Management",
-        "AI-Powered Document Classification",
-        "Multi-Region Data Residency",
-        "24/7 Dedicated Support & Onboarding Assistance",
+        planDetails.enterpriseInclude1,
+        planDetails.enterpriseInclude2,
+        planDetails.enterpriseInclude3,
+        planDetails.enterpriseInclude4,
+        planDetails.enterpriseInclude5,
       ],
     },
   ];
@@ -37,14 +59,8 @@ const HomePricing = () => {
       <section className="home-pricing section">
         <div className="container">
           <div className="pricing-text-head">
-            <h2 className="pricing-title text-sb">
-              Designed to Scale with Your <br /> Clinical Operations
-            </h2>
-            <p className="pricing-desc h6 text-rg">
-              Choose the plan that fits your organization’s scale and complexity —
-              from core eTMF functionality to advanced automation and analytics.
-              Vault’s pricing is designed to grow with you.
-            </p>
+            <h2 className="pricing-title text-sb"> {pricingTitle} </h2>
+            <p className="pricing-desc h6 text-rg">{pricingSubtitle}</p>
 
             {/* ===== Plan Tabs ===== */}
             <div className="pricing-tabs btn-bg site-radius-10">

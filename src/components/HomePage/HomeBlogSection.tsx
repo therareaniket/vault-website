@@ -6,7 +6,12 @@ import Link from "next/link"
 import { Progress } from "@/components/ui/progress"
 import HmBlogArrow from "./HmBlogArrow"
 
-const HomeBlogSection = () => {
+type BlogProps = { 
+    blogsTitle: string;
+    blogsSubtitle: string;
+ }
+
+const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [progress, setProgress] = useState(70)
   const [isSmallScreen, setIsSmallScreen] = useState(false)
@@ -79,10 +84,8 @@ const HomeBlogSection = () => {
         <div className="home-blog-wrapper">
           {/* Header */}
           <div className="hm-blog-head">
-            <h2 className="text-sb">Thoughts & Updates</h2>
-            <p className="text-rg h6">
-              Explore expert insights, product innovations, and clinical trial strategies.
-            </p>
+            <h2 className="text-sb">{blogsTitle}</h2>
+            <p className="text-rg h6">{blogsSubtitle}</p>
           </div>
 
           {/* Scrollable Blog Cards */}
