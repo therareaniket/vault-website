@@ -20,7 +20,7 @@ export default function Workflow(){
         {
             title: "AI Agents for auto-checking content",
             desc: "Intelligent algorithms sort, tag, and verify your documents for accuracy and compliance.",
-            icon: "icon-uploadIcon",
+            icon: "icon-grading",
             image: "/images/aboutpage/ai-agents.webp",
             imgWidth: 473,
             imgHeight: 387,
@@ -28,7 +28,7 @@ export default function Workflow(){
         {
             title: "Review and approve with audit ready logs",
             desc: "Collaborate with your team and maintain detailed logs for full audit transparency.",
-            icon: "icon-uploadIcon",
+            icon: "icon-order_approve",
             image: "/images/aboutpage/approve-audit-ready.webp",
             imgWidth: 605,
             imgHeight: 382,
@@ -36,7 +36,7 @@ export default function Workflow(){
         {
             title: "Monitor site readiness via dashboards",
             desc: "Get real-time insights into compliance status and system health through intuitive dashboards.",
-            icon: "icon-uploadIcon",
+            icon: "icon-assistant_on_hub",
             image: "/images/aboutpage/site-readiness.webp",
             imgWidth: 592,
             imgHeight: 320,
@@ -44,7 +44,7 @@ export default function Workflow(){
         {
             title: "Export or archive with full compliance",
             desc: "Collaborate with your team and maintain detailed logs for full audit transparency.",
-            icon: "icon-uploadIcon",
+            icon: "icon-exit_to_app",
             image: "/images/aboutpage/export-archive.webp",
             imgWidth: 559,
             imgHeight: 382,

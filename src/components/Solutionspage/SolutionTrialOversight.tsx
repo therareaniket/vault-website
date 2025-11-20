@@ -16,6 +16,7 @@ export default function TrialOversight() {
                     <div className="ovrsgt-lists">
                         <div className="ovrsgt-list">
                             <div className="ovrsgt-list-titles">
+                                {/* <span className="for-animation"></span> */}
                                 <h3 className="h5 text-sb">Real-time visibility into TMF completeness</h3>
 
                                 <p>DhatuVault provides Real-time access to trial master file status enables centralized oversight, compliance tracking, and coordination</p>

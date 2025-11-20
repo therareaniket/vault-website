@@ -82,7 +82,7 @@ const HomePricing = () => {
               <ul>
                 {plan?.features.map((feature, i) => (
                   <li className="text-18" key={i}>
-                    <span className="icon-check_circle1"></span> {feature}
+                    <span className="icon-finalize"></span> {feature}
                   </li>
                 ))}
               </ul>

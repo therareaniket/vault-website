@@ -9,10 +9,10 @@ const ContactCustomerSupport = () => {
                 <div className="customer-support-wrapper">
                     <div className="contact-card-1  site-radius-10">
                         <p className="site-radius-5 contact-cust-tag-new text-rg">I’m New Here</p>
-                            <Image className="cntct-svg-1" src="/images/contactUs/live_help.svg" alt="" width={34} height={42}></Image>
+                            <span className="icon-live_help"></span>
                         <div className="customer-text-wrp">
 
-                            <p className="text-18 text-rg">Need help with DhatuVault licenses, plan changes, or additional modules?</p>
+                            <p className="text-18 text-rg">Need a DhatuVault demo? Questions about pricing or features?</p>
 
                             <Link href="mailto:sales@dhatuvault.com" className="text-18 text-rg">sales@dhatuvault.com</Link>
                         </div>
@@ -20,7 +20,7 @@ const ContactCustomerSupport = () => {
 
                     <div className="contact-card-1 contact-card-2  site-radius-10">
                         <p className="site-radius-5 contact-cust-tag-existing text-rg">Existing Customer</p>
-                            <Image className="cntct-svg-1" src="/images/contactUs/additional-module.svg" alt="" width={38} height={40}></Image>
+                            <span className="icon-contact-page-need-help"></span>
                         <div className="customer-text-wrp">
 
                             <p className="text-18 text-rg">Need help with DhatuVault licenses, plan changes, or additional modules?</p>
@@ -31,7 +31,7 @@ const ContactCustomerSupport = () => {
 
                     <div className="contact-card-1 contact-card-3 site-radius-10">
                         {/* <p className="site-radius-5 contact-cust-tag-new text-rg">I’m New Here</p> */}
-                            <Image className="cntct-svg-1" src="/images/contactUs/info-contact.svg" alt="" width={38} height={36}></Image>
+                            <span className="icon-contact-page-ready-to"></span>
                         <div className="customer-text-wrp">
 
                             <p className="text-18 text-rg">Ready to renew your subscription or need information about your current plan details?</p>
@@ -42,7 +42,7 @@ const ContactCustomerSupport = () => {
 
                     <div className="contact-card-1 contact-card-4 site-radius-10">
                         {/* <p className="site-radius-5 contact-cust-tag-new text-rg">I’m New Here</p> */}
-                            <Image className="cntct-svg-1" src="/images/contactUs/cancelling-subscription.svg" alt="" width={40} height={42}></Image>
+                            <span className="icon-contact-page-cancelling-sub"></span>
                         <div className="customer-text-wrp">
 
                             <p className="text-18 text-rg">Need a DhatuVault demo? Questions about pricing or features?</p>

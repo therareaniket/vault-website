@@ -37,11 +37,11 @@ const Footer = () => {
 
                                 <ul className='contact-infolinks'>
                                     <li>
-                                        <p className='text-16 text-rg'><span className='icon-footer-call'></span> <Link href="">+91 1234567891</Link> </p>
+                                        <p className='text-16 text-rg'><span className='icon-calllcon'></span> <Link href="">+91 1234567891</Link> </p>
                                     </li>
 
                                     <li>
-                                        <p className='text-16 text-rg'><span className='icon-footer-contact-email'></span><Link href="mailto:enquire@dhatuvault.com">enquire@dhatuvault.com</Link> </p>
+                                        <p className='text-16 text-rg'><span className='icon-mailIcon'></span><Link href="mailto:enquire@dhatuvault.com">enquire@dhatuvault.com</Link> </p>
                                     </li>
                                 </ul>
                             </div>

@@ -29,9 +29,7 @@ const Header = () => {
       }
 
       // If you want hide/show only on Home page
-      if (!isHome) {
-        return;
-      }
+
 
       const navbarHeight = headerRef.current?.offsetHeight || 0;
       const triggerPoint = window.innerHeight - navbarHeight;
@@ -85,7 +83,7 @@ const Header = () => {
             </Link>
 
             <Link
-              href="/Contact"
+              href="/Contact" onClick={closeMenu}
               className="contact-btn btn-padding btn-bg site-radius-10 text-md text-18"
             >
               Contact Us

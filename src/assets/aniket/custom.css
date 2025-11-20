@@ -65,13 +65,13 @@
 
 .security-list-wrapper { display: flex; align-items: center; justify-content: space-between; padding-right: 60px; }
 .security-headings { width: 600px; }
-.security-list { width: 600px; padding: 18px; display: flex; align-items: start; gap: 30px; }
+.security-list { width: 600px; padding: 30px; display: flex; align-items: start; gap: 20px; }
 .security-list:not(:last-child) { margin-bottom: 14px; }
 .security-list:nth-child(even) { transform: translateX(60px); }
-.security-list:nth-child(1) { border-left: 6px solid #053EFF; }
-.security-list:nth-child(2) { border-left: 6px solid #FEAF06; }
-.security-list:nth-child(3) { border-left: 6px solid #F8791E; }
-.security-list:nth-child(4) { border-left: 6px solid #561FF9; }
+/* .security-list:nth-child(1) { border-left: 6px solid #053EFF; } */
+/* .security-list:nth-child(2) { border-left: 6px solid #FEAF06; } */
+/* .security-list:nth-child(3) { border-left: 6px solid #F8791E; } */
+/* .security-list:nth-child(4) { border-left: 6px solid #561FF9; } */
 
 .compli-icon, .list-icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%); }
 .compli-info { width: 470px; }
@@ -137,7 +137,11 @@
 .opertion-list { width: 350px; height: 350px; padding: 20px 0 0 20px; }
 .opert-list-title { position: relative;  }
 .opert-list-title .h5 { width: 280px; padding-top: 40px; position: relative; z-index: 2; }
-.opert-list-title .list-num { font-size: 200px; line-height: 160px; position: absolute; top: 0; right: 0; color: #F2F2F2; z-index: 1; }
+.opert-list-title .list-num { font-size: 200px; line-height: 160px; position: absolute; top: 0; right: 0; color: #F2F2F2; z-index: 1;  transform: scale(0); opacity: 0; transition: transform 2s ease, opacity 0.3s ease; }
+.list-num.show-num {
+  transform: scale(1);
+  opacity: 1;
+}
 
 .trail-ovrsgt-headings { width: 560px; }
 .trail-ovrsgt-headings .h6 { width: 80%; }
@@ -155,6 +159,8 @@
 .featu-lab-data { width: 1190px; height: 350px; background-color: var(--blue-light); } 
 .featu-lab-item { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 20px; text-align: center; }
 .feat-lab-mob-acrdn { display: none; }
+.feat-lab-btn i{ display: inline-block; text-align: center; width: 32px; height: 32px; }
+.featu-lab-item p { padding: 0 60px; }
 
 section.trial-performance { padding-top: 0; }
 .trail-prfmnc-headings { width: 820px; text-align: center; margin: 0 auto; }
