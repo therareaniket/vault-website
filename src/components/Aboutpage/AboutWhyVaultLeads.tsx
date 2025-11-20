@@ -34,6 +34,7 @@ export default function WhyVaultLead() {
                             </div>
                         </div>
 
+
                         <div className="why-leads-list site-radius-20">
                             <Image src='/images/aboutpage/why-leads-dashboard.webp' alt="" width={363} height={197}></Image>
                             <div className="leads-list-text">
@@ -42,6 +43,7 @@ export default function WhyVaultLead() {
                                 <p className="text-18-ani">Monitor trials in real time with DhatuVault&apos;s interactive dashboards providing instant insights.</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
