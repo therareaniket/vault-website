@@ -2,15 +2,34 @@
 
 import Image from "next/image";
 
-export default function SecuritiesPlatform() {
+type SecuritiesProps = {
+    certifiedPlatformsTitle: string;
+    certifiedPlatformsSubtitle: string;
+
+    certifiedPlatformsList: {
+        platform1Title: string;
+        platform1Subtitle: string;
+
+        platform2Title: string;
+        platform2Subtitle: string;
+
+        platform3Title: string;
+        platform3Subtitle: string;
+
+        platform4Title: string;
+        platform4Subtitle: string;
+    }
+}
+
+export default function SecuritiesPlatform({ certifiedPlatformsTitle, certifiedPlatformsSubtitle, certifiedPlatformsList }: SecuritiesProps) {
     return(
         <>
             <section className="section">
                 <div className="container">
                     <div className="security-headings">
-                        <h2 className="h3">Security-Certified Platform</h2>
+                        <h2 className="h3">{certifiedPlatformsTitle}</h2>
 
-                        <p className="h6 text-rg">DhatuVault exceeds regulatory requirements with global certifications and encrypted data protection</p>
+                        <p className="h6 text-rg">{certifiedPlatformsSubtitle}</p>
                     </div>
 
                     <div className="security-list-wrapper">
@@ -23,9 +42,9 @@ export default function SecuritiesPlatform() {
                                 </div>
 
                                 <div className="compli-info">
-                                    <h3 className="h5">21 CFR Part 11</h3>
+                                    <h3 className="h5">{certifiedPlatformsList.platform1Title}</h3>
 
-                                    <p style={{ color: "var(--grey)" }}>Electronic records and signatures meet FDA standards for trustworthiness</p>
+                                    <p style={{ color: "var(--grey)" }}>{certifiedPlatformsList.platform1Subtitle}</p>
                                 </div>
                             </div>
 
@@ -35,9 +54,9 @@ export default function SecuritiesPlatform() {
                                 </div>
 
                                 <div className="compli-info">
-                                    <h3 className="h5">Annex 11</h3>
+                                    <h3 className="h5">{certifiedPlatformsList.platform2Title}</h3>
 
-                                    <p style={{ color: "var(--grey)" }}>Ensures data integrity and system validation for GxP-regulated environments</p>
+                                    <p style={{ color: "var(--grey)" }}>{certifiedPlatformsList.platform2Subtitle}</p>
                                 </div>
                             </div>
 
@@ -47,9 +66,9 @@ export default function SecuritiesPlatform() {
                                 </div>
 
                                 <div className="compli-info">
-                                    <h3 className="h5">ISO 27001</h3>
+                                    <h3 className="h5">{certifiedPlatformsList.platform3Title}</h3>
 
-                                    <p style={{ color: "var(--grey)" }}>DhatuVault maintains ISMS certification ensuring information security management excellence</p>
+                                    <p style={{ color: "var(--grey)" }}>{certifiedPlatformsList.platform3Subtitle}</p>
                                 </div>
                             </div>
 
@@ -59,9 +78,9 @@ export default function SecuritiesPlatform() {
                                 </div>
 
                                 <div className="compli-info">
-                                    <h3 className="h5">GDPR & HIPAA Ready</h3>
+                                    <h3 className="h5">{certifiedPlatformsList.platform4Title}</h3>
 
-                                    <p style={{ color: "var(--grey)" }}>Maintains GDPR compliance for EU data protection and global privacy requirements</p>
+                                    <p style={{ color: "var(--grey)" }}>{certifiedPlatformsList.platform4Subtitle}</p>
                                 </div>
                             </div>
                         </div>

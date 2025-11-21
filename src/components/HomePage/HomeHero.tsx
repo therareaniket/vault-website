@@ -12,7 +12,14 @@ const heroImages = [
   { src: "/images/HomePage/demo-1.webp", width: 264, height: 118, className: "hm-hero-img-5" },
 ];
 
-const HomeHero = () => {
+type HeroProps = {
+    home_hero_title: string;
+    home_hero_subtitle: string;
+    home_hero_cta_1?: { url: string; title: string } | null;
+    home_hero_cta_2?: { url: string; title: string } | null;
+};
+
+const HomeHero = ({ home_hero_title, home_hero_subtitle, home_hero_cta_1, home_hero_cta_2, }: HeroProps) => {
   const [animate, setAnimate] = useState({
     title: false,
     subtitle: false,
@@ -58,31 +65,18 @@ const HomeHero = () => {
     <section className="home-hero">
       {/* Background video */}
       <div className="hero-bg-video">
-        <video
-          src="/images/HomePage/hero-bg-mp.mp4"
-          loop
-          autoPlay
-          muted
-          className="w-full h-full object-cover"
-        />
+        <video src="/images/HomePage/hero-bg-mp.mp4" loop autoPlay muted className="w-full h-full object-cover" />
       </div>
       <div className="container">
       {/* Hero content */}
       <div className="home-hero-content">
         <div className="hero-content-text">
-          <h1
-            className={`hero-title transition-transform duration-700 ${animate.title ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
-              }`}
-          >
-            Intelligent DhatuVault for Compliant Clinical Trials
+          <h1 className={`hero-title transition-transform duration-700 ${animate.title ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0" }`} >
+            {home_hero_title}
           </h1>
 
-          <p
-            className={`hero-subtitle transition-transform duration-700 ${animate.subtitle ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
-              }`}
-          >
-            Secure, automated DhatuVault built for global compliance, seamless
-            scalability, and effortless document management.
+          <p className={`hero-subtitle transition-transform duration-700 ${animate.subtitle ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0" }`} >
+          {home_hero_subtitle}
           </p>
 
           <div
@@ -91,39 +85,25 @@ const HomeHero = () => {
                 : "scale-0 opacity-0"
               }`}
           >
-            <Link href="#" className="btn-bg btn-padding text-md text-18">
-              Book a Demo
-            </Link>
-            <Link
-              href="#"
-              className="btn-padding explore-prod-btn text-md text-18 site-radius-10 btn-secondary"
-            >
-              Explore Product
-            </Link>
+            {home_hero_cta_1 && (
+                <Link href={home_hero_cta_1.url} title={home_hero_cta_1.title} className="btn-bg btn-padding text-md text-18">{home_hero_cta_1.title}</Link>
+            )}
+
+            {home_hero_cta_2 && (
+                <Link href={home_hero_cta_2.url} title={home_hero_cta_2.title} className="btn-padding explore-prod-btn text-md text-18 site-radius-10 btn-secondary">{home_hero_cta_2.title}</Link>
+            )}
           </div>
         </div>
 
         <div className="hero-content-images">
           <div className="image-content-1">
             {heroImages.slice(0, 2).map((img, idx) => (
-              <AnimatedImage
-                key={idx}
-                src={img.src}
-                width={img.width}
-                height={img.height}
-                visible={animate.images[idx]}
-              />
+              <AnimatedImage key={idx} src={img.src} width={img.width} height={img.height} visible={animate.images[idx]}/>
             ))}
           </div>
           <div className="image-content-2">
             {heroImages.slice(2).map((img, idx) => (
-              <AnimatedImage
-                key={idx + 2}
-                src={img.src}
-                width={img.width}
-                height={img.height}
-                visible={animate.images[idx + 2]}
-              />
+              <AnimatedImage key={idx + 2} src={img.src} width={img.width} height={img.height} visible={animate.images[idx + 2]} />
             ))}
           </div>
         </div>

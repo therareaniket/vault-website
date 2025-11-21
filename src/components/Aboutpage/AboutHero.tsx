@@ -2,7 +2,15 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function AboutHero() {
+type AboutHomeProps = {
+    aboutHeroTitle: string;
+    aboutHeroSubtitle: string;
+
+    infoTitle: string;
+    infoSubtitle: string;
+}
+
+export default function AboutHero({aboutHeroTitle, aboutHeroSubtitle, infoTitle, infoSubtitle}:AboutHomeProps) {
   const [animate, setAnimate] = useState({
     heading: false,
     paragraph: false,
@@ -40,14 +48,8 @@ export default function AboutHero() {
                 animate.heading ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
               }`}
             >
-              <h1>Built for Compliant, Connected Research</h1>
-              <p
-                className={`h6 text-rg transition-transform duration-700 ${
-                  animate.paragraph ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
-                }`}
-              >
-                Delivering secure, scalable solutions that protect your data and simplify compliance.
-              </p>
+              <h1>{aboutHeroTitle}</h1>
+              <p className={`h6 text-rg transition-transform duration-700 ${   animate.paragraph ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0" }`}>{aboutHeroSubtitle}</p>
             </div>
 
             <div
@@ -70,10 +72,8 @@ export default function AboutHero() {
       <section className="section">
         <div className="container">
           <div className="page-info">
-            <h2 className="h3">Trusted Clinical Oversight and Audit-Ready Compliance</h2>
-            <p className="h6 text-rg">
-              DhatuVault Portal centralizes all clinical trial documentation with inspection-ready controls for approvals and access management throughout the study lifecycle. The platform enforces role-based permissions for sensitive content, maintains complete audit trails of all actions, and automates approval workflows—ensuring 21 CFR Part 11 compliance and regulatory readiness at every step.
-            </p>
+            <h2 className="h3">{infoTitle}</h2>
+            <p className="h6 text-rg">{infoSubtitle}</p>
           </div>
         </div>
       </section>

@@ -6,7 +6,12 @@ import Link from "next/link"
 import { Progress } from "@/components/ui/progress"
 import HmBlogArrow from "./HmBlogArrow"
 
-const HomeBlogSection = () => {
+type BlogProps = { 
+    blogsTitle: string;
+    blogsSubtitle: string;
+ }
+
+const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const initialAnimatedRef = useRef(false) // ensures first animation runs once
 
@@ -175,10 +180,8 @@ useEffect(() => {
 
           {/* Header */}
           <div className="hm-blog-head">
-            <h2 className="text-sb">Thoughts & Updates</h2>
-            <p className="text-rg h6">
-              Explore expert insights, product innovations, and clinical trial strategies.
-            </p>
+            <h2 className="text-sb">{blogsTitle}</h2>
+            <p className="text-rg h6">{blogsSubtitle}</p>
           </div>
 
           {/* Scrollable Cards */}
