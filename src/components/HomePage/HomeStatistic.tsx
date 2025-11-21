@@ -25,13 +25,13 @@ const HomeStatistic = () => {
         <div className="statistic-main">
           <div className='home-stats-head'>
             <h2 className='text-sb'>
-              Accelerate Trial with Vault’s Intelligent Platform
+              Accelerate Trial with DhatuVault’s Intelligent Platform
             </h2>
 
             <p className='h6 text-rg home-stats-para'>
-              Vault is designed for modern clinical operations, unifying document control,
+              DhatuVault is designed for modern clinical operations, unifying document control,
               AI-powered automation, and compliance first workflows. Whether you’re a sponsor, CRO, site partner,
-              Vault ensures fast, and compliant trial delivery.
+              it ensures fast and compliant trial delivery.
             </p>
 
             <div className='stats-section-cards'>

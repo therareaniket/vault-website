@@ -1,5 +1,4 @@
 "use client";
-import { div } from "motion/react-client";
 import React, { useState, useEffect } from "react";
 
 const HomeTestimonial = () => {
@@ -8,21 +7,21 @@ const HomeTestimonial = () => {
             client: "J",
             clientName: "James Carter",
             clientDetail: "IT Director, MedTech Solutions",
-            text: "Vault simplified our document management, replacing long email threads with one seamless workspace. Collaboration is now faster, smarter, and fully compliant.",
+            text: "DhatuVault simplified our document management, replacing long email threads with one seamless workspace. Collaboration is now faster, smarter, and fully compliant.",
             date: "01 Sep, 2025",
         },
         {
             client: "P",
             clientName: "Priya Mehta",
             clientDetail: "Compliance Officer, FinSecure Ltd.",
-            text: "Compliance Vault streamlined our entire audit process. What used to take weeks now takes days. The intuitive dashboard and automated alerts keep us ahead of regulatory deadlines.",
+            text: "DhatuVault streamlined our entire audit process. What used to take weeks now takes days. The intuitive dashboard and automated alerts keep us ahead of regulatory deadlines.",
             date: "29 Aug, 2025",
         },
         {
             client: "A",
             clientName: "Anita Desai",
             clientDetail: "Operations Manager, LegalEdge Partners",
-            text: "As our studies expanded across regions, Vault scaled effortlessly with our needs. Its secure, connected workflows empower us to manage complex global operations with confidence.",
+            text: "As our studies expanded across regions, DhatuVault scaled effortlessly with our needs. Its secure, connected workflows empower us to manage complex global operations with confidence.",
             date: "06 Sep, 2025",
         },
         {
@@ -49,6 +48,16 @@ const HomeTestimonial = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    useEffect(() => {
+    if (!isMobile) return; // Only on mobile
+
+    const interval = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % testimonials.length);
+    }, 3500); // change speed here
+
+    return () => clearInterval(interval);
+}, [isMobile, testimonials.length]);
+
     // Next / Prev logic
     const rotateCircleC = () => {
         if (!isMobile) {
@@ -72,10 +81,10 @@ const HomeTestimonial = () => {
                 {/* Heading Section */}
                 <div className="hm-head-text-wrapper">
                     <h2 className="text-sb hm-head-text">
-                        Success Stories Powered by ComplianceVault
+                        Success Stories 
                     </h2>
                     <p className="text-rg h6 hm-para-text">
-                        Hear from teams who rely on Vault to streamline document management,
+                        Hear from teams who rely on DhatuVault to streamline document management,
                         ensure compliance, and deliver study excellence — empowering seamless
                         collaboration and complete audit readiness across every study phase.
                     </p>

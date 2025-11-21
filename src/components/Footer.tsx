@@ -25,10 +25,10 @@ const Footer = () => {
 
                                 <ul className='foot-quick-links'>
                                     <li><Link className='text-16 text-rg' href="/About">About</Link></li>
-                                    {/* <li><Link className='text-16 text-rg' href="">Product</Link></li> */}
                                     <li><Link className='text-16 text-rg' href="/Solutions">Solutions</Link></li>
                                     <li><Link className='text-16 text-rg' href="/Security&Compliance">Security & Compliance </Link></li>
                                     <li><Link className='text-16 text-rg' href="/Blogs">Resources</Link></li>
+                                    <li><Link className='text-16 text-rg' href="/Contact">Contact</Link></li>
                                 </ul>
                             </div>
 
@@ -79,9 +79,9 @@ const Footer = () => {
                     <div className="container">
                         <div className="footer-cta-bg site-radius-10">
                             <div className="footer-cta-text">
-                                <h2 className='h3 text-sb'>Let Vault manage regulatory compliance </h2>
+                                <h2 className='h3 text-sb'>Let DhatuVault manage regulatory compliance </h2>
 
-                                <p className='h6 text-rg'>From eTMF uploads to regulatory inspections, Vault streamlines clinical operations with automated accuracy, full traceability, and unmatched speed.</p>
+                                <p className='h6 text-rg'>From eTMF uploads to regulatory inspections, DhatuVault streamlines clinical operations with automated accuracy, full traceability, and unmatched speed.</p>
 
                                 <Link href="" className='footer-cta-button btn-bg btn-padding text-18 text-md'>Book a Demo</Link>
                             </div>

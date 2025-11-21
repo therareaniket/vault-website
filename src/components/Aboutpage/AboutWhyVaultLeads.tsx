@@ -10,22 +10,22 @@ export default function WhyVaultLead() {
                     <div className="why-leads-headings">
                         <h2 className="h3">Why DhatuVault Leads Clinical Trials</h2>
 
-                        <p className="h6 text-rg">Regulatory-first architecture, AI-driven automation, and intelligent solutions Vault delivers secure, scalable, and inspection-ready trial management.</p>
+                        <p className="h6 text-rg">Regulatory-first architecture, AI-driven automation, and intelligent solutions. DhatuVault delivers secure, scalable, and inspection-ready trial management.</p>
                     </div>
 
                     <div className="why-leads-lists">
                         <div className="why-leads-list site-radius-20">
-                            <Image src='/images/aboutpage/why-leads-compliance.webp' alt="" width={261} height={182}></Image>
+                            <Image src='/images/dhatuVaultGifs/why-leads-compliance.gif' alt="" width={261} height={182}></Image>
 
                             <div className="leads-list-text">
                                 <h3 className="h5 text-md">Compliance-First Architecture</h3>
 
-                                <p className="text-18-ani">Built for global regulatory standards, Vault ensures your trial data is secure, auditable, and inspection-ready.</p>
+                                <p className="text-18-ani">Built for global regulatory standards, DhatuVault ensures your trial data is secure, auditable, and inspection-ready.</p>
                             </div>
                         </div>
 
                         <div className="why-leads-list site-radius-20">
-                            <Image src='/images/aboutpage/why-leads-ai-automation.webp' alt="" width={307} height={201}></Image>
+                            <Image src='/images/dhatuVaultGifs/why-leads-ai-automation.gif' alt="" width={307} height={201}></Image>
 
                             <div className="leads-list-text">
                                 <h3 className="h5 text-md">Powered by AI Agents</h3>
@@ -36,7 +36,7 @@ export default function WhyVaultLead() {
 
 
                         <div className="why-leads-list site-radius-20">
-                            <Image src='/images/aboutpage/why-leads-dashboard.webp' alt="" width={363} height={197}></Image>
+                            <Image src='/images/dhatuVaultGifs/why-leads-dashboard.gif' alt="" width={363} height={197}></Image>
                             <div className="leads-list-text">
                                 <h3 className="h5 text-md">Real-Time Dashboards</h3>
 

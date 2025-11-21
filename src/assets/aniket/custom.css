@@ -200,7 +200,7 @@ section.trial-performance { padding-top: 0; }
 .assrnc-compli-tab[data-state="active"] { color: var(--secondary-purple-bluish); background-color: #F8F6FF; box-shadow: none; }
 
 .assrnc-compli-contnt { width: calc(100% - 420px); background-image: url("/images/securitycompliancepage/assrnce-info-bg.webp"); }
-.assrnc-tab-details { padding: 60px; height: 400px; display: flex; flex-direction: column; justify-content: center; }
+.assrnc-tab-details { padding: 60px; height: 400px; display: flex; flex-direction: column; justify-content: start; }
 .assrnc-explor-btn { width: 210px; margin-top: 40px; }
 
 .esign-headings { width: 1240px; margin: 0 auto; text-align: center; }

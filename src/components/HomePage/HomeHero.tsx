@@ -5,11 +5,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const heroImages = [
-  { src: "/images/HomePage/demo-2.webp", width: 297, height: 279 },
-  { src: "/images/HomePage/hero-img-2.webp", width: 344, height: 150 },
-  { src: "/images/HomePage/hero-img-3.webp", width: 236, height: 216 },
-  { src: "/images/HomePage/demo.webp", width: 250, height: 200 },
-  { src: "/images/HomePage/demo-1.webp", width: 264, height: 118 },
+  { src: "/images/HomePage/demo-2.webp", width: 297, height: 279, className: "hm-hero-img-1" },
+  { src: "/images/HomePage/hero-img-2.webp", width: 344, height: 150, className: "hm-hero-img-2" },
+  { src: "/images/HomePage/hero-img-3.webp", width: 236, height: 216, className: "hm-hero-img-3" },
+  { src: "/images/HomePage/demo.webp", width: 250, height: 200, className: "hm-hero-img-4" },
+  { src: "/images/HomePage/demo-1.webp", width: 264, height: 118, className: "hm-hero-img-5" },
 ];
 
 const HomeHero = () => {
@@ -74,14 +74,14 @@ const HomeHero = () => {
             className={`hero-title transition-transform duration-700 ${animate.title ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
               }`}
           >
-            Intelligent Vault for Compliant Clinical Trials
+            Intelligent DhatuVault for Compliant Clinical Trials
           </h1>
 
           <p
             className={`hero-subtitle transition-transform duration-700 ${animate.subtitle ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
               }`}
           >
-            Secure, automated vault system built for global compliance, seamless
+            Secure, automated DhatuVault built for global compliance, seamless
             scalability, and effortless document management.
           </p>
 

@@ -46,7 +46,7 @@ export default function AboutRoles() {
                     <div className="abt-roles-headings">
                         <h2 className="h3">Built for Every Role</h2>
 
-                        <p className="h6 text-rg">From sponsors to sites, CROs to labs—Vault empowers every stakeholder in the clinical trial ecosystem</p>
+                        <p className="h6 text-rg">From sponsors to sites, CROs to labs—DhatuVault empowers every stakeholder in the clinical trial ecosystem</p>
                     </div>
 
                     <div className="abt-user-roles">

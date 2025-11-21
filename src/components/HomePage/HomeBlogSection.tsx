@@ -7,20 +7,64 @@ import { Progress } from "@/components/ui/progress"
 import HmBlogArrow from "./HmBlogArrow"
 
 const HomeBlogSection = () => {
-  const scrollRef = useRef<HTMLDivElement>(null)
+  const scrollRef = useRef<HTMLDivElement | null>(null)
+  const initialAnimatedRef = useRef(false) // ensures first animation runs once
+
   const [progress, setProgress] = useState(70)
   const [isSmallScreen, setIsSmallScreen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
 
   // Detect screen width
   useEffect(() => {
-    const handleResize = () => setIsSmallScreen(window.innerWidth <= 500)
+    const handleResize = () => setIsSmallScreen(window.innerWidth <= 1100)
     handleResize()
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  // Scroll handling & mobile animation trigger
+  // Utility: return actual .hm-blog-card inside wrapper
+  const getCardFromWrapper = (wrapper: HTMLElement): HTMLElement | null => {
+    if (wrapper.classList.contains("hm-blog-card")) return wrapper
+    return wrapper.querySelector(".hm-blog-card")
+  }
+
+  // Find centered card index
+  const findCenteredIndex = (container: HTMLDivElement) => {
+    const children = Array.from(container.children) as HTMLElement[]
+    const scrollLeft = container.scrollLeft
+    const containerWidth = container.clientWidth
+    const viewCenter = scrollLeft + containerWidth / 2
+
+    let closest = 0
+    let minDist = Infinity
+
+    children.forEach((child, idx) => {
+      const childCenter = child.offsetLeft + child.clientWidth / 2
+      const dist = Math.abs(childCenter - viewCenter)
+      if (dist < minDist) {
+        minDist = dist
+        closest = idx
+      }
+    })
+
+    return closest
+  }
+
+  // Activate card animation
+  const activateCard = (cardEl: HTMLElement | null) => {
+    if (!cardEl) return
+    cardEl.classList.add("active-animation")
+    cardEl.querySelector(".for-animation")?.classList.add("animate")
+  }
+
+  // Deactivate animation
+  const deactivateCard = (cardEl: HTMLElement | null) => {
+    if (!cardEl) return
+    cardEl.classList.remove("active-animation")
+    cardEl.querySelector(".for-animation")?.classList.remove("animate")
+  }
+
+  // Scroll + progress + mobile animation logic
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
@@ -36,6 +80,7 @@ const HomeBlogSection = () => {
       const adjustedProgress = Math.max(70, Math.min(progressPercent, 100))
       setProgress(adjustedProgress)
 
+      // MOBILE animation logic
       if (isSmallScreen) {
         const children = Array.from(el.children) as HTMLElement[]
         let closest = 0
@@ -46,8 +91,8 @@ const HomeBlogSection = () => {
           const viewCenter = scrollLeft + containerWidth / 2
           const dist = Math.abs(childCenter - viewCenter)
 
-          // Remove animation class from all
-          child.classList.remove("active-animation")
+          const card = getCardFromWrapper(child)
+          if (card) deactivateCard(card)
 
           if (dist < minDist) {
             minDist = dist
@@ -55,25 +100,70 @@ const HomeBlogSection = () => {
           }
         })
 
-        // Add animation class to the centered card
-        children[closest].classList.add("active-animation")
+        const centeredWrapper = children[closest]
+        const centeredCard = getCardFromWrapper(centeredWrapper)
+        if (centeredCard) activateCard(centeredCard)
+
         setActiveIndex(closest)
       }
     }
 
     el.addEventListener("scroll", handleScroll, { passive: true })
-    handleScroll()
+    handleScroll() // initial call
+
     return () => el.removeEventListener("scroll", handleScroll)
   }, [isSmallScreen])
 
-  // Scroll to card on dot click
+  // ⭐ Initial animation when FIRST CARD becomes visible
+// ⭐ Initial animation when FIRST CARD becomes visible on mobile
+useEffect(() => {
+  // Only run this auto‑animation in mobile view
+  if (!isSmallScreen) return
+
+  const container = scrollRef.current
+  if (!container) return
+
+  const firstWrapper = container.children[0] as HTMLElement
+  if (!firstWrapper) return
+
+  const firstCard = getCardFromWrapper(firstWrapper)
+  if (!firstCard) return
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0]
+      // When section comes into view for the first time on mobile,
+      // trigger the first card animation once.
+      if (entry.isIntersecting && !initialAnimatedRef.current) {
+        initialAnimatedRef.current = true
+        requestAnimationFrame(() => {
+          activateCard(firstCard)
+          setActiveIndex(0)
+        })
+        observer.disconnect()
+      }
+    },
+    {
+      // Slightly looser threshold so animation starts as soon as
+      // user reaches the section.
+      threshold: 0.3,
+    }
+  )
+
+  observer.observe(firstWrapper)
+
+  return () => observer.disconnect()
+}, [isSmallScreen])
+
+
+
+  // Scroll to card using dots
   const scrollToCard = (index: number) => {
     const el = scrollRef.current
     if (!el) return
-
-    const card = el.children[index] as HTMLElement
-    if (card) {
-      const left = card.offsetLeft - (el.clientWidth / 2 - card.clientWidth / 2)
+    const child = el.children[index] as HTMLElement
+    if (child) {
+      const left = child.offsetLeft - (el.clientWidth / 2 - child.clientWidth / 2)
       el.scrollTo({ left, behavior: "smooth" })
     }
   }
@@ -91,23 +181,24 @@ const HomeBlogSection = () => {
             </p>
           </div>
 
-          {/* Scrollable Blog Cards */}
+          {/* Scrollable Cards */}
           <div
             ref={scrollRef}
             className="hm-blog-cards hide-scrollbar flex gap-[60px] scroll-smooth 
                        snap-x snap-mandatory"
           >
+
             {/* Card 1 */}
             <div className="hm-blog-card hm-blog-card-1 relative snap-center">
               <span className="for-animation"></span>
+
               <div className="hm-blog-card-text hm-blog-card-text-1">
                 <div className="blog-text-res-wrap">
                   <div className="hm-blog-text-wrap">
                     <h3 className="h5 text-md">Dashboards That Drive Decisions</h3>
-                    <Link href="/BlogDetailPage">
-                      <HmBlogArrow />
-                    </Link>
+                    <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
                   </div>
+
                   <p className="text-18 text-rg">
                     How real-time insights improve trial oversight and streamline compliance.
                   </p>
@@ -118,6 +209,7 @@ const HomeBlogSection = () => {
                   </div>
                 </div>
               </div>
+
               <Image
                 className="home-blog-img-1 site-radius-20"
                 src="/images/HomePage/hm-blog-img-1.webp"
@@ -131,21 +223,25 @@ const HomeBlogSection = () => {
             <div className="hm-blog-card-wrapper hm-blog-card-wrapper-2 snap-center">
               <div className="hm-blog-card hm-blog-card-2 relative">
                 <span className="for-animation"></span>
+
                 <div className="blog-text-res-wrap">
                   <div className="hm-blog-card-text hm-blog-card-text-2">
                     <div className="hm-blog-text-wrap">
                       <h3 className="h5 text-md">5 Ways DhatuVault CTMS Reduces Study Time</h3>
                       <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
                     </div>
+
                     <p className="text-18 text-rg">
                       Learn proven strategies for streamlining site activation, document management.
                     </p>
                   </div>
+
                   <div className="hm-blogs-links">
                     <Link href="#" className="link-padding text-rg text-14">Compliance & Security</Link>
                     <p className="text-14 text-rg text-grey">27 October 2025</p>
                   </div>
                 </div>
+
                 <Image
                   className="home-blog-img-2 site-radius-20"
                   src="/images/HomePage/hm-blog-img-2.webp"
@@ -160,21 +256,25 @@ const HomeBlogSection = () => {
             <div className="hm-blog-card-wrapper hm-blog-card-wrapper-3 snap-center">
               <div className="hm-blog-card hm-blog-card-3 relative">
                 <span className="for-animation"></span>
+
                 <div className="blog-text-res-wrap">
                   <div className="hm-blog-card-text hm-blog-card-text-3">
                     <div className="hm-blog-text-wrap">
                       <h3 className="h5 text-md">The Complete Guide to DhatuVault Integration</h3>
                       <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
                     </div>
+
                     <p className="text-18 text-rg">
-                      Explore how Vault unified integration hub connects EDC, eTMF, CRM.
+                      Explore how DhatuVault’s unified integration hub connects EDC, eTMF, CRM.
                     </p>
                   </div>
+
                   <div className="hm-blogs-links">
                     <Link href="#" className="link-padding text-rg text-14">AI & Automation</Link>
                     <p className="text-14 text-rg text-grey">14 September 2025</p>
                   </div>
                 </div>
+
                 <Image
                   className="home-blog-img-3 site-radius-20"
                   src="/images/HomePage/hm-blog-img-3.webp"
@@ -184,9 +284,10 @@ const HomeBlogSection = () => {
                 />
               </div>
             </div>
+
           </div>
 
-          {/* Progress Bar / Dots */}
+          {/* Progress / Dots */}
           <div className="hm-blog-progress mt-6 flex justify-center">
             {!isSmallScreen ? (
               <Progress
@@ -196,13 +297,13 @@ const HomeBlogSection = () => {
                            transition-all duration-300"
               />
             ) : (
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-2">
                 {[0, 1, 2].map((idx) => (
                   <span
                     key={idx}
                     onClick={() => scrollToCard(idx)}
-                    className={`block cursor-pointer w-3 h-3 rounded-full bg-[rgba(0,0,0,0.3)]
-                      ${activeIndex === idx ? "w-6 h-1 bg-[var(--secondary)] rounded-[2px]" : ""}
+                    className={`block cursor-pointer w-1 h-1 rounded-full bg-[rgba(0,0,0,0.3)]
+                      ${activeIndex === idx ? "w-3 h-1 bg-[var(--secondary)] rounded-[2px]" : ""}
                       transition-all duration-300`}
                   />
                 ))}

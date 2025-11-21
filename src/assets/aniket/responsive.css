@@ -269,7 +269,8 @@
     .process-info { width: 200px; }
     .process-images img { width: 65px; }
     .process-images img { transform: translate(calc(6px - 50%), calc(-50% - 10px)); }
-
+    
+    .workflow-accordion { display: none; }
 }
 
 @media screen and (max-width: 991px) {
@@ -611,7 +612,8 @@
 
     .opert-list-title .h5 { padding-top: 20px; }
     .opertion-list { height: 250px; padding-left: 0; }
- 
+    .testimonial-btns{ display: none; }
+    .testimonial-content{ justify-content: flex-start; }
 
 }
 

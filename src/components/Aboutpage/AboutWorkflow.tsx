@@ -1,6 +1,7 @@
 "use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@radix-ui/react-accordion";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -13,7 +14,7 @@ export default function Workflow(){
             title: "Upload documents via secure portal",
             desc: "Easily submit files through our encrypted platform, ensuring data privacy from the start.",
             icon: "icon-uploadIcon",
-            image: "/images/aboutpage/upload-docs.webp",
+            image: "/images/dhatuVaultGifs/upload-docs.gif",
             imgWidth: 646,
             imgHeight: 394,
         },
@@ -21,7 +22,7 @@ export default function Workflow(){
             title: "AI Agents for auto-checking content",
             desc: "Intelligent algorithms sort, tag, and verify your documents for accuracy and compliance.",
             icon: "icon-grading",
-            image: "/images/aboutpage/ai-agents.webp",
+            image: "/images/dhatuVaultGifs/ai-agents.gif",
             imgWidth: 473,
             imgHeight: 387,
         },
@@ -29,7 +30,7 @@ export default function Workflow(){
             title: "Review and approve with audit ready logs",
             desc: "Collaborate with your team and maintain detailed logs for full audit transparency.",
             icon: "icon-order_approve",
-            image: "/images/aboutpage/approve-audit-ready.webp",
+            image: "/images/dhatuVaultGifs/approve-audit-ready.gif",
             imgWidth: 605,
             imgHeight: 382,
         },
@@ -37,7 +38,7 @@ export default function Workflow(){
             title: "Monitor site readiness via dashboards",
             desc: "Get real-time insights into compliance status and system health through intuitive dashboards.",
             icon: "icon-assistant_on_hub",
-            image: "/images/aboutpage/site-readiness.webp",
+            image: "/images/dhatuVaultGifs/site-readiness.gif",
             imgWidth: 592,
             imgHeight: 320,
         },
@@ -45,7 +46,7 @@ export default function Workflow(){
             title: "Export or archive with full compliance",
             desc: "Collaborate with your team and maintain detailed logs for full audit transparency.",
             icon: "icon-exit_to_app",
-            image: "/images/aboutpage/export-archive.webp",
+            image: "/images/dhatuVaultGifs/export-archive.gif",
             imgWidth: 559,
             imgHeight: 382,
         },
@@ -56,7 +57,7 @@ export default function Workflow(){
             <section className="about-roles">
                 <div className="container">
                     <div className="workflow-headings">
-                        <h2 className="h3">Vault-Driven Workflow</h2>
+                        <h2 className="h3">DhatuVault-Driven Workflow</h2>
 
                         <p className="h6 text-rg">Experience a secure, step-by-step approach to manage compliance with confidence and clarity.</p>
                     </div>
@@ -97,6 +98,8 @@ export default function Workflow(){
                                             <div className="wf-tab-icon site-radius-10"> <i className={tab.icon}></i> </div>
                                             <h3 className="h5">{tab.title}</h3>
                                         </div>
+
+                                         <ChevronDown style={{ color: "var(--grey)" }}  className="wf-acc-arrow transition-transform duration-300 ml-auto" />
                                     </AccordionTrigger>
 
                                     <AccordionContent className="wf-accord-cont">

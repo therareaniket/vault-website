@@ -10,7 +10,7 @@ const HomeSolution = () => {
                     <div className="home-solution-head">
                         <h2 className='text-sb home-solution-head-h2'>Intelligent Solutions That Power Clinical Excellence</h2>
 
-                        <p className='text-rg h6 home-solution-head-para'>Vault delivers role-specific capabilities across the clinical ecosystem with AI-powered automation, real-time oversight, streamlined CAPA workflows, and quality management</p>
+                        <p className='text-rg h6 home-solution-head-para'>DhatuVault delivers role-specific capabilities across the clinical ecosystem with AI-powered automation, real-time oversight, streamlined CAPA workflows, and quality management</p>
                     </div>
 
                     <div className='solution-card-main'>

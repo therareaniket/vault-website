@@ -1,6 +1,7 @@
 "use client";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@radix-ui/react-accordion";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function FeaturesLabs() {
@@ -163,6 +164,8 @@ export default function FeaturesLabs() {
                 <AccordionTrigger className="py-4 flex items-start gap-3 text-left pb-0 accord-trigr">
                   <i className={`${item.icon} text-xl pt-[4px]`}></i>
                   <span className="h5 text-md">{item.title}</span>
+
+                   <ChevronDown style={{ color: "var(--grey)" }} className="mobile-accordion-arrow ml-auto transition-transform duration-300 accord-arrow" />
                 </AccordionTrigger>
 
                 <AccordionContent className="accord-content">

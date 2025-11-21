@@ -113,7 +113,7 @@ const Header = () => {
               <Image src="/images/Header/arrowIcon.svg" alt="arrow" width={32} height={32} />
             </li>
             <li className="h2 text-sb">
-              <Link href="/Blogs" onClick={closeMenu}>Blog</Link>
+              <Link href="/Blogs" onClick={closeMenu}>Resources</Link>
               <Image src="/images/Header/arrowIcon.svg" alt="arrow" width={32} height={32} />
             </li>
             <li className="h2 text-sb contact-menu-list">

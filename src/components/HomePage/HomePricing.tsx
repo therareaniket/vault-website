@@ -38,12 +38,12 @@ const HomePricing = () => {
         <div className="container">
           <div className="pricing-text-head">
             <h2 className="pricing-title text-sb">
-              Designed to Scale with Your <br /> Clinical Operations
+              Designed to Scale with Your Clinical Operations
             </h2>
             <p className="pricing-desc h6 text-rg">
               Choose the plan that fits your organization’s scale and complexity —
               from core eTMF functionality to advanced automation and analytics.
-              Vault’s pricing is designed to grow with you.
+              DhatuVault’s pricing is designed to grow with you.
             </p>
 
             {/* ===== Plan Tabs ===== */}

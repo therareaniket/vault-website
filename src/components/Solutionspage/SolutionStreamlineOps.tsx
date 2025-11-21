@@ -42,7 +42,7 @@ export default function StreamlinedOpera() {
               <div className="list-icon site-radius-10">
                 <span className="icon-uploadIcon text-white"></span>
               </div>
-              <h3 className="h5 text-sb">Upload documents via secure portal</h3>
+              <h3 className="h5 text-sb">Easily upload documents in a secure portal.</h3>
               <p>Trial documents uploaded securely with end-to-end encryption with complete privacy protection and data security.</p>
               <span className="text-sb list-num">01</span>
             </div>
@@ -53,7 +53,7 @@ export default function StreamlinedOpera() {
               <div className="list-icon site-radius-10">
                 <span className="icon-grading text-white"></span>
               </div>
-              <h3 className="h5 text-sb">Auto-Classification and Validation</h3>
+              <h3 className="h5 text-sb">Smart classification and instant validation.</h3>
               <p>DhatuVault automatically classifies documents based on predefined categories and validates them against protocol requirements.</p>
               <span className="text-sb list-num">02</span>
             </div>
@@ -64,7 +64,7 @@ export default function StreamlinedOpera() {
               <div className="list-icon site-radius-10">
                 <span className="icon-order_approve text-white"></span>
               </div>
-              <h3 className="h5 text-sb">Review and Approve with Audit Logs</h3>
+              <h3 className="h5 text-sb">Approve with transparent audit history.</h3>
               <p>Documents are routed to the appropriate reviewers with built-in approval workflows. Every action view, comment captured.</p>
               <span className="text-sb list-num">03</span>
             </div>
@@ -75,7 +75,7 @@ export default function StreamlinedOpera() {
               <div className="list-icon site-radius-10">
                 <span className="icon-assistant_on_hub text-white"></span>
               </div>
-              <h3 className="h5 text-sb">Monitor Readiness & Respond to Queries</h3>
+              <h3 className="h5 text-sb">Stay ready and respond to queries quickly.</h3>
               <p>Real-Time intelligence monitor document readiness, track workflow status, and respond to queries instantly for faster trials.</p>
               <span className="text-sb list-num">04</span>
             </div>
