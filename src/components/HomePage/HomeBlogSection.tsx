@@ -6,12 +6,12 @@ import Link from "next/link"
 import { Progress } from "@/components/ui/progress"
 import HmBlogArrow from "./HmBlogArrow"
 
-type BlogProps = { 
-    blogsTitle: string;
-    blogsSubtitle: string;
- }
+type BlogProps = {
+  blogsTitle: string;
+  blogsSubtitle: string;
+}
 
-const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
+const HomeBlogSection = ({ blogsTitle, blogsSubtitle }: BlogProps) => {
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const initialAnimatedRef = useRef(false) // ensures first animation runs once
 
@@ -120,45 +120,45 @@ const HomeBlogSection = ({blogsTitle, blogsSubtitle}:BlogProps) => {
   }, [isSmallScreen])
 
   // ⭐ Initial animation when FIRST CARD becomes visible
-// ⭐ Initial animation when FIRST CARD becomes visible on mobile
-useEffect(() => {
-  // Only run this auto‑animation in mobile view
-  if (!isSmallScreen) return
+  // ⭐ Initial animation when FIRST CARD becomes visible on mobile
+  useEffect(() => {
+    // Only run this auto‑animation in mobile view
+    if (!isSmallScreen) return
 
-  const container = scrollRef.current
-  if (!container) return
+    const container = scrollRef.current
+    if (!container) return
 
-  const firstWrapper = container.children[0] as HTMLElement
-  if (!firstWrapper) return
+    const firstWrapper = container.children[0] as HTMLElement
+    if (!firstWrapper) return
 
-  const firstCard = getCardFromWrapper(firstWrapper)
-  if (!firstCard) return
+    const firstCard = getCardFromWrapper(firstWrapper)
+    if (!firstCard) return
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const entry = entries[0]
-      // When section comes into view for the first time on mobile,
-      // trigger the first card animation once.
-      if (entry.isIntersecting && !initialAnimatedRef.current) {
-        initialAnimatedRef.current = true
-        requestAnimationFrame(() => {
-          activateCard(firstCard)
-          setActiveIndex(0)
-        })
-        observer.disconnect()
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0]
+        // When section comes into view for the first time on mobile,
+        // trigger the first card animation once.
+        if (entry.isIntersecting && !initialAnimatedRef.current) {
+          initialAnimatedRef.current = true
+          requestAnimationFrame(() => {
+            activateCard(firstCard)
+            setActiveIndex(0)
+          })
+          observer.disconnect()
+        }
+      },
+      {
+        // Slightly looser threshold so animation starts as soon as
+        // user reaches the section.
+        threshold: 0.3,
       }
-    },
-    {
-      // Slightly looser threshold so animation starts as soon as
-      // user reaches the section.
-      threshold: 0.3,
-    }
-  )
+    )
 
-  observer.observe(firstWrapper)
+    observer.observe(firstWrapper)
 
-  return () => observer.disconnect()
-}, [isSmallScreen])
+    return () => observer.disconnect()
+  }, [isSmallScreen])
 
 
 
@@ -192,102 +192,107 @@ useEffect(() => {
           >
 
             {/* Card 1 */}
-            <div className="hm-blog-card hm-blog-card-1 relative snap-center">
-              <span className="for-animation"></span>
+            <Link href="/Blog/understanding-regulatory-compliance-in-clinical-trials" className="block">
+              <div className="hm-blog-card hm-blog-card-1 relative snap-center">
+                <span className="for-animation"></span>
 
-              <div className="hm-blog-card-text hm-blog-card-text-1">
-                <div className="blog-text-res-wrap">
-                  <div className="hm-blog-text-wrap">
-                    <h3 className="h5 text-md">Dashboards That Drive Decisions</h3>
-                    <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
-                  </div>
+                <div className="hm-blog-card-text hm-blog-card-text-1">
+                  <div className="blog-text-res-wrap">
+                    <div className="hm-blog-text-wrap">
+                      <h3 className="h5 text-md">Understanding Regulatory Compliance in Clinical Trials</h3>
+                      <Link href="/Blogs"><HmBlogArrow /></Link>
+                    </div>
 
-                  <p className="text-18 text-rg">
-                    How real-time insights improve trial oversight and streamline compliance.
-                  </p>
+                    <p className="text-18 text-rg">
+                      Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.
+                    </p>
 
-                  <div className="hm-blogs-links">
-                    <Link href="#" className="link-padding text-rg text-14">Data Visualization</Link>
-                    <p className="text-14 text-rg text-grey">23 October 2025</p>
+                    <div className="hm-blogs-links">
+                      <Link href="#" className="link-padding text-rg text-14">Compliance</Link>
+                      <p className="text-14 text-rg text-grey">27 October 2025</p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <Image
-                className="home-blog-img-1 site-radius-20"
-                src="/images/HomePage/hm-blog-img-1.webp"
-                alt="Dashboard"
-                width={493}
-                height={237}
-              />
-            </div>
+                <Image
+                  className="home-blog-img-1 site-radius-20"
+                  src="/images/blogspage/BlogListing-img-1.webp"
+                  alt="Dashboard"
+                  width={493}
+                  height={237}
+                />
+              </div>
+            </Link>
 
             {/* Card 2 */}
-            <div className="hm-blog-card-wrapper hm-blog-card-wrapper-2 snap-center">
-              <div className="hm-blog-card hm-blog-card-2 relative">
-                <span className="for-animation"></span>
+            <Link href="/Blog/navigating-21-cfr-part-11-in-clinical-data-systems" className="block">
+              <div className="hm-blog-card-wrapper hm-blog-card-wrapper-2 snap-center">
+                <div className="hm-blog-card hm-blog-card-2 relative">
+                  <span className="for-animation"></span>
 
-                <div className="blog-text-res-wrap">
-                  <div className="hm-blog-card-text hm-blog-card-text-2">
-                    <div className="hm-blog-text-wrap">
-                      <h3 className="h5 text-md">5 Ways DhatuVault CTMS Reduces Study Time</h3>
-                      <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
+                  <div className="blog-text-res-wrap">
+                    <div className="hm-blog-card-text hm-blog-card-text-2">
+                      <div className="hm-blog-text-wrap">
+                        <h3 className="h5 text-md">Navigating 21 CFR Part 11 in Clinical Data Systems</h3>
+                        <Link href="/Blogs"><HmBlogArrow /></Link>
+                      </div>
+
+                      <p className="text-18 text-rg">
+                        Learn proven strategies for streamlining site activation, document management.
+                      </p>
                     </div>
 
-                    <p className="text-18 text-rg">
-                      Learn proven strategies for streamlining site activation, document management.
-                    </p>
+                    <div className="hm-blogs-links">
+                      <Link href="#" className="link-padding text-rg text-14">Compliance</Link>
+                      <p className="text-14 text-rg text-grey">27 October 2025</p>
+                    </div>
                   </div>
 
-                  <div className="hm-blogs-links">
-                    <Link href="#" className="link-padding text-rg text-14">Compliance & Security</Link>
-                    <p className="text-14 text-rg text-grey">27 October 2025</p>
-                  </div>
+                  <Image
+                    className="home-blog-img-2 site-radius-20"
+                    src="/images/blogspage/BlogListing-img-2.webp"
+                    alt="CTMS Study Startup"
+                    width={493}
+                    height={237}
+                  />
                 </div>
-
-                <Image
-                  className="home-blog-img-2 site-radius-20"
-                  src="/images/HomePage/hm-blog-img-2.webp"
-                  alt="CTMS Study Startup"
-                  width={493}
-                  height={237}
-                />
               </div>
-            </div>
+            </Link>
 
             {/* Card 3 */}
-            <div className="hm-blog-card-wrapper hm-blog-card-wrapper-3 snap-center">
-              <div className="hm-blog-card hm-blog-card-3 relative">
-                <span className="for-animation"></span>
+            <Link href="/Blog/hippa-clinical-research" className="block">
+              <div className="hm-blog-card-wrapper hm-blog-card-wrapper-3 snap-center">
+                <div className="hm-blog-card hm-blog-card-3 relative">
+                  <span className="for-animation"></span>
 
-                <div className="blog-text-res-wrap">
-                  <div className="hm-blog-card-text hm-blog-card-text-3">
-                    <div className="hm-blog-text-wrap">
-                      <h3 className="h5 text-md">The Complete Guide to DhatuVault Integration</h3>
-                      <Link href="/BlogDetailPage"><HmBlogArrow /></Link>
+                  <div className="blog-text-res-wrap">
+                    <div className="hm-blog-card-text hm-blog-card-text-3">
+                      <div className="hm-blog-text-wrap">
+                        <h3 className="h5 text-md">HIPAA & Clinical Research: Protecting PHI in Trial Settings</h3>
+                        <Link href="/Blogs"><HmBlogArrow /></Link>
+                      </div>
+
+                      <p className="text-18 text-rg">
+                        Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.
+                      </p>
                     </div>
 
-                    <p className="text-18 text-rg">
-                      Explore how DhatuVault’s unified integration hub connects EDC, eTMF, CRM.
-                    </p>
+                    <div className="hm-blogs-links">
+                      <Link href="#" className="link-padding text-rg text-14">Compliance</Link>
+                      <p className="text-14 text-rg text-grey">27 October 2025</p>
+                    </div>
                   </div>
 
-                  <div className="hm-blogs-links">
-                    <Link href="#" className="link-padding text-rg text-14">AI & Automation</Link>
-                    <p className="text-14 text-rg text-grey">14 September 2025</p>
-                  </div>
+                  <Image
+                    className="home-blog-img-3 site-radius-20"
+                    src="/images/blogspage/BlogListing-img-3.webp"
+                    alt="Integration"
+                    width={493}
+                    height={237}
+                  />
                 </div>
-
-                <Image
-                  className="home-blog-img-3 site-radius-20"
-                  src="/images/HomePage/hm-blog-img-3.webp"
-                  alt="Integration"
-                  width={493}
-                  height={237}
-                />
               </div>
-            </div>
-
+            </Link>
           </div>
 
           {/* Progress / Dots */}

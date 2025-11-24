@@ -23,16 +23,16 @@ export default function BlogLists() {
 
                         <TabsContent value="all">
                             <div className="blog-list">
-                                <Link href="/Blog/blog-1" className="block">
+                                <Link href="/Blog/understanding-regulatory-compliance-in-clinical-trials" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/compliance-blog-img.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/blogspage/BlogListing-img-1.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
                                                     <p>Smit Shah</p>
 
-                                                    <p>Data Visualization</p>
+                                                    <p>Compliance</p>
                                                 </div>
 
                                                 <p>27 October 2025</p>
@@ -49,16 +49,16 @@ export default function BlogLists() {
                                     </div>
                                 </Link>
 
-                                <Link href="/Blog/blog-2" className="block">
+                                <Link href="/Blog/navigating-21-cfr-part-11-in-clinical-data-systems" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/compliance-cfr-img.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/blogspage/BlogListing-img-2.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
                                                     <p>Smit Shah</p>
 
-                                                    <p>Compliance & Security</p>
+                                                    <p>Compliance</p>
                                                 </div>
 
                                                 <p>27 October 2025</p>
@@ -75,16 +75,16 @@ export default function BlogLists() {
                                     </div>
                                 </Link>
 
-                                <Link href="/Blog/blog-3" className="block">
+                                <Link href="/Blog/hippa-clinical-research" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/hippa-blog-img.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/blogspage/BlogListing-img-3.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
-                                                    <p>Dev Malhotra</p>
+                                                    <p>Smit Shah</p>
 
-                                                    <p>AI & Automation</p>
+                                                    <p>Compliance</p>
                                                 </div>
 
                                                 <p>27 October 2025</p>
@@ -129,18 +129,18 @@ export default function BlogLists() {
                             </div>
                         </TabsContent>
 
-                        {/* <TabsContent value="compliance">
+                        <TabsContent value="compliance">
                             <div className="blog-list">
-                                <Link href="#" className="block">
+                                <Link href="/Blog/understanding-regulatory-compliance-in-clinical-trials" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/blog-2-final.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/blogspage/BlogListing-img-1.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
-                                                    <p>Ishita Rao</p>
+                                                    <p>Smit Shah</p>
 
-                                                    <p>Compliance & Security</p>
+                                                    <p>Compliance</p>
                                                 </div>
 
                                                 <p>27 October 2025</p>
@@ -150,14 +150,92 @@ export default function BlogLists() {
                                         </div>
 
                                         <div className="blog-glimps-cont">
-                                            <p className="h5">5 Ways Vault CTMS Reduces Study Startup Time</p>
+                                            <p className="h5">Understanding Regulatory Compliance in Clinical Trials: A Complete Guide </p>
+
+                                            <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p>
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/navigating-21-cfr-part-11-in-clinical-data-systems" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/blogspage/BlogListing-img-2.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Compliance</p>
+                                                </div>
+
+                                                <p>27 October 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">Navigating 21 CFR Part 11 in Clinical Data Systems</p>
 
                                             <p>Learn proven strategies for streamlining site activation, document management.</p>
                                         </div>
                                     </div>
                                 </Link>
+
+                                <Link href="/Blog/hippa-clinical-research" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/blogspage/BlogListing-img-3.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Compliance</p>
+                                                </div>
+
+                                                <p>27 October 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">HIPAA & Clinical Research: Protecting PHI in Trial Settings</p>
+
+                                            <p>Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.</p>
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                {/* <Link href="#" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/blogspage/blog-4-final.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Amit Sinha</p>
+
+                                                    <p>Data Visualization</p>
+                                                </div>
+
+                                                <p>27 October 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">Smart TMF Management: A Day in the Life with DhatuVault</p>
+
+                                            <p>Follow a clinical operations lead through a typical day using DhatuVault’s TMF tools.</p>
+                                        </div>
+                                    </div>
+                                </Link> */}
                             </div>
-                        </TabsContent> */}
+                        </TabsContent>
 
                         {/* <TabsContent value="ai_etmf">
                             <div className="blog-list">
