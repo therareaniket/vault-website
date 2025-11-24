@@ -2,15 +2,20 @@
 
 import Image from "next/image";
 
-export default function SystematicCompliance () {
+type SystematicProps = {
+    systematicComplianceTitle: string;
+    systematicComplianceSubtitle: string;
+}
+
+export default function SystematicCompliance ({systematicComplianceTitle, systematicComplianceSubtitle}:SystematicProps) {
     return(
         <>
             <section className="section bg-black text-white">
                 <div className="container">
                     <div className="sytmtc-comp-headings">
-                        <h2 className="h3">Compliance Made Systematic</h2>
+                        <h2 className="h3">{systematicComplianceTitle}</h2>
 
-                        <p className="h6 text-rg">Enforces regulatory rigour with automated compliance controls</p>
+                        <p className="h6 text-rg">{systematicComplianceSubtitle}</p>
                     </div>
 
                     <div className="systematic-highlgts">

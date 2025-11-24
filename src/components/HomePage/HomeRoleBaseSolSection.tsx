@@ -3,32 +3,43 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const HomeRoleBaseSolSection = () => {
+type RoleBasedProps = {
+    workflowTitle: string;
+    workflowSubtitle: string;
+    planning: string;
+    edlTemplates: string;
+    issueTracking: string;
+    etmfViewer: string;
+    integrationHub: string;
+    blindingManagement: string;
+}
+
+const HomeRoleBaseSolSection = ({workflowTitle, workflowSubtitle, planning, edlTemplates, issueTracking, etmfViewer, integrationHub, blindingManagement}:RoleBasedProps) => {
 
   const textData = {
     planning: {
       title: "Planning",
-      desc: "Effortlessly organize your study milestones, timelines, and deliverables in one place. The Planning module ensures visibility across all trial activities. With proactive insights, you can plan smarter and keep studies on track from start to finish."
+      desc: planning,
     },
     edl: {
       title: "EDL Templates",
-      desc: "Simplify trial setup with standardized EDL templates built for efficiency and compliance. Create, reuse, and adapt templates across studies to maintain consistency and reduce manual effort. Ensure every essential document is accounted for, accelerating readiness and audit preparation."
+      desc: edlTemplates,
     },
     issue: {
       title: "Issue Tracking",
-      desc: "Stay in control of quality and compliance with intelligent issue tracking. Log, categorize, and monitor every deviation or CAPA through resolution, ensuring full accountability. Real-time visibility helps teams act faster, close gaps, and maintain inspection-ready records."
+      desc: issueTracking,
     },
     etmf: {
       title: "eTMF Viewer",
-      desc: "Gain complete transparency with an intuitive eTMF Viewer that centralizes document access. Review, verify, and validate critical trial files in real time with ease. Ensure your eTMF remains inspection-ready while streamlining collaboration across global teams."
+      desc: etmfViewer,
     },
     hub: {
       title: "Integration Hub",
-      desc: "Break down silos with seamless connections between DhatuVault and your clinical systems. The Integration Hub automates data flow across EDC, CTMS, and other platforms, ensuring consistency and accuracy. With unified insights, teams can work smarter and make data-driven decisions."
+      desc: integrationHub,
     },
     blinding: {
       title: "Blinding Management",
-      desc: "Protect study integrity through secure, role-based blinding workflows. The Blinding Management feature ensures sensitive data remains confidential and only accessible to authorized users. Maintain compliance and minimize risk while keeping your trial operations transparent."
+      desc: blindingManagement,
     },
   } as const;
 
@@ -143,11 +154,8 @@ const handleManualClick = (key: FeatureKey) => {
         <div className="role-base-sol-wrapper">
 
           <div className="role-base-soln-text">
-            <h2 className="role-base-soln-head text-md">Powering Smarter Clinical Operations</h2>
-            <p className="role-base-soln-para h6 text-rg">
-              Explore DhatuVault’s core strengths through a visual showcase of its most impactful features.
-              From intelligent automation to regulatory-grade compliance, each capability is designed to streamline workflows.
-            </p>
+            <h2 className="role-base-soln-head text-md">{workflowTitle}</h2>
+            <p className="role-base-soln-para h6 text-rg">{workflowSubtitle}</p>
           </div>
 
           <Image
