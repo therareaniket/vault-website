@@ -98,12 +98,12 @@ const HomeHero = ({ home_hero_title, home_hero_subtitle, home_hero_cta_1, home_h
         <div className="hero-content-images">
           <div className="image-content-1">
             {heroImages.slice(0, 2).map((img, idx) => (
-              <AnimatedImage key={idx} src={img.src} width={img.width} height={img.height} visible={animate.images[idx]}/>
+              <AnimatedImage key={idx} src={img.src} width={img.width} height={img.height} className={img.className} visible={animate.images[idx]}/>
             ))}
           </div>
           <div className="image-content-2">
             {heroImages.slice(2).map((img, idx) => (
-              <AnimatedImage key={idx + 2} src={img.src} width={img.width} height={img.height} visible={animate.images[idx + 2]} />
+              <AnimatedImage key={idx + 2} src={img.src} width={img.width} height={img.height} className={img.className} visible={animate.images[idx + 2]} />
             ))}
           </div>
         </div>
@@ -119,17 +119,19 @@ const AnimatedImage = ({
   width,
   height,
   visible,
+  className,
 }: {
   src: string;
   width: number;
   height: number;
   visible: boolean;
+  className: string;
 }) => (
   <div
     className={`transition-transform duration-700 ${visible ? "scale-100 opacity-100" : "scale-0 opacity-0"
       }`}
   >
-    <Image src={src} width={width} height={height} alt="" />
+    <Image src={src} width={width} height={height} className={className} alt="" />
   </div>
 );
 

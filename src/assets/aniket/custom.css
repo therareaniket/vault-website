@@ -42,10 +42,10 @@
 .active-role { width: 1170px; height: calc(100% - 20px); }
 .click-roles .role { width: 400px; height: 210px; margin-bottom: 20px; }
 
-.cro-bg-img { background-image: url('https://rarepixelsdesign.com/wp-content/uploads/2025/11/cro-role.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
-.labs-bg-img { background-image: url('https://rarepixelsdesign.com/wp-content/uploads/2025/11/labs-role.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
-.sites-bg-img { background-image: url('https://rarepixelsdesign.com/wp-content/uploads/2025/11/sites-role.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
-.sponsor-bg-img { background-image: url('https://rarepixelsdesign.com/wp-content/uploads/2025/11/sponsor-role.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.cro-bg-img { background-image: url('https://admin.dhatuvault.com/wp-content/uploads/2025/11/cro-bg-img.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.labs-bg-img { background-image: url('https://admin.dhatuvault.com/wp-content/uploads/2025/11/labs-bg-img.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.sites-bg-img { background-image: url('https://admin.dhatuvault.com/wp-content/uploads/2025/11/sites-bg-img.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.sponsor-bg-img { background-image: url('https://admin.dhatuvault.com/wp-content/uploads/2025/11/sponsor-bg-img.webp'); background-repeat: no-repeat; background-size: cover; background-position: center; }
 
 .abt-roles-wrapper .btn-bg { background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); }
 .abt-roles-wrapper .btn-bg:hover { transform: scale(1); }
