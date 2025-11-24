@@ -2,7 +2,12 @@
 
 import { useEffect } from "react";
 
-export default function StreamlinedOpera() {
+type StreamlineOpsProps = {
+    operationsTitle: string;
+    operationsSubtitle: string;
+}
+
+export default function StreamlinedOpera({operationsTitle, operationsSubtitle}:StreamlineOpsProps) {
 
   useEffect(() => {
     const items = document.querySelectorAll<HTMLSpanElement>(".list-num");
@@ -30,10 +35,8 @@ export default function StreamlinedOpera() {
     <section className="section">
       <div className="container">
         <div className="strmlnd-ops-headings">
-          <h2 className="h3">Streamline Operations with DhatuVault</h2>
-          <p className="h6 text-rg">
-            From Upload to Approval, Step-by-step automation that secures documents, enables approvals, and ensures audit readiness
-          </p>
+          <h2 className="h3">{operationsTitle}</h2>
+          <p className="h6 text-rg">{operationsSubtitle}</p>
         </div>
 
         <div className="opertion-lists">
@@ -53,7 +56,7 @@ export default function StreamlinedOpera() {
               <div className="list-icon site-radius-10">
                 <span className="icon-grading text-white"></span>
               </div>
-              <h3 className="h5 text-sb">Smart classification and instant validation.</h3>
+              <h3 className="h5 text-sb">Instantly categorizes and validates every document</h3>
               <p>DhatuVault automatically classifies documents based on predefined categories and validates them against protocol requirements.</p>
               <span className="text-sb list-num">02</span>
             </div>

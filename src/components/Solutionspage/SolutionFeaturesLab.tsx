@@ -4,7 +4,19 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 
-export default function FeaturesLabs() {
+type FeaturesProps = {
+    featuresLabsTitle: string;
+    featuresLabsSubtitle: string;
+    secureUploadDetails: string;
+    validationEngineDetails: string;
+    retentionArchiveDetails: string;
+    notificationsDetails: string;
+
+    glanceTitle: string;
+    glanceSubtitle: string;
+}
+
+export default function FeaturesLabs({ featuresLabsTitle, featuresLabsSubtitle, secureUploadDetails, validationEngineDetails, retentionArchiveDetails, notificationsDetails, glanceTitle, glanceSubtitle }:FeaturesProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   // ---------------------------
@@ -83,29 +95,25 @@ export default function FeaturesLabs() {
       title: "Secure Uploads",
       icon: "icon-uploadIcon",
       contentTitle: "Controlled Access for Sensitive Data",
-      contentDesc:
-        "Ensure the confidentiality of critical documents with secure upload mechanisms. Role-based access controls and encryption protocols safeguard sensitive information, allowing only authorized users to view or manage files. This minimizes the risk of data breaches and ensures compliance with industry regulations.",
+      contentDesc: secureUploadDetails
     },
     {
       title: "Validation Engine",
       icon: "icon-validationIcon",
       contentTitle: "Automated Checks for Document Integrity",
-      contentDesc:
-        "Ensure every document meets your standards before it enters your system. The Validation Engine performs real-time, automated checks for format, completeness, and consistency. This reduces manual review time, flags discrepancies early, and guarantees that only accurate, compliant data is processed.",
+      contentDesc: validationEngineDetails
     },
     {
       title: "Retention & Archive",
       icon: "icon-archiveIcon",
       contentTitle: "Policy-Based Lifecycle Management",
-      contentDesc:
-        "Manage your data with confidence using intelligent retention and archiving policies. Files are automatically categorized and stored based on regulatory and operational requirements. Whether it's short-term retention or long-term archival, this system ensures timely disposal, secure storage, and audit-readiness.",
+      contentDesc: retentionArchiveDetails
     },
     {
       title: "Notifications",
       icon: "icon-notificationIcon",
       contentTitle: "Real-Time Alerts for Missing or Delayed Files",
-      contentDesc:
-        "Never miss a critical update. The notification system delivers instant alerts for missing, delayed, or non-compliant documents. Stay informed and take immediate action to resolve issues, keeping workflows smooth and ensuring deadlines are met without surprises.",
+      contentDesc: notificationsDetails
     },
   ];
 
@@ -118,12 +126,9 @@ export default function FeaturesLabs() {
       <section className="section features-of-lab">
         <div className="container">
           <div className="features-lab-headings">
-            <h2 className="h3">Essential DhatuVault Features for Labs</h2>
+            <h2 className="h3">{featuresLabsTitle}</h2>
 
-            <p className="h6 text-rg">
-              Explore the most relevant modules designed to support secure data handling,
-              validation, and lifecycle management in lab operations
-            </p>
+            <p className="h6 text-rg">{featuresLabsSubtitle}</p>
           </div>
 
           <div className="features-lab-list-wrapper">
@@ -187,12 +192,9 @@ export default function FeaturesLabs() {
       <section className="section trial-performance">
         <div className="container">
           <div className="trail-prfmnc-headings">
-            <h2 className="h3">Trial Performance at a Glance</h2>
+            <h2 className="h3">{glanceTitle}</h2>
 
-            <p className="h6 text-rg">
-              DhatuVault delivers quantifiable operational metrics enabling informed decisions
-              and measurable continuous improvement across trials
-            </p>
+            <p className="h6 text-rg">{glanceSubtitle}</p>
           </div>
 
           <div className="performace-glance">

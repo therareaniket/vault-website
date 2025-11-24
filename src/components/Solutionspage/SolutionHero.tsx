@@ -3,7 +3,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function SolutionHero() {
+type SolutionHeroProps = {
+    solutionsHeroTitle: string;
+    solutionsHeroSubtitle: string;
+}
+
+export default function SolutionHero({solutionsHeroTitle, solutionsHeroSubtitle}:SolutionHeroProps) {
   const [animate, setAnimate] = useState({
     heading: false,
     paragraph: false,
@@ -45,7 +50,7 @@ export default function SolutionHero() {
                   : "-translate-x-full opacity-0"
               }`}
             >
-              <h1>Centralized Control. Accelerated Trials.</h1>
+              <h1>{solutionsHeroTitle}</h1>
 
               <p
                 className={`h6 text-rg transition-transform duration-700 ${
@@ -54,8 +59,7 @@ export default function SolutionHero() {
                     : "-translate-x-full opacity-0"
                 }`}
               >
-                One platform for sponsors, CROs, and sites—managing trials faster
-                with unified oversight and real-time visibility.
+                {solutionsHeroSubtitle}
               </p>
             </div>
 

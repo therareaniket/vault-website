@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 
 const ContactCustomerSupport = () => {
@@ -34,7 +33,7 @@ const ContactCustomerSupport = () => {
                             <span className="icon-contact-page-ready-to"></span>
                         <div className="customer-text-wrp">
 
-                            <p className="text-18 text-rg">Ready to renew your subscription or need information about your current plan details?</p>
+                            <p className="text-18 text-rg">Time to renew your DhatuVault subscription? Need details on your current plan?</p>
 
                             <Link href="mailto:upgrade@dhatuvault.com" className="text-18 text-rg">upgrade@dhatuvault.com</Link>
                         </div>
@@ -45,7 +44,7 @@ const ContactCustomerSupport = () => {
                             <span className="icon-contact-page-cancelling-sub"></span>
                         <div className="customer-text-wrp">
 
-                            <p className="text-18 text-rg">Need a DhatuVault demo? Questions about pricing or features?</p>
+                            <p className="text-18 text-rg">Cancel or downgrade DhatuVault? Let&apos;s discuss options that work for you.</p>
 
                             <Link href="mailto:sales@dhatuvault.com" className="text-18 text-rg">sales@dhatuvault.com</Link>
                         </div>

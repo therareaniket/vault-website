@@ -41,7 +41,7 @@ const ContactHero = () => {
               animate.heading ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
             }`}
           >
-            <h1>Connect with Vault Experts</h1>
+            <h1>Ready to Transform Your Clinical Trials with DhatuVault?</h1>
 
             <p
               className={`h6 text-rg transition-transform duration-700 ${
@@ -50,8 +50,7 @@ const ContactHero = () => {
                   : "-translate-x-full opacity-0"
               }`}
             >
-              Connect with our Vault team for product inquiries, technical support, or customized
-              solutions. We're here to guide your clinical operations journey.
+              Connect with our clinical operations experts to discover how DhatuVault&apos;s intelligent platform can streamline your trial management, ensure regulatory compliance, and accelerate study execution.
             </p>
           </div>
 

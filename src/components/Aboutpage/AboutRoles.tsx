@@ -7,11 +7,11 @@ type AboutRolesProps = {
 }
 
 const ROLES = [
-    { id: 1, bgClass: "cro-bg-img", title: "CROs", subTitle: "Collaborate seamlessly with sponsors and sites while maintaining high-quality documentation." },
-    { id: 2, bgClass: "labs-bg-img", title: "Labs", subTitle: "Transmit lab results and sensitive data through secure, encrypted pipelines at every stage, and drive operations." },
-    { id: 3, bgClass: "sites-bg-img", title: "Sites", subTitle: "Easily upload essential documents, reduce back-and-forth, and accelerate approval timelines." }
+    { id: 1, bgClass: "cro-bg-img", title: "CROs", subTitle: "Coordinate seamlessly with sponsors and sites through DhatuVault's unified workflows." },
+    { id: 2, bgClass: "labs-bg-img", title: "Labs", subTitle: "Integrate lab data with trial systems while maintaining regulatory compliance via DhatuVault." },
+    { id: 3, bgClass: "sites-bg-img", title: "Sites", subTitle: "Streamline patient tracking and study operations with DhatuVault's site-focused workflows." }
 ];
-const ACTIVE_ROLE = { id: 0, bgClass: "sponsor-bg-img", title: "Sponsor", subTitle: "Gain full visibility into trial progress, ensure audit readiness at every stage, and drive operations." };
+const ACTIVE_ROLE = { id: 0, bgClass: "sponsor-bg-img", title: "Sponsor", subTitle: "Monitor global trials with real-time oversight and automated compliance reporting in DhatuVault." };
 
 function useIsMobile(maxWidth = 400) {
     const [isMobile, setIsMobile] = useState(typeof window !== "undefined" ? window.innerWidth <= maxWidth : false);

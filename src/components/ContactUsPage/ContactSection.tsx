@@ -34,10 +34,10 @@ const ContactSection = ({phoneNumber, email, location}:ContactProps) => {
         
         {/* LEFT SIDE */}
         <div className="contact-left">
-          <h2 className="contact-title text-md h3">Connect with Vault Experts</h2>
+          <h2 className="contact-title text-md h3">Connect with DhatuVault Experts</h2>
 
           <p className="contact-desc text-20 text-rg text-grey">
-            Questions about CTMS features, implementation, or clinical operations?
+            Questions about features, implementation, or clinical operations?
             Need technical support or want a personalized demo?
           </p>
 

@@ -76,7 +76,7 @@ const HomeHero = ({ home_hero_title, home_hero_subtitle, home_hero_cta_1, home_h
           </h1>
 
           <p className={`hero-subtitle transition-transform duration-700 ${animate.subtitle ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0" }`} >
-          {home_hero_subtitle}
+            {home_hero_subtitle}
           </p>
 
           <div
