@@ -69,7 +69,7 @@ export default async function Solutions() {
             }
         }`)
 
-        const SolutionFetch = Solution.page.solutionpage;
+    const SolutionFetch = Solution.page.solutionpage;
 
 
     return (

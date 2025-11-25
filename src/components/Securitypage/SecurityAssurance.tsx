@@ -4,15 +4,25 @@
     import Link from "next/link";
     import { ChevronDown } from "lucide-react";
 
-    export default function SecurityAssurance() {
+    type AssuranceProps = {
+        globalComplianceTitle: string;
+        globalComplianceSubtitle: string;
+        fda21Details: string;
+        euAnnexDetails: string;
+        hipaaDetails: string;
+        gdprDetails: string;
+        cdscoDetails: string;
+    }
+
+    export default function SecurityAssurance({globalComplianceTitle, globalComplianceSubtitle, fda21Details, euAnnexDetails, hipaaDetails, gdprDetails, cdscoDetails }:AssuranceProps) {
         return(
             <>
                 <section className="section">
                     <div className="container">
                         <div className="assrnc-headings">
-                            <h2 className="h3">Your Assurance of Global Compliance and Control</h2>
+                            <h2 className="h3">{globalComplianceTitle}</h2>
 
-                            <p className="h6 text-rg">DhatuVault continuously aligns with evolving FDA, EMA, and GxP frameworks to safeguard your digital records through automated validation, governance, and traceability.</p>
+                            <p className="h6 text-rg">{globalComplianceSubtitle}</p>
                         </div>
 
                         <div className="assrnc-lists">
@@ -44,7 +54,7 @@
                                         <div className="assrnc-tab-details">
                                             <h4>FDA 21 CFR Part 11</h4>  
 
-                                            <p>21 CFR Part 11 is a U.S. FDA regulation that defines the criteria under which electronic records and electronic signatures are considered trustworthy, reliable, and equivalent to paper records. It ensures that all electronic systems handling regulated data maintain accuracy, security, and traceability.</p>
+                                            <p>{fda21Details}</p>
                                             
                                             <Link href="#" className="secondry-btn assrnc-explor-btn site-radius-10"><p className="text-md text-center">Explore</p></Link>
                                         </div>
@@ -54,7 +64,7 @@
                                         <div className="assrnc-tab-details">
                                             <h4>EU Annex 11</h4>
 
-                                            <p>Provides comprehensive guidance on computerized systems operating in GMP-regulated environments across the EU. It ensures that all automated processes uphold data integrity, security, and full regulatory compliance throughout their lifecycle.</p>
+                                            <p>{euAnnexDetails}</p>
                                             
                                             <Link href="#" className="secondry-btn assrnc-explor-btn site-radius-10"><p className="text-md text-center">Explore</p></Link>
                                         </div>
@@ -64,7 +74,7 @@
                                         <div className="assrnc-tab-details">
                                             <h4>HIPAA</h4>
 
-                                            <p>Ensures the protection of sensitive patient health information through robust administrative, physical, and technical safeguards. Compliance is mandatory for healthcare providers, insurers, and associated partners to maintain privacy and data security at every level.</p>
+                                            <p>{hipaaDetails}</p>
                                             
                                             <Link href="#" className="secondry-btn assrnc-explor-btn site-radius-10"><p className="text-md text-center">Explore</p></Link>
                                         </div>
@@ -74,7 +84,7 @@
                                         <div className="assrnc-tab-details">
                                             <h4>GDPR</h4>
 
-                                            <p>Protects the personal data of EU residents by enforcing strict standards for privacy, transparency, and user control. Organizations must ensure responsible handling of data across collection, processing, and storage to maintain trust and compliance.</p>
+                                            <p>{gdprDetails}</p>
                                             
                                             <Link href="#" className="secondry-btn assrnc-explor-btn site-radius-10"><p className="text-md text-center">Explore</p></Link>
                                         </div>
@@ -84,7 +94,7 @@
                                         <div className="assrnc-tab-details">
                                             <h4>CDSCO</h4>
 
-                                            <p>Serves as India’s primary regulatory authority overseeing drug approvals, clinical trials, and manufacturing compliance. It ensures that all pharmaceuticals meet the highest standards of safety, efficacy, and quality before reaching patients.</p>
+                                            <p>{cdscoDetails}</p>
                                             
                                             <Link href="#" className="secondry-btn assrnc-explor-btn site-radius-10"><p className="text-md text-center">Explore</p></Link>
                                         </div>
@@ -99,9 +109,7 @@
                                 <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
-                                    <p>21 CFR Part 11 is a U.S. FDA regulation that defines the criteria under which electronic records and electronic signatures are considered trustworthy, reliable, and equivalent to paper records. It ensures that all electronic systems handling regulated data maintain accuracy, security, and traceability.</p>
-                                    
-                                    <p></p>
+                                    <p>{fda21Details}</p>
                                 </AccordionContent>
                             </AccordionItem>
 
@@ -110,9 +118,7 @@
                                 <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
-                                    <p>Provides comprehensive guidance on computerized systems operating in GMP-regulated environments across the EU. It ensures that all automated processes uphold data integrity, security, and full regulatory compliance throughout their lifecycle.</p>
-                                    
-                                    <p></p>
+                                    <p>{euAnnexDetails}</p>
                                 </AccordionContent>
                             </AccordionItem>
 
@@ -121,9 +127,7 @@
                                 <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
-                                    <p>Ensures the protection of sensitive patient health information through robust administrative, physical, and technical safeguards. Compliance is mandatory for healthcare providers, insurers, and associated partners to maintain privacy and data security at every level.</p>
-                                    
-                                    <p></p>
+                                    <p>{hipaaDetails}</p>
                                 </AccordionContent>
                             </AccordionItem>
 
@@ -132,9 +136,7 @@
                                 <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
-                                    <p>Protects the personal data of EU residents by enforcing strict standards for privacy, transparency, and user control. Organizations must ensure responsible handling of data across collection, processing, and storage to maintain trust and compliance.</p>
-                                    
-                                    <p></p>
+                                    <p>{gdprDetails}</p>
                                 </AccordionContent>
                             </AccordionItem>
 
@@ -143,9 +145,7 @@
                                 <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
-                                    <p>Serves as India’s primary regulatory authority overseeing drug approvals, clinical trials, and manufacturing compliance. It ensures that all pharmaceuticals meet the highest standards of safety, efficacy, and quality before reaching patients.</p>
-
-                                    <p></p>
+                                    <p>{cdscoDetails}</p>
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>

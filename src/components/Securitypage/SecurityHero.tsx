@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function SecurityHero() {
-  const [animate, setAnimate] = useState({
-    heading: false,
-    paragraph: false,
-    image: false,
-  });
+type SecurityHeroProps = {
+  	securityHeroTitle: string;
+    securityHeroSubtitle: string;
+}
+
+export default function SecurityHero({securityHeroTitle, securityHeroSubtitle}:SecurityHeroProps) {
+  const [animate, setAnimate] = useState({ heading: false, paragraph: false, image: false, });
 
   useEffect(() => {
     const timers: NodeJS.Timeout[] = [];
@@ -43,7 +44,7 @@ export default function SecurityHero() {
                 animate.heading ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
               }`}
             >
-              <h1>Trusted Security. Proven Compliance.</h1>
+              <h1>{securityHeroTitle}</h1>
 
               <p
                 className={`h6 text-rg transition-transform duration-700 ${
@@ -52,7 +53,7 @@ export default function SecurityHero() {
                     : "-translate-x-full opacity-0"
                 }`}
               >
-                DhatuVault delivers enterprise-grade security and audit-ready compliance controls.
+				{securityHeroSubtitle}
               </p>
             </div>
 

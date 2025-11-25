@@ -2,15 +2,20 @@
 
 import Image from "next/image";
 
-export default function SecurePlatform() {
+type SecurePlatformProps = {
+    secureWorkspacesTitle: string;
+    secureWorkspacesSubtitle: string;
+}
+
+export default function SecurePlatform({secureWorkspacesTitle, secureWorkspacesSubtitle} : SecurePlatformProps) {
     return(
         <>
             <section className="section secure-platform">
                 <div className="container">
                     <div className="scr-pltfm-headings">
-                        <h2 className="h3">Secure Workspaces. Unified Platform.</h2>
+                        <h2 className="h3">{secureWorkspacesTitle}</h2>
 
-                        <p className="h6 text-rg">Each tenant operates as an independent Dhatuvault with complete data separation, user management, and workflow independence.</p>
+                        <p className="h6 text-rg">{secureWorkspacesSubtitle}</p>
                     </div>
 
                     <div className="scr-pltfm-image">

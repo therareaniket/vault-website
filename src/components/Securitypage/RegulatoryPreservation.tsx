@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import {  motion, } from 'framer-motion';
 
+type PreservationProps = {
+    regulatoryPreservationTitle: string;
+    regulatoryPreservationSubtitle: string;
+}
+
 const timelineAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ?  {
     initialLine: { width: '0%' },
     animateLine: { width: '100%', transition: { duration: 4, delay: 0.2 }, },
@@ -42,15 +47,15 @@ const timelineAnimation = (typeof window !== "undefined" && window.innerWidth >=
     animateArchived: { opacity: 1, y: 'auto', },
 }
 
-export default function RegulatoryPreservation(){
+export default function RegulatoryPreservation({regulatoryPreservationTitle, regulatoryPreservationSubtitle}: PreservationProps){
     return (
         <>
             <section className="section regulatory-preserv">
                 <div className="container">
                     <div className="regulatory-headings">
-                        <h2 className="h3">Immutable Vault Archiving for Regulatory Preservation</h2>
+                        <h2 className="h3">{regulatoryPreservationTitle}</h2>
 
-                        <p className="h6 text-rg">Preserve Your Records Immutably with Vault. WORM-based storage ensures tamper-proof protection, retention compliance, and audit-ready access</p>
+                        <p className="h6 text-rg">{regulatoryPreservationSubtitle}</p>
                     </div>
 
                     <div className="prsrvtn-tl-procs">

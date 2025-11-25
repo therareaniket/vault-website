@@ -2,15 +2,20 @@
 
 import Image from "next/image";
 
-export default function SDLCStages(){
+type SDLCProps = {
+    sdlcTitle: string;
+    sdlcSubtitle: string;
+}
+
+export default function SDLCStages({sdlcTitle, sdlcSubtitle}: SDLCProps){
     return(
         <>
             <section className="section sdlc-stages">
                 <div className="container">
                     <div className="sdlc-headings">
-                        <h2 className="h3">Secure SDLC Building Vault with Confidence at Every Stage</h2>
+                        <h2 className="h3">{sdlcTitle}</h2>
 
-                        <p className="h6 text-rg">From planning to deployment, every step of DhatuVault’s lifecycle follows rigorous security checks ensuring your data remains protected through continuous monitoring, code validation, and proactive threat mitigation.</p>
+                        <p className="h6 text-rg">{sdlcSubtitle}</p>
                     </div>
 
                     <div className="sdlc-imageblock">
