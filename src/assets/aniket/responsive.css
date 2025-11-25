@@ -271,7 +271,7 @@
 
     .process-info { width: 200px; }
     .process-images img { width: 65px; }
-    .process-images img { transform: translate(calc(6px - 50%), calc(-50% - 10px)); }
+    .process-images img { transform: translate(calc(6px - 50%), calc(-50% - 14px)); }
     
     .workflow-accordion { display: none; }
 }
@@ -503,7 +503,8 @@
     .process-images { display: none; }
     .prsrvtn-tl-procs { justify-content: center; height: 575px; }
     .process-main-wrapper { height: 100%; width: 2px; flex-direction: column; }
-    .central-dot { transform: translate(-4px, 0); }
+    .central-line-animation { height: 100%; width: 4px; transform: translateX(-1px); }
+    .central-dot { transform: translate(-5px, 0); }
     .process-info, .process-info.alt-direction { width: 200px; transform: translate(-110%, -50%); top: 0; left: 0; text-align: right; }
     .process-info.alt-direction { transform: translate(calc(0% + 30px), -50%); text-align: left; }
     
