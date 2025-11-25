@@ -460,7 +460,7 @@
 
   .contact-cust-tag-new{ width: max-content;  }
   .customer-contact-wrapper{ gap: 20px; }
-  .contact-section{ padding-bottom: 80px; }
+  .contact-section{ padding-bottom: 70px; }
   .home-blog-img-1, .home-blog-img-2, .home-blog-img-3{ width: 378px; }
 }
 
@@ -1080,6 +1080,10 @@
   .home-blog-img-1, .home-blog-img-2, .home-blog-img-3{ width: 100%; }
 
   .hm-blog-card{ width: 330px; border-top: 0; padding: 10px; height: max-content; }
+
+  .social-media-section { height: max-content; }
+  .footer-links { flex-direction: column; width: 100%; }
+  .newsletter-input { width: 100%; }
 
 }
 @media screen and (max-width: 374px) {

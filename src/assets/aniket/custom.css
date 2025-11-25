@@ -290,8 +290,8 @@ section.trial-performance { padding-top: 0; }
 .assr-acc-item .h5 { margin-bottom: 0; }
 .assr-acc-cont { padding-top: 10px; }
 
-/* .draft { animation-delay: 0.8s; }
-.in-review { animation-delay: 2s; }
-.approved { animation-delay: 3.5s; }
-.finalized { animation-delay: 5s; }
-.archived { animation-delay: 6.5s; } */
+.stages-step:last-child p { margin-bottom: 0; }
+
+.foot-news-ltr { padding: 6px 14px; display: block; margin-top: 10px; background-color: var(--secondary); }
+
+.active-footer-link { color: var(--secondary); background-color: #fff; }

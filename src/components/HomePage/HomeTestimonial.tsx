@@ -167,7 +167,7 @@ const HomeTestimonial = ({ testimonialsTitle, testimonialsSubtitle, testimonialR
 
                         {/* Navigation */}
                         <div className="testimonial-btns">
-                            <button className="prev" onClick={rotateCircleN}>
+                            <button className="prev" onClick={rotateCircleN} aria-label="Previous Testimonial">
                                 <svg
                                     className="prev-arrow"
                                     width="15"
@@ -185,7 +185,7 @@ const HomeTestimonial = ({ testimonialsTitle, testimonialsSubtitle, testimonialR
                                 </svg>
                             </button>
 
-                            <button className="next" onClick={rotateCircleC}>
+                            <button className="next" onClick={rotateCircleC} aria-label="Next Testimonial">
                                 <svg
                                     className="next-arrow"
                                     width="15"

@@ -2,6 +2,7 @@ import { fetchGraphQL } from '@/lib/graphql';
 import Image from 'next/image'
 import Link from 'next/link'
 
+
 type ContactData = {
     page: {
         contactpage: {
@@ -9,7 +10,6 @@ type ContactData = {
             email: string;
         }
     }
-    
 }
 
 export default async function Footer() {
@@ -73,6 +73,8 @@ export default async function Footer() {
                                 <p className='text-18 text-md links-heading'>Newsletter</p>
 
                                 <input className='newsletter-input text-16 text-rgc btn-padding' type="email" name="" id="" placeholder='Enter your mail' />
+
+                                <button type="submit" className='btn-bg foot-news-ltr'>Submit</button>
                             </div>
                         </div>
                     </div>
