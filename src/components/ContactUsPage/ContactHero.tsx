@@ -2,7 +2,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const ContactHero = () => {
+type ContactHeroProps = {
+    contactHeroTitle: string;
+    contactHeroSubtitle: string;
+}
+
+const ContactHero = ({contactHeroTitle, contactHeroSubtitle}: ContactHeroProps) => {
   const [animate, setAnimate] = useState({
     heading: false,
     paragraph: false,
@@ -41,7 +46,7 @@ const ContactHero = () => {
               animate.heading ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
             }`}
           >
-            <h1>Ready to Transform Your Clinical Trials with DhatuVault?</h1>
+            <h1>{contactHeroTitle}</h1>
 
             <p
               className={`h6 text-rg transition-transform duration-700 ${
@@ -50,7 +55,7 @@ const ContactHero = () => {
                   : "-translate-x-full opacity-0"
               }`}
             >
-              Connect with our clinical operations experts to discover how DhatuVault&apos;s intelligent platform can streamline your trial management, ensure regulatory compliance, and accelerate study execution.
+                {contactHeroSubtitle}
             </p>
           </div>
 

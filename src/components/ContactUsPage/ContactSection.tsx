@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import MyContactForm from "./ContactForm";
 
 type ContactProps = {
     phoneNumber: string;
@@ -68,66 +69,7 @@ const ContactSection = ({phoneNumber, email, location}:ContactProps) => {
         </div>
 
         {/* RIGHT SIDE — FORM */}
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <div className="form-group form-group-name">
-              <label className="text-18 text-rg">
-                Name<span className="req">*</span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group form-group-email">
-              <label className="text-18 text-rg">
-                Email<span className="req">*</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-
-          <div className="form-group form-group-org">
-            <label className="text-18 text-rg">
-              Organization<span className="req">*</span>
-            </label>
-            <input
-              type="text"
-              name="organization"
-              placeholder="Enter your Organization Name"
-              required
-              value={formData.organization}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div className="form-group ">
-            <label className="text-18 text-rg">Message</label>
-            <textarea
-              name="message"
-              placeholder="Enter your message"
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
-            />
-          </div>
-
-          <button className="submit-btn site-radius-10 text-18 text-md btn-padding" type="submit">
-            Submit
-          </button>
-        </form>
+        <MyContactForm />
 
       </div>
       </div>

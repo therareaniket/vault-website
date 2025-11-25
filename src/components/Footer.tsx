@@ -1,9 +1,32 @@
-"use client"
-import React from 'react'
+import { fetchGraphQL } from '@/lib/graphql';
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Footer = () => {
+type ContactData = {
+    page: {
+        contactpage: {
+            phoneNumber: string;
+            email: string;
+        }
+    }
+    
+}
+
+export default async function Footer() {
+
+    const Contact = await fetchGraphQL<ContactData>(`
+            query {
+                page(id: "/contact-us", idType: URI) {
+                    contactpage {
+    
+                        phoneNumber
+                        email
+                    }
+                }
+            }`)
+    
+        const ContactFetch = Contact.page.contactpage;
+
     return (
         <>
             <footer className="main-footer">
@@ -13,7 +36,7 @@ const Footer = () => {
                             <Image className='footer-dhatu-icon' src='/images/Footer/dhatuVault.svg' alt='menu-img' width={199} height={34} priority={false}></Image>
 
                             <div className='footer-text'>
-                                <p className='text-16 text-rg'>Built for Security.  <br />   Trusted for Compliance.</p>
+                                <p className='text-16 text-rg'>Built for Security.<br />Trusted for Compliance.</p>
                             </div>
 
                             <Image className='linkedIn-Icon' src='/images/Footer/linkedInIcon.svg' alt='menu-img' width={28} height={28} priority={false}></Image>
@@ -37,11 +60,11 @@ const Footer = () => {
 
                                 <ul className='contact-infolinks'>
                                     <li>
-                                        <p className='text-16 text-rg'><span className='icon-calllcon'></span> <Link href="">+91 1234567891</Link> </p>
+                                        <p className='text-16 text-rg'><span className='icon-calllcon'></span> <Link href="tel:`{ContactFetch.phoneNumber}`">{ContactFetch.phoneNumber}</Link> </p>
                                     </li>
 
                                     <li>
-                                        <p className='text-16 text-rg'><span className='icon-mailIcon'></span><Link href="mailto:enquire@dhatuvault.com">enquire@dhatuvault.com</Link> </p>
+                                        <p className='text-16 text-rg'><span className='icon-mailIcon'></span><Link href="mailto:`{ContactFetch.email}`">{ContactFetch.email}</Link> </p>
                                     </li>
                                 </ul>
                             </div>
@@ -92,5 +115,3 @@ const Footer = () => {
         </>
     )
 }
-
-export default Footer

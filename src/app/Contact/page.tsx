@@ -6,6 +6,9 @@ import { fetchGraphQL } from "@/lib/graphql";
 type ContactData = {
     page: {
         contactpage: {
+            contactHeroTitle: string;
+            contactHeroSubtitle: string;
+
             phoneNumber: string;
             email: string;
             location: string;
@@ -20,6 +23,9 @@ export default async function Contact () {
         query {
             page(id: "/contact-us", idType: URI) {
                 contactpage {
+                    contactHeroTitle
+                    contactHeroSubtitle
+
                     phoneNumber
                     email
                     location
@@ -31,7 +37,7 @@ export default async function Contact () {
 
     return(
         <>
-            <ContactHero />
+            <ContactHero contactHeroTitle={ContactFetch.contactHeroTitle} contactHeroSubtitle={ContactFetch.contactHeroSubtitle} />
 
             <ContactCustomerSupport />
 

@@ -128,12 +128,12 @@ const Header = () => {
             <div className="contact-title-text">
               <div className="h6 text-rg contact-detail-header">
                 <span className="icon-mailIcon"></span>
-                <Link href="mailto:info@dhatavault.com">info@dhatavault.com</Link>
+                <Link href="mailto:enquire@dhatuvault.com">enquire@dhatuvault.com</Link>
               </div>
 
               <div className="h6 text-rg contact-detail-header">
                 <span className="icon-calllcon"></span>
-                <Link href="#">+91 9568567412</Link>
+                <Link href="tel:1234567891">+91 1234567891</Link>
               </div>
 
               <div className="h6 text-rg contact-detail-header">
