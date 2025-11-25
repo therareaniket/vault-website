@@ -433,7 +433,7 @@ header {
 
 /* .statistic-section{ margin: 150px 0; } */
 .statistic-main{ display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-.home-stats-head h2{ width: 935px; margin: 0 auto; }
+.home-stats-head h2{ width: 1090px; margin: 0 auto; }
 .home-stats-para{ width: 1250px; margin: 0 auto; padding-top: 20px; padding-bottom: 60px;} 
 
 .stats-section-cards{ position: relative; height: 435px; margin-top: 50px; }
@@ -670,13 +670,14 @@ pricing-title{ width: 1042px; }
 .hm-blog-text-wrap { display: flex; justify-content: space-between; align-items: flex-start; }
 
 .hm-blogs-links{ display: flex; justify-content: space-between; align-items: center; margin-top: 20px; margin-bottom: 30px; }
-.hm-blogs-links a{ background-color: var(--light-grey); border-radius: 100px; }
+.hm-blogs-links span{ background-color: var(--light-grey); border-radius: 100px; }
 .hm-blogs-links p{ width: max-content !important; padding-top: 0; }
 
 .home-blog-img-1, .home-blog-img-2, .home-blog-img-3{ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */ }
+.hm-blog-cards {
+  scroll-behavior: smooth !important;
+}
 
-/* .hm-blog-card-2{ transform: translateY(-100px); } */
-/* .hm-blog-card-3{ transform: translateY(-200px); } */
 
 .home-blog-wrapper{ overflow: none; }
 .hm-blog-cards{ overflow-x: none; }
@@ -1507,6 +1508,41 @@ z-index: -2; transform: translate(-2px, -2px); padding: 10px;  }
   transform: rotate(180deg); /* rotate when open */
 }
 
+/* Make trigger + arrow align in flex */
+.assr-acc-item {
+  position: relative;
+}
+
+.assr-acc-item > .assr-acc-arrow {
+  position: absolute;
+  right: 5%;
+  top: 22px; /* adjust based on your spacing */
+}
+
+/* Make the trigger itself a flex row */
+.assr-acc-item > button {
+  display: flex !important;
+  align-items: center !important;
+  width: 100%;
+  padding-right: 40px; /* space for arrow */
+}
+
+/* Remove default margin causing breaking */
+.assr-acc-item h3 {
+  margin: 0;
+}
+
+/* Rotate arrow when open */
+.assr-acc-item > button[data-state="open"] + .assr-acc-arrow {
+  transform: rotate(180deg);
+}
+
+/* Initial arrow position */
+.assr-acc-arrow {
+  transition: transform .3s ease;
+}
+
+
 /* ovrsgt-list solution page hover animation*/
 
 
@@ -1530,4 +1566,5 @@ z-index: -2; transform: translate(-2px, -2px); padding: 10px;  }
 
 .blog-inner-section-padding{ padding-top: 30px; }
 
-
+.page-not-found-wrapper{ display: flex; flex-direction: column; justify-content: center; gap: 30px; align-items: center;  }
+.blog-image img{ width: 100%; }

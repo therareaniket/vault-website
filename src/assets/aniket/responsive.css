@@ -466,7 +466,6 @@
     .pointer-item { width: 230px; height: 250px; }
     .pointer-item .h5 { width: 90%; }
 
-    .security-lists { gap: 20px; }
     .security-list { width: 100%; }
     .security-list:not(:last-child) { margin-bottom: 0; }
 

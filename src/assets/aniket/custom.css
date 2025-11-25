@@ -254,6 +254,7 @@ section.trial-performance { padding-top: 0; }
 .process-images.alt-direction { bottom: auto; top: 0; }
 .process-images.alt-direction img { transform: translate(calc(-50% + 6px), 12px); }
 
+
 .assrnc-lists-mobile { display: none; }
 .assr-acc-item { padding: 20px; margin-bottom: 20px; background: linear-gradient(135deg, #561FF9 0%, #7A68AE 100%); color: var(--white); border-radius: 10px; }
 .assr-acc-item .h5 { margin-bottom: 0; }
