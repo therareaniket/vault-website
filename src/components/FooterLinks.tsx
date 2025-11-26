@@ -86,7 +86,9 @@ export default function FooterLinks({ phoneNumber, email }: ContactLinkProps) {
         <>
             <div className="footer-links-section">
                 <div className='social-media-section'>
-                    <Image className='footer-dhatu-icon' src='/images/Footer/dhatuVault.svg' alt='menu-img' width={199} height={34} priority={false} />
+                    <Link href="/">
+                        <Image className='footer-dhatu-icon' src='/images/Footer/dhatuVault.svg' alt='menu-img' width={199} height={34} priority={false} />
+                    </Link>
 
                     <div className='footer-text'>
                         <p className='text-16 text-rg'>Built for Security.<br />Trusted for Compliance.</p>
