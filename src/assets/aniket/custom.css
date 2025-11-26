@@ -292,6 +292,6 @@ section.trial-performance { padding-top: 0; }
 
 .stages-step:last-child p { margin-bottom: 0; }
 
-.foot-news-ltr { padding: 6px 14px; display: block; margin-top: 10px; background-color: var(--secondary); }
+.foot-news-ltr { padding: 6px 14px; display: block; margin-top: 15px; background-color: var(--secondary); }
 
 .active-footer-link { color: var(--secondary); }
