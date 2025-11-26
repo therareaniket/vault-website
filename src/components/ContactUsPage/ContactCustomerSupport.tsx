@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ContactCustomerSupport = () => {
     return (
-        <div className="customer-support-main section">
+        <div className="customer-support-main contact-section">
             <div className="container">
                 <div className="customer-support-wrapper">
                     <div className="contact-card-1  site-radius-10">
@@ -13,7 +13,7 @@ const ContactCustomerSupport = () => {
 
                             <p className="text-18 text-rg">Need a DhatuVault demo? Questions about pricing or features?</p>
 
-                            <Link href="mailto:sales@dhatuvault.com" className="text-18 text-rg">sales@dhatuvault.com</Link>
+                            <Link href="mailto:enquiry@dhatuvault.com" className="text-18 text-rg">enquiry@dhatuvault.com</Link>
                         </div>
                     </div>
 
@@ -24,7 +24,7 @@ const ContactCustomerSupport = () => {
 
                             <p className="text-18 text-rg">Need help with DhatuVault licenses, plan changes, or additional modules?</p>
 
-                            <Link href="mailto:sales@dhatuvault.com" className="text-18 text-rg">sales@dhatuvault.com</Link>
+                            <Link href="mailto:enquiry@dhatuvault.com" className="text-18 text-rg">enquiry@dhatuvault.com</Link>
                         </div>
                     </div>
 
@@ -35,7 +35,7 @@ const ContactCustomerSupport = () => {
 
                             <p className="text-18 text-rg">Time to renew your DhatuVault subscription? Need details on your current plan?</p>
 
-                            <Link href="mailto:upgrade@dhatuvault.com" className="text-18 text-rg">upgrade@dhatuvault.com</Link>
+                            <Link href="mailto:enquiry@dhatuvault.com" className="text-18 text-rg">enquiry@dhatuvault.com</Link>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@ const ContactCustomerSupport = () => {
 
                             <p className="text-18 text-rg">Cancel or downgrade DhatuVault? Let&apos;s discuss options that work for you.</p>
 
-                            <Link href="mailto:sales@dhatuvault.com" className="text-18 text-rg">sales@dhatuvault.com</Link>
+                            <Link href="mailto:enquiry@dhatuvault.com" className="text-18 text-rg">enquiry@dhatuvault.com</Link>
                         </div>
                     </div>
                 </div>

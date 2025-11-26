@@ -7,11 +7,11 @@ type AboutRolesProps = {
 }
 
 const ROLES = [
-    { id: 1, bgClass: "cro-bg-img", title: "CROs", subTitle: "Coordinate seamlessly with sponsors and sites through DhatuVault's unified workflows." },
-    { id: 2, bgClass: "labs-bg-img", title: "Labs", subTitle: "Integrate lab data with trial systems while maintaining regulatory compliance via DhatuVault." },
-    { id: 3, bgClass: "sites-bg-img", title: "Sites", subTitle: "Streamline patient tracking and study operations with DhatuVault's site-focused workflows." }
+    { id: 1, bgClass: "cro-bg-img", title: "CROs", subTitle: "As a Clinical Research Organization, your success depends on flawless collaboration with sponsors, research sites, and regulatory stakeholders. DhatuVault empowers CRO teams with unified workflows designed to simplify document management, streamline site communications, and accelerate trial execution." },
+    { id: 2, bgClass: "labs-bg-img", title: "Labs", subTitle: "Clinical laboratories play a crucial role in the success of every clinical trial. With DhatuVault, lab teams can securely integrate critical test data directly into trial management systems—all while ensuring the highest standards of regulatory compliance." },
+    { id: 3, bgClass: "sites-bg-img", title: "Sites", subTitle: "Sites are at the frontline of clinical trials, responsible for patient recruitment, retention, and protocol adherence. DhatuVault equips site staff with tailored workflows for efficient patient tracking, seamless data entry, and smooth study operations—all from an intuitive, secure platform." }
 ];
-const ACTIVE_ROLE = { id: 0, bgClass: "sponsor-bg-img", title: "Sponsor", subTitle: "Monitor global trials with real-time oversight and automated compliance reporting in DhatuVault." };
+const ACTIVE_ROLE = { id: 0, bgClass: "sponsor-bg-img", title: "Sponsor", subTitle: "Sponsors drive the vision and execution of clinical trials across the globe. DhatuVault provides sponsors with a centralized platform for monitoring complex studies, ensuring regulatory compliance, and making data-driven decisions in real time." };
 
 function useIsMobile(maxWidth = 400) {
     const [isMobile, setIsMobile] = useState(typeof window !== "undefined" ? window.innerWidth <= maxWidth : false);

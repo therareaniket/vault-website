@@ -95,7 +95,7 @@ export default async function Footer() {
                             </div>
 
                             <div className='terms-links'>
-                                <Link href="" className='text-14 text-rg '>Terms of Use</Link>
+                                <Link href="/Terms&Use" className='text-14 text-rg '>Terms of Use</Link>
 
                                 <Link href="" className='text-14 text-rg '>Privacy Policy</Link>
                             </div>
@@ -111,7 +111,7 @@ export default async function Footer() {
 
                                 <p className='h6 text-rg'>From eTMF uploads to regulatory inspections, DhatuVault streamlines clinical operations with automated accuracy, full traceability, and unmatched speed.</p>
 
-                                <Link href="" className='footer-cta-button btn-bg btn-padding text-18 text-md'>Book a Demo</Link>
+                                <Link href="/Contact" className='footer-cta-button btn-bg btn-padding text-18 text-md'>Book a Demo</Link>
                             </div>
                         </div>
                     </div>

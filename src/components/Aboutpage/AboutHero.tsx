@@ -58,7 +58,7 @@ export default function AboutHero({aboutHeroTitle, aboutHeroSubtitle, infoTitle,
               }`}
             >
               <Image
-                src="/images/aboutpage/abt-hero-hglt.webp"
+                src="/images/aboutpage/about-us-svg.svg"
                 alt="About Hilight"
                 width={601}
                 height={299}

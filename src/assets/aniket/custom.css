@@ -47,7 +47,7 @@
 
 .abt-roles-headings { text-align: center; }
 .abt-roles-headings p { width: 700px; margin: 0 auto; }
-.abt-roles-wrapper { display: flex; gap: 30px; margin-top: 60px; }
+.abt-roles-wrapper { display: flex; flex-direction: row-reverse; gap: 30px; margin-top: 60px; }
 .role { width: 100%; transition: all 0.5s ease-in-out; padding: 20px; display: flex; flex-direction: column; justify-content: end; }
 .active-role { width: 1170px; height: calc(100% - 20px); }
 .click-roles .role { width: 400px; height: 210px; margin-bottom: 20px; }
@@ -295,3 +295,5 @@ section.trial-performance { padding-top: 0; }
 .foot-news-ltr { padding: 6px 14px; display: block; margin-top: 15px; background-color: var(--secondary); }
 
 .active-footer-link { color: var(--secondary); }
+
+.terms-use li { list-style-type: disc; list-style-position: inside; }

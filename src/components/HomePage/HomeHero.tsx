@@ -5,11 +5,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const heroImages = [
-  { src: "/images/HomePage/demo-2.webp", width: 297, height: 279, className: "hm-hero-img-1" },
+  { src: "/images/HomePage/home-portfolio-svg.svg", width: 297, height: 279, className: "hm-hero-img-1" },
   { src: "/images/HomePage/hero-img-2.webp", width: 344, height: 150, className: "hm-hero-img-2" },
   { src: "/images/HomePage/hero-img-3.webp", width: 236, height: 216, className: "hm-hero-img-3" },
   { src: "/images/HomePage/demo.webp", width: 250, height: 200, className: "hm-hero-img-4" },
-  { src: "/images/HomePage/demo-1.webp", width: 264, height: 118, className: "hm-hero-img-5" },
+  { src: "/images/HomePage/home-hero-last-svg.svg", width: 264, height: 118, className: "hm-hero-img-5" },
 ];
 
 type HeroProps = {
