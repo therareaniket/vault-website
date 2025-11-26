@@ -1,6 +1,7 @@
 import { fetchGraphQL } from '@/lib/graphql';
 import Image from 'next/image'
 import Link from 'next/link'
+import FooterLinks from './FooterLinks';
 
 
 type ContactData = {
@@ -31,7 +32,7 @@ export default async function Footer() {
         <>
             <footer className="main-footer">
                 <div className="container">
-                    <div className="footer-links-section">
+                    {/* <div className="footer-links-section">
                         <div className='social-media-section'>
                             <Image className='footer-dhatu-icon' src='/images/Footer/dhatuVault.svg' alt='menu-img' width={199} height={34} priority={false}></Image>
 
@@ -77,7 +78,9 @@ export default async function Footer() {
                                 <button type="submit" className='btn-bg foot-news-ltr'>Submit</button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
+
+                    <FooterLinks phoneNumber={ContactFetch.phoneNumber} email={ContactFetch.email} />
                 </div>
 
                 <div className="footer-br-line">

@@ -17,6 +17,7 @@ const Header = () => {
   // Optional: if you want this behavior only on Home page
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const isActive = (href: string) => pathname?.toLowerCase() === href.toLowerCase();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,23 +98,24 @@ const Header = () => {
         <div className="mega-menu-content container">
           <ul className="menu-links">
             <li className="h2 text-sb">
-              <Link href="/" onClick={closeMenu}>Home</Link>
+              <Link href="/" onClick={closeMenu} className={isActive("/") ? "text-secondary" : ""}>Home</Link>
+             
               <Image src="/images/Header/arrowIcon.svg" alt="arrow" width={32} height={32} />
             </li>
             <li className="h2 text-sb">
-              <Link href="/About" onClick={closeMenu}>About</Link>
+              <Link href="/About" onClick={closeMenu} className={isActive("/About") ? "text-secondary" : ""}>About</Link>
               <Image src="/images/Header/arrowIcon.svg" alt="arrow" width={32} height={32} />
             </li>
             <li className="h2 text-sb">
-              <Link href="/Solutions" onClick={closeMenu}>Solutions</Link>
+              <Link href="/Solutions" onClick={closeMenu} className={isActive("/Solutions") ? "text-secondary" : ""}>Solutions</Link>
               <Image src="/images/Header/arrowIcon.svg" alt="arrow" width={32} height={32} />
             </li>
             <li className="h2 text-sb">
-              <Link href="/Security&Compliance" onClick={closeMenu}>Security & Compliance</Link>
+              <Link href="/Security&Compliance" onClick={closeMenu} className={isActive("/Security&Compliance") ? "text-secondary" : ""}>Security & Compliance</Link>
               <Image src="/images/Header/arrowIcon.svg" alt="arrow" width={32} height={32} />
             </li>
             <li className="h2 text-sb">
-              <Link href="/Blogs" onClick={closeMenu}>Resources</Link>
+              <Link href="/Blogs" onClick={closeMenu} className={isActive("/Blogs") ? "text-secondary" : ""}>Resources</Link>
               <Image src="/images/Header/arrowIcon.svg" alt="arrow" width={32} height={32} />
             </li>
             <li className="h2 text-sb contact-menu-list">
