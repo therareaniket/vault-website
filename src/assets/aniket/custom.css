@@ -297,3 +297,21 @@ section.trial-performance { padding-top: 0; }
 .active-footer-link { color: var(--secondary); }
 
 .terms-use li { list-style-type: disc; list-style-position: inside; }
+
+.coming-soon { overflow: hidden; }
+.comingsoon-wrapper {  
+    overflow-x: hidden;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    background-image: url("/images/coming-soon-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comingsoon-wrapper h3 { margin-top: 20px; }
+.comingsoon-wrapper .h5 { margin-top: 20px; }
+.coming-erly-acc { padding: 12px 30px; color: var(--white); background-color: var(--primary); margin-top: 10px; }

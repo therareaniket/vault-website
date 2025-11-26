@@ -175,7 +175,7 @@ const handleManualClick = (key: FeatureKey) => {
                 <p className="text-rg h6">{textData[active].desc}</p>
               </div>
 
-              <Link href="#" className="role-btn btn-padding btn-bg btn-secondary site-radius-10 text-md text-18">
+              <Link href="/Contact" className="role-btn btn-padding btn-bg btn-secondary site-radius-10 text-md text-18">
                 Book a Demo
               </Link>
             </div>

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 type PricingProps = {
@@ -87,9 +88,9 @@ const HomePricing = ({pricingTitle, pricingSubtitle, planDetails}:PricingProps) 
                 <p className="total-price h5 text-md">
                   Total price: ${plan?.price} <span className="text-grey h5 text-md">${plan?.oldprice}</span>
                 </p>
-                <button className="start-btn btn-padding btn-bg btn-primary text-18 text-md">
-                  Subscribe
-                </button>
+                <Link href="/ComingSoon" className="start-btn btn-padding btn-bg btn-primary text-18 text-md text-center">
+                    Subscribe
+                </Link>
               </div>
             </div>
 

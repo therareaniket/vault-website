@@ -623,6 +623,8 @@
     .section { padding: 50px 0; }
     .contact-section{ padding-bottom: 50px; }
     .ovrsgt-list { border: 1px solid var(--light-grey); }
+
+    .comingsoon-wrapper img { width: 250px; }
 }
 
 @media screen and (max-width: 374px) {}
