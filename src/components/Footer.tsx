@@ -95,7 +95,7 @@ export default async function Footer() {
                             </div>
 
                             <div className='terms-links'>
-                                <Link href="/Terms&Use" className='text-14 text-rg '>Terms of Use</Link>
+                                <Link href="" className='text-14 text-rg '>Terms of Use</Link>
 
                                 <Link href="" className='text-14 text-rg '>Privacy Policy</Link>
                             </div>
