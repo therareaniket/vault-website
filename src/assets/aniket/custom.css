@@ -296,8 +296,9 @@ section.trial-performance { padding-top: 0; }
 
 .active-footer-link { color: var(--secondary); }
 
-.terms-use li { list-style-type: disc; list-style-position: inside; }
-
+.terms-use ul { padding-left: 30px; }
+.terms-use li { list-style-type: disc; list-style-position: outside; padding-left: 10px;  }
+ 
 .coming-soon { overflow: hidden; }
 .comingsoon-wrapper {  
     overflow-x: hidden;
@@ -315,3 +316,7 @@ section.trial-performance { padding-top: 0; }
 .comingsoon-wrapper h3 { margin-top: 20px; }
 .comingsoon-wrapper .h5 { margin-top: 20px; }
 .coming-erly-acc { padding: 12px 30px; color: var(--white); background-color: var(--primary); margin-top: 10px; }
+
+.container-sm { width: 1200px; margin: 0 auto; padding: 50px 20px; }
+.terms-use section:nth-child(even) .container-sm { padding-top: 0; padding-bottom: 0; }
+.terms-use { padding-top: 100px; }

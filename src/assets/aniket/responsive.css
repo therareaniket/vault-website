@@ -168,6 +168,8 @@
 
     .process-info { width: 271px; }
 
+    .container-sm { width: 1024px; }
+
 }
 
 @media screen and (max-width: 1199px) {
@@ -239,6 +241,8 @@
     .esign-process .h5 { font-size: 20px; line-height: 28px; }
     .scr-pltfm-headings .h3 { width: 400px; }
     /* .process-images img { width: 78px; } */
+
+    .container-sm { width: 80%; }
 }
 
 @media screen and (max-width: 1023px) {
@@ -274,6 +278,9 @@
     .process-images img { transform: translate(calc(6px - 50%), calc(-50% - 14px)); }
     
     .workflow-accordion { display: none; }
+
+    .terms-use { padding-top: 70px; }
+    .container-sm { padding: 40px 20px; }
 }
 
 @media screen and (max-width: 991px) {
@@ -562,6 +569,9 @@
     .workflow-accordion, .wf-accrd-tab-info p { padding: 0; }
     .wf-accord-item { padding: 15px; }
     .process-info, .process-info.alt-direction { width: 190px; }
+
+    .terms-use { padding-top: 50px; }
+    .terms-use h1 { margin-bottom: 0; }
     
 }
 
@@ -589,6 +599,8 @@
 
     .prsrvtn-tl-procs { height: 700px; }
     .process-info, .process-info.alt-direction { width: 150px; }
+
+    .container-sm { width: 100%; }
 
 }
 
