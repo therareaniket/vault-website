@@ -29,7 +29,7 @@ const ContactSection = ({phoneNumber, email, location}:ContactProps) => {
   };
 
   return (
-    <section className="section">
+    <section className="section" id="ContactFrom">
         <div className="container">
       <div className="contact-section-wrapper">
         

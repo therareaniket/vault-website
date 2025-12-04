@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ContactCustomerSupport = () => {
     return (
-        <div className="customer-support-main contact-section">
+        <div className="section customer-support-main" style={{ paddingBottom: 0 }}>
             <div className="container">
                 <div className="customer-support-wrapper">
                     <div className="contact-card-1  site-radius-10">

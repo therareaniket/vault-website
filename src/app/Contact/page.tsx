@@ -39,9 +39,9 @@ export default async function Contact () {
         <>
             <ContactHero contactHeroTitle={ContactFetch.contactHeroTitle} contactHeroSubtitle={ContactFetch.contactHeroSubtitle} />
 
-            <ContactSection phoneNumber={ContactFetch.phoneNumber} email={ContactFetch.email} location={ContactFetch.location} />
-            
             <ContactCustomerSupport />
+
+            <ContactSection phoneNumber={ContactFetch.phoneNumber} email={ContactFetch.email} location={ContactFetch.location} />           
         </>
     );
 }
