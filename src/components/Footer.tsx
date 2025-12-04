@@ -111,7 +111,7 @@ export default async function Footer() {
 
                                 <p className='h6 text-rg'>From eTMF uploads to regulatory inspections, DhatuVault streamlines clinical operations with automated accuracy, full traceability, and unmatched speed.</p>
 
-                                <Link href="/Contact" className='footer-cta-button btn-bg btn-padding text-18 text-md'>Book a Demo</Link>
+                                <Link href="/Contact#ContactFrom" className='footer-cta-button btn-bg btn-padding text-18 text-md'>Book a Demo</Link>
                             </div>
                         </div>
                     </div>

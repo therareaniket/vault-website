@@ -13,8 +13,7 @@ type ContactData = {
             email: string;
             location: string;
         }
-    }
-    
+    } 
 }
 
 export default async function Contact () {
