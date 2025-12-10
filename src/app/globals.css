@@ -166,8 +166,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url('../../public/fonts/icon/icomoon.ttf?ihhx4o') format('truetype'),
-    url('../../public/fonts/icon/icomoon.woff?ihhx4o') format('woff');
+  src: url('../../public/fonts/icon/icomoon.ttf?39h3k5') format('truetype'),
+    url('../../public/fonts/icon/icomoon.woff?39h3k5') format('woff');
 
   font-weight: normal;
   font-style: normal;
@@ -190,7 +190,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .icon-compliance:before {
+  /* .icon-compliance:before {
     content: "\e917";
   }
   .icon-contact-page-cancelling-sub:before {
@@ -261,8 +261,93 @@
   }
   .icon-calllcon:before {
     content: "\e902";
-  }
-  
+  } */
+
+.icon-icon-facebook:before {
+  content: "\e918";
+}
+.icon-icon-instagram:before {
+  content: "\e919";
+}
+.icon-icon-linkedin:before {
+  content: "\e91a";
+}
+.icon-icon-x:before {
+  content: "\e91b";
+}
+.icon-compliance:before {
+  content: "\e917";
+}
+.icon-contact-page-cancelling-sub:before {
+  content: "\e913";
+}
+.icon-contact-page-ready-to:before {
+  content: "\e914";
+}
+.icon-contact-page-need-help:before {
+  content: "\e915";
+}
+.icon-live_help:before {
+  content: "\e916";
+}
+.icon-archive-wprm:before {
+  content: "\e903";
+}
+.icon-finalize:before {
+  content: "\e907";
+}
+.icon-approved:before {
+  content: "\e908";
+}
+.icon-review:before {
+  content: "\e909";
+}
+.icon-draft:before {
+  content: "\e90a";
+}
+.icon-contact-page-location:before {
+  content: "\e90b";
+}
+.icon-contact-page-mail:before {
+  content: "\e90c";
+}
+.icon-contact-page-call:before {
+  content: "\e90d";
+}
+.icon-exit_to_app:before {
+  content: "\e90e";
+}
+.icon-assistant_on_hub:before {
+  content: "\e90f";
+}
+.icon-order_approve:before {
+  content: "\e910";
+}
+.icon-grading:before {
+  content: "\e911";
+}
+.icon-notificationIcon:before {
+  content: "\e912";
+}
+.icon-archiveIcon:before {
+  content: "\e904";
+}
+.icon-validationIcon:before {
+  content: "\e905";
+}
+.icon-uploadIcon:before {
+  content: "\e906";
+}
+.icon-locationIcon:before {
+  content: "\e900";
+}
+.icon-mailIcon:before {
+  content: "\e901";
+}
+.icon-calllcon:before {
+  content: "\e902";
+}
+
 
 .text-rg { font-family: 'poppins-rg' !important; }
 .text-md { font-family: 'poppins-md' !important; }

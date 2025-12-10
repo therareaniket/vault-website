@@ -320,3 +320,14 @@ section.trial-performance { padding-top: 0; }
 .container-sm { width: 1200px; margin: 0 auto; padding: 50px 20px; }
 .terms-use section:nth-child(even) .container-sm { padding-top: 0; padding-bottom: 0; }
 .terms-use { padding-top: 100px; }
+
+.footer-socials { display: flex; align-items: center; gap: 18px; }
+
+.social-icon { transition: filter 0.3s ease; }
+.social-icon:hover {
+  filter: brightness(0) saturate(100%) invert(64%) sepia(78%) saturate(425%) hue-rotate(45deg) brightness(95%) contrast(88%);
+}
+
+.vault-soci-icons { display: flex; gap: 16px; }
+.vault-soci-icons .foot-soc-icon { font-size: 28px; color: var(--white); }
+.vault-soci-icons .foot-soc-icon:hover { color: var(--secondary); }

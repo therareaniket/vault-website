@@ -94,7 +94,19 @@ export default function FooterLinks({ phoneNumber, email }: ContactLinkProps) {
                         <p className='text-16 text-rg'>Built for Security.<br />Trusted for Compliance.</p>
                     </div>
 
-                    <Image className='linkedIn-Icon' src='/images/Footer/linkedInIcon.svg' alt='menu-img' width={28} height={28} priority={false} />
+                    {/* <div className="footer-socials">
+                        <Image className='fb-Icon social-icon' src='/images/Footer/icon-facebook.svg' alt='menu-img' width={24} height={24} priority={false} />
+                        <Image className='insta-Icon social-icon' src='/images/Footer/icon-instagram.svg' alt='menu-img' width={26} height={26} priority={false} />
+                        <Image className='linkedIn-Icon social-icon' src='/images/Footer/icon-linkedin.svg' alt='menu-img' width={24} height={24} priority={false} />
+                        <Image className='x-Icon social-icon' src='/images/Footer/icon-x.svg' alt='menu-img' width={24} height={28} priority={false} />
+                    </div> */}
+
+                    <div className="vault-soci-icons">
+                        <i className="foot-soc-icon icon-icon-facebook"></i>
+                        <i className="foot-soc-icon icon-icon-instagram"></i>
+                        <i className="foot-soc-icon icon-icon-linkedin"></i>
+                        <i className="foot-soc-icon icon-icon-x"></i>
+                    </div>
                 </div>
 
                 <div className='footer-links'>
