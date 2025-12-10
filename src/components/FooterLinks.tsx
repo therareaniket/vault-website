@@ -102,10 +102,10 @@ export default function FooterLinks({ phoneNumber, email }: ContactLinkProps) {
                     </div> */}
 
                     <div className="vault-soci-icons">
-                        <i className="foot-soc-icon icon-icon-facebook"></i>
-                        <i className="foot-soc-icon icon-icon-instagram"></i>
                         <i className="foot-soc-icon icon-icon-linkedin"></i>
                         <i className="foot-soc-icon icon-icon-x"></i>
+                        <i className="foot-soc-icon icon-icon-instagram"></i>
+                        <i className="foot-soc-icon icon-icon-facebook"></i>
                     </div>
                 </div>
 
