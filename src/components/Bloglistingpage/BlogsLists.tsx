@@ -101,6 +101,165 @@ export default function BlogLists() {
                                     </div>
                                 </Link>
 
+                                {/* Integrations Blogs*/}
+                                <Link href="/Blog/integrating-eTMF-with-other-eclinical-systems" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/integrationBlogs/integrations-blog-1.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Integrations with eTMF</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">Why Integrating eTMF with Other eClinical Systems Matters</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/how-to-achieve-seamless-ETMF-integration" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/integrationBlogs/integrations-blog-2.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Integrations with eTMF</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">How to Achieve Seamless eTMF Integration — Tips & Best Practices</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/real-world-benefits-of-integrated-ETMF" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/integrationBlogs/integrations-blog-3.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Integrations with eTMF</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">Real-World Benefits of Integrated eTMF: Use Cases & Success Stories</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+
+                                {/* Readiness Blogs */}
+                                <Link href="/Blog/what-is-inspection-readiness-and-why-ETMF-is-key" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/readinessBlogs/readiness-blog-1.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Inspection Rediness</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">What is Inspection Readiness — and Why eTMF Is Key</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/how-to-keep-your-ETMF-inspection-ready" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/readinessBlogs/readiness-blog-2.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Inspection Rediness</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">How to Keep Your eTMF Inspection-Ready — Best Practices</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/how-integration-ETMF-good-practices-make-inspection-readiness" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/readinessBlogs/readiness-blog-3.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Inspection Rediness</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">How Integration + eTMF + Good Practices Make Inspection-Readiness</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
                             </div>
                         </TabsContent>
 
@@ -216,65 +375,169 @@ export default function BlogLists() {
                             </div>
                         </TabsContent>
 
-                        {/* <TabsContent value="integrations">
+                        <TabsContent value="integrations">
                             <div className="blog-list">
-                                <Link href="/Blog" className="block">
+                                <Link href="/Blog/integrating-eTMF-with-other-eclinical-systems" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/blog-1-final.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/integrationBlogs/integrations-blog-1.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
-                                                    <p>Karan Bhatt</p>
+                                                    <p>Smit Shah</p>
 
-                                                    <p>Data Visualization</p>
+                                                    <p>Integrations with eTMF</p>
                                                 </div>
 
-                                                <p>27 October 2025</p>
+                                                <p>11 December 2025</p>
                                             </div>
 
                                             <HmBlogArrow />
                                         </div>
 
                                         <div className="blog-glimps-cont">
-                                            <p className="h5">Integrating DhatuVault with EDC, CTMS, and eCOA Systems</p>
+                                            <p className="h5">Why Integrating eTMF with Other eClinical Systems Matters</p>
 
-                                            <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p>
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
                                         </div>
                                     </div>
                                 </Link>
-                            </div>
-                        </TabsContent> */}
 
-                        {/* <TabsContent value="inspection_rediness">
-                            <div className="blog-list">
-                                <Link href="#" className="block">
+                                <Link href="/Blog/how-to-achieve-seamless-ETMF-integration" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/blog-4-final.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/integrationBlogs/integrations-blog-2.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
-                                                    <p>Amit Sinha</p>
+                                                    <p>Smit Shah</p>
 
-                                                    <p>Data Visualization</p>
+                                                    <p>Integrations with eTMF</p>
                                                 </div>
 
-                                                <p>27 October 2025</p>
+                                                <p>11 December 2025</p>
                                             </div>
 
                                             <HmBlogArrow />
                                         </div>
 
                                         <div className="blog-glimps-cont">
-                                            <p className="h5">Smart TMF Management: A Day in the Life with DhatuVault</p>
+                                            <p className="h5">How to Achieve Seamless eTMF Integration — Tips & Best Practices</p>
 
-                                            <p>Follow a clinical operations lead through a typical day using DhatuVault’s TMF tools.</p>
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/real-world-benefits-of-integrated-ETMF" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/integrationBlogs/integrations-blog-3.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Integrations with eTMF</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">Real-World Benefits of Integrated eTMF: Use Cases & Success Stories</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
                                         </div>
                                     </div>
                                 </Link>
                             </div>
-                        </TabsContent> */}
+                        </TabsContent>
+
+                        <TabsContent value="inspection_rediness">
+                            <div className="blog-list">
+                                <Link href="/Blog/what-is-inspection-readiness-and-why-ETMF-is-key" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/readinessBlogs/readiness-blog-1.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Inspection Rediness</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">What is Inspection Readiness — and Why eTMF Is Key</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/how-to-keep-your-ETMF-inspection-ready" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/readinessBlogs/readiness-blog-2.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Inspection Rediness</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">How to Keep Your eTMF Inspection-Ready — Best Practices</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/how-integration-ETMF-good-practices-make-inspection-readiness" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/readinessBlogs/readiness-blog-3.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>Inspection Rediness</p>
+                                                </div>
+
+                                                <p>11 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">How Integration + eTMF + Good Practices Make Inspection-Readiness</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        </TabsContent>
                     </Tabs>
                 </div>
             </section>
