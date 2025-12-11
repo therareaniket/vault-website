@@ -514,6 +514,8 @@
     .central-dot { transform: translate(-5px, 0); }
     .process-info, .process-info.alt-direction { width: 200px; transform: translate(-110%, -50%); top: 0; left: 0; text-align: right; }
     .process-info.alt-direction { transform: translate(calc(0% + 30px), -50%); text-align: left; }
+
+    .blog-detail-hero-img { border-radius: 10px; margin-bottom: 70px; padding-bottom: 0; }
     
 }
 
