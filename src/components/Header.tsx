@@ -147,15 +147,23 @@ const Header = () => {
 
               <div>
                 <p className="contact-title h5 text-sb">Follow</p>
-                <Link href="#" onClick={closeMenu}>
-                  <Image
-                    className="linkedin-header-link"
-                    src="/images/Header/linkedInIcon.svg"
-                    alt="linkedin"
-                    width={24}
-                    height={24}
-                  />
-                </Link>
+                	<div className="vault-soci-icons">
+                    	<Link href="#" onClick={closeMenu}>
+                        	<i className="foot-soc-icon icon-icon-linkedin"></i>
+                   		</Link>
+
+                    	<Link href="#" onClick={closeMenu}>
+                        	<i className="foot-soc-icon icon-icon-x"></i>
+	                    </Link>
+
+    	                <Link href="#" onClick={closeMenu}>
+        	                <i className="foot-soc-icon icon-icon-instagram"></i>
+            	        </Link>
+						
+                	    <Link href="#" onClick={closeMenu}>
+                    	    <i className="foot-soc-icon icon-icon-facebook"></i>
+	                    </Link>
+                    </div>
               </div>
             </div>
           </div>
