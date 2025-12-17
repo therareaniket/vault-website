@@ -1,6 +1,7 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
+import StandardPricingPlan from "./StandardPricingPlan";
+import EnterprisePricingPlan from "./EnterprisePricingPlan";
 
 type PricingProps = {
     pricingTitle: string;
@@ -78,33 +79,19 @@ const HomePricing = ({pricingTitle, pricingSubtitle, planDetails}:PricingProps) 
           </div>
 
           {/* ===== Pricing Content ===== */}
-          <div className="pricing-content">
-            <div className="pricing-left">
-              <div className="pricing-left-text">
-                <div className="price-line">
-                  <h3 className="price h1 text-sb">${plan?.price}</h3>
-                  <p className="per-user h6 text-md">per user/month</p>
-                </div>
-                <p className="total-price h5 text-md">
-                  Total price: ${plan?.price} <span className="text-grey h5 text-md">${plan?.oldprice}</span>
-                </p>
-                <Link href="/ComingSoon" className="start-btn btn-padding btn-bg btn-primary text-18 text-md text-center">
-                    Subscribe
-                </Link>
-              </div>
-            </div>
-
-            <div className="pricing-right glass-box site-radius-20">
-              <h4 className="h5 text-md pricin-right-head">Includes</h4>
-              <ul>
-                {plan?.features.map((feature, i) => (
-                  <li className="text-18" key={i}>
-                    <span className="icon-finalize"></span> {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          {activePlan === "Standard" ? (
+            <StandardPricingPlan
+              price={plans[0].price}
+              oldprice={plans[0].oldprice}
+              features={plans[0].features}
+            />
+          ) : (
+            <EnterprisePricingPlan
+              price={plans[1].price}
+              oldprice={plans[1].oldprice}
+              features={plans[1].features}
+            />
+          )}
         </div>
       </section>
 
