@@ -41,7 +41,7 @@ export default function WhyVaultLead({leadsClinicalTrialsTitle, leadsClinicalTri
 
 
                         <div className="why-leads-list site-radius-20">
-                            <Image src='/images/dhatuVaultGifs/why-leads-dashboard.gif' alt="" width={363} height={197}></Image>
+                            <Image src='/images/dhatuVaultGifs/DV_leads.gif' alt="" width={363} height={197}></Image>
                             <div className="leads-list-text">
                                 <h3 className="h5 text-md">Real-Time Dashboards</h3>
 

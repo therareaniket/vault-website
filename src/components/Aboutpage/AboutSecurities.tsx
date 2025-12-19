@@ -33,7 +33,7 @@ export default function SecuritiesPlatform({ certifiedPlatformsTitle, certifiedP
                     </div>
 
                     <div className="security-list-wrapper">
-                        <Image src="/images/aboutpage/security-showcase.webp" alt="security-showcase" width={805} height={346} className="security-showcase"></Image>
+                        <Image src="/images/aboutpage/dv-about-seccurity-updated.webp" alt="security-showcase" width={805} height={346} className="security-showcase site-radius-20"></Image>
 
                         <div className="security-lists">
                             <div className="security-list">
