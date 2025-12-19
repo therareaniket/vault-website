@@ -19,7 +19,7 @@ export default function SystematicCompliance ({systematicComplianceTitle, system
                     </div>
 
                     <div className="systematic-highlgts">
-                        <Image src="/images/aboutpage/doc-compli-abt-svg.svg" alt="systematic-showcase" width={870} height={544} className="systematic-img"></Image>
+                        <Image src="/images/aboutpage/vault-compliance-symentic-updated.webp" alt="systematic-showcase" width={870} height={544} className="systematic-img site-radius-20"></Image>
 
                         <div className="systematic-pointers">
                             <div className="pointer-items">
