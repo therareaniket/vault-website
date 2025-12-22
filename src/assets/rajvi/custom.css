@@ -250,8 +250,7 @@ header {
 .contact-menu-text{ display: none; }
 
 .dhatuVault-logo{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-.mega-menu { overflow-y: auto;  /* enables vertical scroll */
-}
+.mega-menu { overflow-y: auto;  /* enables vertical scroll */ }
 
 
 /*  YOUR BASE BUTTON  */

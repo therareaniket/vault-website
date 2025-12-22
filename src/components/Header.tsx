@@ -19,42 +19,40 @@ const Header = () => {
   const isHome = pathname === "/";
   const isActive = (href: string) => pathname?.toLowerCase() === href.toLowerCase();
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScroll = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
 
-  //     // Stop hide/show when mega menu is open
-  //     if (isMenuOpen) {
-  //       setHideHeader(false);
-  //       return;
-  //     }
-
-  //     // If you want hide/show only on Home page
+      // Stop hide/show when mega menu is open
+      if (isMenuOpen) {
+        setHideHeader(false);
+        return;
+      }
 
 
-  //     const navbarHeight = headerRef.current?.offsetHeight || 0;
-  //     const triggerPoint = window.innerHeight - navbarHeight;
+      const navbarHeight = headerRef.current?.offsetHeight || 0;
+      const triggerPoint = window.innerHeight - navbarHeight;
 
-  //     if (currentScroll <= triggerPoint) {
-  //       setHideHeader(false);
-  //       setLastScrollY(currentScroll);
-  //       return;
-  //     }
+      if (currentScroll <= triggerPoint) {
+        setHideHeader(false);
+        setLastScrollY(currentScroll);
+        return;
+      }
 
-  //     if (currentScroll > lastScrollY) {
-  //       // scrolling down
-  //       setHideHeader(true);
-  //     } else {
-  //       // scrolling up
-  //       setHideHeader(false);
-  //     }
+      if (currentScroll > lastScrollY) {
+        // scrolling down
+        setHideHeader(true);
+      } else {
+        // scrolling up
+        setHideHeader(false);
+      }
 
-  //     setLastScrollY(currentScroll);
-  //   };
+      setLastScrollY(currentScroll);
+    };
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [lastScrollY, isMenuOpen, isHome]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY, isMenuOpen, isHome]);
 
   return (
     <>
