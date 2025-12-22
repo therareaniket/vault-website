@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import {  motion, } from 'framer-motion';
+import {  delay, motion, } from 'framer-motion';
 
 type PreservationProps = {
     regulatoryPreservationTitle: string;
@@ -28,8 +28,8 @@ const timelineAnimation = (typeof window !== "undefined" && window.innerWidth >=
     initialArchived: { opacity: 0, y: 100, },
     animateArchived: { opacity: 1, y: '-5px', transition: { duration: 0.5, delay: 3.2 },},
 } : {
-    initialLine: { width: '0%' },
-    animateLine: { width: '100%', },
+    initialLine: { width: '100%', height: '1%' },
+    animateLine: { width: '100%', height: '100%', transition: { delay: 1, duration: 4 }, },
 
     initialDraft: { opacity: 1, y: 'auto', },
     animateDraft: { opacity: 1, y: 'auto', },
@@ -120,7 +120,7 @@ export default function RegulatoryPreservation({regulatoryPreservationTitle, reg
                                 </div>
                             </motion.div>
                             
-                            <motion.div className="central-line-animation" variants={timelineAnimation} initial="initialLine" whileInView="animateLine" viewport={{ once: true, amount: 1 }}></motion.div>
+                            <motion.div className="central-line-animation" variants={timelineAnimation} initial="initialLine" whileInView="animateLine" viewport={{ once: true, amount: 0.5 }}></motion.div>
                         </div>
 
                     </div>

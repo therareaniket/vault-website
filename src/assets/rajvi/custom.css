@@ -1522,8 +1522,7 @@ z-index: -2; transform: translate(-2px, -2px); padding: 10px;  }
 .assr-acc-item > button {
   display: flex !important;
   align-items: center !important;
-  width: 100%;
-  padding-right: 40px; /* space for arrow */
+  width: 100%; /* space for arrow */
 }
 
 /* Remove default margin causing breaking */
@@ -1532,7 +1531,7 @@ z-index: -2; transform: translate(-2px, -2px); padding: 10px;  }
 }
 
 /* Rotate arrow when open */
-.assr-acc-item > button[data-state="open"] + .assr-acc-arrow {
+.assr-acc-item > button[data-state="open"]  .assr-acc-arrow {
   transform: rotate(180deg);
 }
 

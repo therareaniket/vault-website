@@ -105,8 +105,9 @@
 
                         <Accordion type="single" collapsible className="w-full assrnc-lists-mobile" defaultValue="item-1" >
                             <AccordionItem value="item-1" className="assr-acc-item relative">
-                                <AccordionTrigger> <h3 className="h5">FDA 21 CFR Part 11</h3> </AccordionTrigger>
-                                <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                <AccordionTrigger> <h3 className="h5">FDA 21 CFR Part 11</h3>
+                                    <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                </AccordionTrigger>
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
                                     <p>{fda21Details}</p>
@@ -114,17 +115,18 @@
                             </AccordionItem>
 
                             <AccordionItem value="item-2" className="assr-acc-item">
-                                <AccordionTrigger> <h3 className="h5">EU Annex 11</h3> </AccordionTrigger>
-                                <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
-
+                                <AccordionTrigger> <h3 className="h5">EU Annex 11</h3> 
+                                    <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                </AccordionTrigger>
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
                                     <p>{euAnnexDetails}</p>
                                 </AccordionContent>
                             </AccordionItem>
 
                             <AccordionItem value="item-3" className="assr-acc-item">
-                                <AccordionTrigger> <h3 className="h5">HIPAA</h3> </AccordionTrigger>
-                                <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                <AccordionTrigger> <h3 className="h5">HIPAA</h3>
+                                    <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                </AccordionTrigger>
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
                                     <p>{hipaaDetails}</p>
@@ -132,8 +134,9 @@
                             </AccordionItem>
 
                             <AccordionItem value="item-4" className="assr-acc-item">
-                                <AccordionTrigger> <h3 className="h5">GDPR</h3> </AccordionTrigger>
-                                <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                <AccordionTrigger> <h3 className="h5">GDPR</h3>
+                                    <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                </AccordionTrigger>
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
                                     <p>{gdprDetails}</p>
@@ -141,8 +144,9 @@
                             </AccordionItem>
 
                             <AccordionItem value="item-5" className="assr-acc-item">
-                                <AccordionTrigger> <h3 className="h5">CDSCO</h3> </AccordionTrigger>
-                                <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                <AccordionTrigger> <h3 className="h5">CDSCO</h3>
+                                    <ChevronDown style={{ color: "var(--white)" }}  className="assr-acc-arrow wf-acc-arrow transition-transform duration-300 ml-auto" />
+                                </AccordionTrigger>
 
                                 <AccordionContent className="flex flex-col gap-4 text-balance assr-acc-cont">
                                     <p>{cdscoDetails}</p>

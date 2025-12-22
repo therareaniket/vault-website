@@ -509,7 +509,7 @@
 
     .process-images { display: none; }
     .prsrvtn-tl-procs { justify-content: center; height: 575px; }
-    .process-main-wrapper { height: 100%; width: 2px; flex-direction: column; }
+    .process-main-wrapper { height: 100%; width: 3px; flex-direction: column; }
     .central-line-animation { height: 100%; width: 4px; transform: translateX(-1px); }
     .central-dot { transform: translate(-5px, 0); }
     .process-info, .process-info.alt-direction { width: 200px; transform: translate(-110%, -50%); top: 0; left: 0; text-align: right; }
@@ -641,7 +641,10 @@
     .comingsoon-wrapper img { width: 250px; }
 }
 
-@media screen and (max-width: 374px) {}
+@media screen and (max-width: 374px) {
+    
+    .opertion-list { height: max-content; padding-top: 30px; }
+}
 
 @media screen and (max-width: 359px) {
     .process-info, .process-info.alt-direction { width: 120px; }
