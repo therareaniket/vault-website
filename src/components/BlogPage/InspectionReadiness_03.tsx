@@ -33,7 +33,7 @@ const InspectionReadiness_03 = () => {
                 <div className="blog-section-detail-wrap">
                     <div className='blog-section-dtae-text'>
                         <p className='text-14 text-rg'>11 December 2025</p>
-                        <p className='link-padding text-14 text-rg blog-btn'>Integrations</p>
+                        <p className='link-padding text-14 text-rg blog-btn'>Inspection Rediness</p>
                     </div>
 
                     <h1 className='h3 text-md'>How Integration + eTMF + Good Practices Make Inspection-Readiness Easier</h1>
