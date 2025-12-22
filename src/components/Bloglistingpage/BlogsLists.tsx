@@ -23,6 +23,7 @@ export default function BlogLists() {
 
                         <TabsContent value="all">
                             <div className="blog-list">
+                                {/* Integrations Blogs*/}
                                 <Link href="/Blog/understanding-regulatory-compliance-in-clinical-trials" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
@@ -44,7 +45,7 @@ export default function BlogLists() {
                                         <div className="blog-glimps-cont">
                                             <p className="h5">Understanding Regulatory Compliance in Clinical Trials: A Complete Guide </p>
 
-                                            <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p>
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
                                         </div>
                                     </div>
                                 </Link>
@@ -70,7 +71,7 @@ export default function BlogLists() {
                                         <div className="blog-glimps-cont">
                                             <p className="h5"> Navigating 21 CFR Part 11 in Clinical Data Systems</p>
 
-                                            <p>Learn proven strategies for streamlining site activation, document management.</p>
+                                            {/* <p>Learn proven strategies for streamlining site activation, document management.</p> */}
                                         </div>
                                     </div>
                                 </Link>
@@ -96,7 +97,7 @@ export default function BlogLists() {
                                         <div className="blog-glimps-cont">
                                             <p className="h5">HIPAA & Clinical Research: Protecting PHI in Trial Settings</p>
 
-                                            <p>Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.</p>
+                                            {/* <p>Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.</p> */}
                                         </div>
                                     </div>
                                 </Link>
@@ -260,6 +261,84 @@ export default function BlogLists() {
                                     </div>
                                 </Link>
 
+                                {/* AI in eTMF Blogs*/}
+                                <Link href="/Blog/top-5-ways-ai-enhances-etmf-quality" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/aiEtmfBlogs/ai-etmf-blog-2.webp" alt="blog-2" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>AI in eTMF</p>
+                                                </div>
+
+                                                <p>20 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">Top 5 Ways AI Enhances eTMF Quality</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/how-ai-is-transforming-etmf" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/aiEtmfBlogs/ai-etmf-blog-1.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>AI in eTMF</p>
+                                                </div>
+
+                                                <p>20 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">How AI is Transforming eTMF for Modern Clinical Trials</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/ai-and-the-next-generation-of-etmf-systems" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/aiEtmfBlogs/ai-etmf-blog-3.webp" alt="blog-3" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>AI in eTMF</p>
+                                                </div>
+
+                                                <p>20 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">AI and the Next Generation of eTMF Systems</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
                         </TabsContent>
 
@@ -286,7 +365,7 @@ export default function BlogLists() {
                                         <div className="blog-glimps-cont">
                                             <p className="h5">Understanding Regulatory Compliance in Clinical Trials: A Complete Guide </p>
 
-                                            <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p>
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
                                         </div>
                                     </div>
                                 </Link>
@@ -312,7 +391,7 @@ export default function BlogLists() {
                                         <div className="blog-glimps-cont">
                                             <p className="h5">Navigating 21 CFR Part 11 in Clinical Data Systems</p>
 
-                                            <p>Learn proven strategies for streamlining site activation, document management.</p>
+                                            {/* <p>Learn proven strategies for streamlining site activation, document management.</p> */}
                                         </div>
                                     </div>
                                 </Link>
@@ -338,7 +417,7 @@ export default function BlogLists() {
                                         <div className="blog-glimps-cont">
                                             <p className="h5">HIPAA & Clinical Research: Protecting PHI in Trial Settings</p>
 
-                                            <p>Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.</p>
+                                            {/* <p>Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.</p> */}
                                         </div>
                                     </div>
                                 </Link>
@@ -347,31 +426,83 @@ export default function BlogLists() {
 
                         <TabsContent value="ai_etmf">
                             <div className="blog-list">
-                                {/* <Link href="#" className="block">
+                                <Link href="/Blog/top-5-ways-ai-enhances-etmf-quality" className="block">
                                     <div className="the-blog">
                                         <div className="blog-image">
-                                            <Image src="/images/blogspage/blog-3-final.webp" alt="blog" width={493} height={237} className="site-radius-10"></Image>
+                                            <Image src="/images/aiEtmfBlogs/ai-etmf-blog-2.webp" alt="blog-2" width={493} height={237} className="site-radius-10"></Image>
 
                                             <div className="blog-author btn-bg">
                                                 <div className="name-designation">
                                                     <p>Smit Shah</p>
 
-                                                    <p>AI & Automation</p>
+                                                    <p>AI in eTMF</p>
                                                 </div>
 
-                                                <p>10 December 2025</p>
+                                                <p>20 December 2025</p>
                                             </div>
 
                                             <HmBlogArrow />
                                         </div>
 
                                         <div className="blog-glimps-cont">
-                                            <p className="h5">How AI Is Redefining eTMF Management in Clinical Trials</p>
+                                            <p className="h5">Top 5 Ways AI Enhances eTMF Quality</p>
 
-                                            <p>Watch how DhatuVault supports every phase of a clinical trial—from design to closeout.</p>
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
                                         </div>
                                     </div>
-                                </Link> */}
+                                </Link>
+
+                                <Link href="/Blog/how-ai-is-transforming-etmf" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/aiEtmfBlogs/ai-etmf-blog-1.webp" alt="blog-1" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>AI in eTMF</p>
+                                                </div>
+
+                                                <p>20 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">How AI is Transforming eTMF for Modern Clinical Trials</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
+
+                                <Link href="/Blog/ai-and-the-next-generation-of-etmf-systems" className="block">
+                                    <div className="the-blog">
+                                        <div className="blog-image">
+                                            <Image src="/images/aiEtmfBlogs/ai-etmf-blog-3.webp" alt="blog-3" width={493} height={237} className="site-radius-10"></Image>
+
+                                            <div className="blog-author btn-bg">
+                                                <div className="name-designation">
+                                                    <p>Smit Shah</p>
+
+                                                    <p>AI in eTMF</p>
+                                                </div>
+
+                                                <p>20 December 2025</p>
+                                            </div>
+
+                                            <HmBlogArrow />
+                                        </div>
+
+                                        <div className="blog-glimps-cont">
+                                            <p className="h5">AI and the Next Generation of eTMF Systems</p>
+
+                                            {/* <p>Explore how DhatuVault connects with your existing clinical systems to create a unified excecution.</p> */}
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
                         </TabsContent>
 
