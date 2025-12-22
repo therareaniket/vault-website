@@ -1,43 +1,3 @@
-// export default function MyContactForm() {
-//     return (
-//         <>
-//             <form className="contact-form">
-//                 <div className="form-row">
-//                     <div className="form-group form-group-name">
-//                         <label className="text-18 text-rg">
-//                             Name<span className="req">*</span>
-//                         </label>
-//                         <input type="text" name="name" placeholder="Enter your name" required />
-//                     </div>
-
-//                     <div className="form-group form-group-email">
-//                         <label className="text-18 text-rg">
-//                             Email<span className="req">*</span>
-//                         </label>
-//                         <input type="email" name="email" placeholder="Enter your email" required />
-//                     </div>
-//                 </div>
-
-//                 <div className="form-group form-group-org">
-//                     <label className="text-18 text-rg">
-//                         Organization<span className="req">*</span>
-//                     </label>
-//                     <input type="text" name="organization" placeholder="Enter your Organization Name" required />
-//                 </div>
-
-//                 <div className="form-group ">
-//                     <label className="text-18 text-rg">Message</label>
-//                     <textarea name="message" placeholder="Enter your message" rows={4} />
-//                 </div>
-
-//                 <button className="submit-btn site-radius-10 text-18 text-md btn-padding" type="submit">
-//                     Submit
-//                 </button>
-//             </form>
-//         </>
-//     );
-// }
-
 'use client';
 
 import { useState } from 'react';
@@ -179,7 +139,7 @@ export default function MyContactForm() {
       </div>
 
       <button
-        className="submit-btn site-radius-10 text-18 text-md btn-padding"
+        className="submit-btn site-radius-10 text-18 text-md btn-padding btn-bg"
         type="submit"
         disabled={isSubmitting}
       >

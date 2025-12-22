@@ -172,6 +172,7 @@ const handleManualClick = (key: FeatureKey) => {
             <div key={animKey} className="role-sol-para">
               <div className="fade-slide">
                 <h3 className="h4 text-sb">{textData[active].title}</h3>
+                
                 <p className="text-rg h6">{textData[active].desc}</p>
               </div>
 

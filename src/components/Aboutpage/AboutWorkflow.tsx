@@ -59,7 +59,7 @@ export default function Workflow({vaultWorkflowTitle, vaultWorkflowSubtitle, vau
             title: vaultProcessFlow.flow4Title,
             desc: vaultProcessFlow.flow4Subtitle,
             icon: "icon-assistant_on_hub",
-            image: "/images/dhatuVaultGifs/site-readiness.gif",
+            image: "/images/dhatuVaultGifs/monitor-site-updated.gif",
             imgWidth: 592,
             imgHeight: 320,
         },

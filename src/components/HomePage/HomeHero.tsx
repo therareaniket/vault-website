@@ -90,7 +90,7 @@ const HomeHero = ({ home_hero_title, home_hero_subtitle, home_hero_cta_1, home_h
             )}
 
             {home_hero_cta_2 && (
-                <Link href={home_hero_cta_2.url} title={home_hero_cta_2.title} className="btn-padding explore-prod-btn text-md text-18 site-radius-10 btn-secondary">{home_hero_cta_2.title}</Link>
+                <Link href={home_hero_cta_2.url} title={home_hero_cta_2.title} className="btn-padding explore-prod-btn text-md text-18 site-radius-10 btn-bg btn-secondary">{home_hero_cta_2.title}</Link>
             )}
           </div>
         </div>

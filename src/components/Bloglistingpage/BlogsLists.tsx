@@ -13,11 +13,11 @@ export default function BlogLists() {
                     <Tabs defaultValue="all">
                         <div className="scrollauto-div overflow-x-auto whitespace-nowrap no-scrollbar">
                             <TabsList className="blog-tablist site-radius-10">
-                                <TabsTrigger className="blog-category-select" value="all">All</TabsTrigger>
-                                <TabsTrigger className="blog-category-select" value="compliance">Compliance</TabsTrigger>
-                                <TabsTrigger className="blog-category-select" value="ai_etmf">AI in eTMF</TabsTrigger>
-                                <TabsTrigger className="blog-category-select" value="integrations">Integrations</TabsTrigger>
-                                <TabsTrigger className="blog-category-select" value="inspection_rediness">Inspection Rediness</TabsTrigger>
+                                <TabsTrigger className="blog-category-select btn-bg" style={{ color: 'var(--black)' }} value="all">All</TabsTrigger>
+                                <TabsTrigger className="blog-category-select btn-bg" style={{ color: 'var(--black)' }} value="compliance">Compliance</TabsTrigger>
+                                <TabsTrigger className="blog-category-select btn-bg" style={{ color: 'var(--black)' }} value="ai_etmf">AI in eTMF</TabsTrigger>
+                                <TabsTrigger className="blog-category-select btn-bg" style={{ color: 'var(--black)' }} value="integrations">Integrations</TabsTrigger>
+                                <TabsTrigger className="blog-category-select btn-bg" style={{ color: 'var(--black)' }} value="inspection_rediness">Inspection Rediness</TabsTrigger>
                             </TabsList>
                         </div>
 
