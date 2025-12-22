@@ -86,7 +86,7 @@ export default function Workflow({vaultWorkflowTitle, vaultWorkflowSubtitle, vau
                     <div className="workflow-wrapper">
                         {/* LEFT IMAGE - changes dynamically */}
                         <div className="workflow-images">
-                            <Image src={tabs[activeTab].image} alt="workflow" width={tabs[activeTab].imgWidth} height={tabs[activeTab].imgHeight} className="site-radius-10" priority={true} />
+                            <Image src={tabs[activeTab].image} alt="workflow" width={tabs[activeTab].imgWidth} height={tabs[activeTab].imgHeight} className="site-radius-10" priority={true} unoptimized={true} />
                         </div>
 
                         {/* RIGHT TAB LISTS */}
